@@ -20,5 +20,6 @@ for post in posts:
             if isinstance(top_level_comment, MoreComments):
                 continue
             if top_level_comment.author != 'AutoModerator':
+                print(top_level_comment.score + '\n')
                 print(top_level_comment.body)
                 print('_______________________\n')
