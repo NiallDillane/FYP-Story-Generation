@@ -1,5 +1,3 @@
-transformers
-
-# For ROUGE
-nltk
-py-rouge
+version https://git-lfs.github.com/spec/v1
+oid sha256:88ec0ed9d09174648e485e834113cae477f8c1cd0308e8e39d356b18239103df
+size 40

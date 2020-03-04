@@ -1,4 +1,3 @@
-tensorboardX
-tensorboard
-scikit-learn
-seqeval
+version https://git-lfs.github.com/spec/v1
+oid sha256:d32f58e7003d5bddcf750bfec468664e9ccd3299aebe41f1ecb908916d68a49c
+size 46

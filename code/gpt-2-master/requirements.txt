@@ -1,4 +1,3 @@
-fire>=0.1.3
-regex==2017.4.5
-requests==2.21.0
-tqdm==4.31.1
+version https://git-lfs.github.com/spec/v1
+oid sha256:02df9a5a643252c9897c6e41277ebe8aa44ae2808bffe5db2c81bbdba84050bf
+size 58
