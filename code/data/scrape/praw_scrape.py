@@ -11,7 +11,7 @@ uage = config['reddit']['uage']
 
 reddit = praw.Reddit(client_id = cid, client_secret = csec, user_agent = uage)
 
-open('wpdata.txt', 'w').close()
+open('ns_top_1k.txt', 'w').close()
 
 posts = list()
 for submission in reddit.subreddit('nosleep').top(limit=1000):
@@ -22,7 +22,5 @@ mods = reddit.subreddit('nosleep').moderator()
 i=0
 for post in posts:
     i += 1
-    print(i)
-    if post.author not in mods:
-        print(post.score)
-        print(post.selftext, file=open('./wpdata.txt', 'a'))
+    print(str(i) + ' - ' + str(post.score))
+    print(post.selftext, file=open('./ns_top_1k.txt', 'a'))

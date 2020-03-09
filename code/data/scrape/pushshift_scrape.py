@@ -5,16 +5,18 @@ last = ''
 ids = []
 url = 'https://api.pushshift.io/reddit/search/submission/?subreddit=nosleep&fields=id,created_utc,title,selftext,score'
 
+open('ns_over_1k.txt', 'w').close()
+
 while i < 100000:
     request = requests.get('{}&before={}'.format(url,last))
     json = request.json()
     for post in json['data']:
-        if post['score'] < 10:
+        if post['score'] < 1000:
             continue
-        print(post['title'] + str(post['created_utc']))
+        print(str(i) + ' - ' + post['title'] + ' - ' + str(post['created_utc']))
         ids.append(post['id'])
         try:
-            print(post['selftext'], file=open('./wpdata.txt', 'a'))
+            print(post['selftext'], file=open('./ns_over_1k.txt', 'a'))
         except:
             continue
         i += 1
