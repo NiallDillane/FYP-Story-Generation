@@ -1,0 +1,17 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdftex 2020.2.5)  11 MAR 2020 12:20
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**arxiv.sty
+(./arxiv.sty
+./arxiv.sty:1: Undefined control sequence.
+l.1 \NeedsTeXFormat
+                   {LaTeX2e}
+? 
+./arxiv.sty:1: Emergency stop.
+l.1 \NeedsTeXFormat
+                   {LaTeX2e}
+End of file on the terminal!
+
+./arxiv.sty:1:  ==> Fatal error occurred, no output PDF file produced!

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2020.2.5)  20 FEB 2020 14:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2020.2.5)  11 MAR 2020 12:25
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -720,194 +720,57 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 
 
 ] [4]
-\openout2 = `4_chapter4/chapter4.aux'.
+\openout2 = `3_chapter3/chapter3.aux'.
 
- (./4_chapter4/chapter4.tex
+ (./3_chapter3/chapter3.tex
  3.
+
+LaTeX Warning: Reference `image02' on page 5 undefined on input line 18.
+
+<3_chapter3/figures/image02.jpg, id=106, 401.5pt x 401.5pt>
+File: 3_chapter3/figures/image02.jpg Graphic file (type jpg)
+<use 3_chapter3/figures/image02.jpg>
+Package pdftex.def Info: 3_chapter3/figures/image02.jpg  used on input line 20.
+
+(pdftex.def)             Requested size: 288.7942pt x 288.81021pt.
+
+Package natbib Warning: Citation `mydownloadedimage' on page 5 undefined on inp
+ut line 20.
+
+
+Package natbib Warning: Citation `mydownloadedimage' on page 5 undefined on inp
+ut line 20.
+
 [5
 
 
 
-]) [6]
-\openout2 = `5_chapter5/chapter5.aux'.
+ <./3_chapter3/figures/image02.jpg>]
 
- (./5_chapter5/chapter5.tex
- 4.
+./3_chapter3/chapter3.tex:36: LaTeX Error: Unknown float option `d'.
 
-Package natbib Warning: Citation `pearce1990world' on page 7 undefined on input
- line 26.
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.36 \begin{table}[htdp]
+                        
+? 
+./3_chapter3/chapter3.tex:36: Emergency stop.
+ ...                                              
+                                                  
+l.36 \begin{table}[htdp]
+                        
+Option `d' ignored and `p' used.
 
-
-Package natbib Warning: Citation `mybookchapter' on page 7 undefined on input l
-ine 27.
-
-
-Package natbib Warning: Citation `mybookcontribution' on page 7 undefined on in
-put line 27.
-
-
-Package natbib Warning: Citation `mycddvd' on page 7 undefined on input line 28
-.
-
-
-Package natbib Warning: Citation `myjournal' on page 7 undefined on input line 
-29.
-
-
-Package natbib Warning: Citation `mypatent' on page 7 undefined on input line 3
-0.
-
-
-Package natbib Warning: Citation `myphd' on page 7 undefined on input line 31.
-
-
-Package natbib Warning: Citation `myproceeding' on page 7 undefined on input li
-ne 32.
-
-
-Package natbib Warning: Citation `mytechreport' on page 7 undefined on input li
-ne 33.
-
-
-Package natbib Warning: Citation `myunpublishedreport' on page 7 undefined on i
-nput line 34.
-
-
-Package natbib Warning: Citation `mywebvideos' on page 7 undefined on input lin
-e 35.
-
-[7
-
-
-
-]
-
-Package natbib Warning: Citation `mywebpaper' on page 8 undefined on input line
- 36.
-
-
-Package natbib Warning: Citation `mywebarticlejournal' on page 8 undefined on i
-nput line 37.
-
-
-Package natbib Warning: Citation `mywebpage' on page 8 undefined on input line 
-38.
-
-
-Package natbib Warning: Citation `mydownloadedimage' on page 8 undefined on inp
-ut line 39.
-
-
-Package natbib Warning: Citation `mybookchapter' on page 8 undefined on input l
-ine 45.
-
-) [8]
-\openout2 = `6_conclusions/conclusions.aux'.
-
- (./6_conclusions/conclusions.tex
- 5.
-) [9
-
-
-
-] [10
-
-
-]
-<image01.jpg, id=149, 401.5pt x 401.5pt>
-File: image01.jpg Graphic file (type jpg)
-<use image01.jpg>
-Package pdftex.def Info: image01.jpg  used on input line 285.
-(pdftex.def)             Requested size: 330.05322pt x 330.07756pt.
-
-
-Package natbib Warning: Citation `mydownloadedimage' on page 11 undefined on in
-put line 285.
-
-
-Package natbib Warning: Citation `mydownloadedimage' on page 11 undefined on in
-put line 285.
-
-[11 <./image01.jpg>] [12
-
-] [13] [14
-
-]
-Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 331.
- (./ahrs_triad_mote.c
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <6> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 2.
-LaTeX Font Info:    Try loading font information for OML+cmr on input line 35.
-
-(/usr/local/texlive/2019/texmf-dist/tex/latex/base/omlcmr.fd
-File: omlcmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <6> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 35.
- [15]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [16])
-(./thesis.bbl)
-
-Package natbib Warning: There were undefined citations.
-
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 388.
-[17]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 388.
- (./thesis.aux (./0_frontmatter/abstract.aux)
-(./0_frontmatter/declaration.aux) (./0_frontmatter/acknowledgement.aux)
-(./0_frontmatter/dedication.aux) (./1_introduction/introduction.aux)
-(./2_chapter2/chapter2.aux) (./4_chapter4/chapter4.aux)
-(./5_chapter5/chapter5.aux) (./6_conclusions/conclusions.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 388.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 388.
-
-
-Package rerunfilecheck Warning: File `thesis.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `thesis.out':
-(rerunfilecheck)             Before: D41D8CD98F00B204E9800998ECF8427E;0
-(rerunfilecheck)             After:  7D83A068794508218212FD1A78B56329;1755.
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 388.
- )
-(\end occurred when \iftrue on line 85 was incomplete) 
+ 
 Here is how much of TeX's memory you used:
- 12619 strings out of 492616
- 188871 string characters out of 6129482
- 763894 words of memory out of 5000000
- 16074 multiletter control sequences out of 15000+600000
- 15436 words of font info for 59 fonts, out of 8000000 for 9000
+ 11746 strings out of 492616
+ 178854 string characters out of 6129482
+ 514894 words of memory out of 5000000
+ 15413 multiletter control sequences out of 15000+600000
+ 15124 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 47i,12n,97p,423b,2046s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2019/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2019/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2019/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmbx6.pfb></usr/local/texlive/2019/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2019/texmf
--dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2019/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2019/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2019/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2019/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2019/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2019/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2019/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmti10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmti12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmtt10.pfb>
-Output written on thesis.pdf (29 pages, 771126 bytes).
-PDF statistics:
- 434 PDF objects out of 1000 (max. 8388607)
- 380 compressed objects within 4 object streams
- 208 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
-
+ 47i,11n,97p,423b,450s stack positions out of 5000i,500n,10000p,200000b,80000s
+./3_chapter3/chapter3.tex:36:  ==> Fatal error occurred, no output PDF file pro
+duced!

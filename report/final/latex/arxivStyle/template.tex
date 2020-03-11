@@ -1,4 +1,4 @@
-\documentclass{article}
+\documentclass[twoside, 12pt]{article}
 
 
 \usepackage{arxiv}
@@ -12,79 +12,80 @@
 \usepackage{nicefrac}       % compact symbols for 1/2, etc.
 \usepackage{microtype}      % microtypography
 \usepackage{lipsum}
+\usepackage{apacite}
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
+\renewcommand{\baselinestretch}{1.5}
 
 \title{Procedural Story Generation using Transformers}
 
 
 \author{
-  David S.~Hippocampus\thanks{Use footnote for providing further
-    information about author (webpage, alternative
-    address)---\emph{not} for acknowledging funding agencies.} \\
-  Department of Computer Science\\
-  Cranberry-Lemon University\\
-  Pittsburgh, PA 15213 \\
-  \texttt{hippo@cs.cranberry-lemon.edu} \\
+  Niall Dillane \\
+  Computer Science and Information Systems\\
+  University of Limerick\\
+  Limerick, Ireland \\
+  \texttt{13132911@studentmail.ul.ie} \\
   %% examples of more authors
    \And
- Elias D.~Striatum \\
-  Department of Electrical Engineering\\
-  Mount-Sheikh University\\
-  Santa Narimana, Levand \\
-  \texttt{stariate@ee.mount-sheikh.edu} \\
-  %% \AND
-  %% Coauthor \\
-  %% Affiliation \\
-  %% Address \\
-  %% \texttt{email} \\
-  %% \And
-  %% Coauthor \\
-  %% Affiliation \\
-  %% Address \\
-  %% \texttt{email} \\
-  %% \And
-  %% Coauthor \\
-  %% Affiliation \\
-  %% Address \\
-  %% \texttt{email} \\
+  James Patten \\
+  Computer Science and Information Systems\\
+  University of Limerick\\
+  Limerick, Ireland \\
+  \texttt{james.patten@ul.ie} \\
 }
 
 \begin{document}
 \maketitle
 
 \begin{abstract}
-\lipsum[1]
+Procedural content generation (PCG) – the process of generating data algorithmically – is a technique that has applications across a variety of domains. In the research outlined in this report, focus is directed to the use of PCG as a means to generate novel-like stories. The challenge is twofold: research into procedural generation methods, as well as the structure and language of stories, addressing questions such as: “What are the elements of a good story?”. Finally, methods to codify these elements must be investigated, in such a way that they can be used by a procedural generation technique, effectively combining the two disciplines.
 \end{abstract}
 
 
 % keywords can be removed
-\keywords{First keyword \and Second keyword \and More}
+\keywords{procedural generation \and algorithms \and AI \and language \and neural networks \and transformers}
 
 
 \section{Introduction}
-\lipsum[2]
-\lipsum[3]
+In order to be able to automatically generate stories we first need to understand the structure of a story. Indeed, not only the structure that would make one grammatically correct, but also those devices, structures and styles that help make a good story. This is probably the largest challenge in the project, a formula which is still unclear after millenia of storytelling. 
+
+Furthermore, there have been significant advancements over recent years in the Natural Language Processing (NLP) field, with new architectures and technologies appearing and outpacing each other. Choosing a direction which is sufficiently developed but still relatively state of the art will be difficult, especially since few of these have specifically tackled the topic of novel-like stories, instead focusing more on news article or script style content.
+
+However, it is this rapid progress and uncertain nature that make the topic so fascinating. There has been great progress in images, video, even games, but text generation has lagged behind somewhat. This signals that language is more nuanced, difficult to replicate, and still in its infancy. 
 
 
-\section{Headings: first level}
-\label{sec:headings}
 
-\lipsum[4] See Section \ref{sec:headings}.
+\section{Good Stories}
+\label{sec:good_stories}
 
-\subsection{Headings: second level}
-\lipsum[5]
-\begin{equation}
-\xi _{ij}(t)=P(x_{t}=i,x_{t+1}=j|y,v,w;\theta)= {\frac {\alpha _{i}(t)a^{w_t}_{ij}\beta _{j}(t+1)b^{v_{t+1}}_{j}(y_{t+1})}{\sum _{i=1}^{N} \sum _{j=1}^{N} \alpha _{i}(t)a^{w_t}_{ij}\beta _{j}(t+1)b^{v_{t+1}}_{j}(y_{t+1})}}
-\end{equation}
+%\lipsum[4] See Section \ref{sec:headings}.
+
+\subsection{Good Stories}
+Structure was the first element to be researched, as the highest level of a story planning process. Popular methods include the Hero’s Journey \cite{campbell2008hero}, which describes a cycle of sorts: a call to adventure, crossing from the known to the unknown, transformation etc. This is a more granular structure, most known for its application in Star Wars. 
+
+Another method is the three (or five) act structure \cite{trottier1998screenwriter}, wherein the story is broken down into distinct sections, typically: setup, confrontation, resolution. This is a bit more versatile, which was something to consider for the later steps of “filling in the gaps” with PCG. There was a balance to be struck: providing some structure so that the generation has some level of cogency, but also allowing flexibility so that not all stories are the same.
+
+Following this, a tree-based approach became appealing, at the higher levels resembling more of a novel plan with plot points, and is eventually fleshed out below into sentences and phrases. This is a familiar concept in Computer Science, and it seems like the best way to maintain a coherent story. Some optional user interaction would be ideal – e.g. “Tell me a story about a dog with superpowers” – a kind of “seed”. These could also be generated autonomously.
+
+\begin{figure}
+	\centering
+	\includegraphics{images/herosjourney.png}
+	\caption{commons.wikimedia.org}
+	\label{fig:herojourney}
+\end{figure}
+
 
 \subsubsection{Headings: third level}
 \lipsum[6]
 
 \paragraph{Paragraph}
+The quick brown fox jumps over the lazy dog
 \lipsum[7]
 
 \section{Examples of citations, figures, tables, references}
 \label{sec:others}
-\lipsum[8] \cite{kour2014real,kour2014fast} and see \cite{hadash2018estimate}.
+\lipsum[8] 
 
 The documentation for \verb+natbib+ may be found at
 \begin{center}
@@ -146,34 +147,8 @@ See awesome Table~\ref{tab:table}.
 \end{itemize}
 
 
-\bibliographystyle{unsrt}  
-%\bibliography{references}  %%% Remove comment to use the external .bib file (using bibtex).
+\bibliographystyle{apacite}  
+\bibliography{references}  %%% Remove comment to use the external .bib file (using bibtex).
 %%% and comment out the ``thebibliography'' section.
-
-
-%%% Comment out this section when you \bibliography{references} is enabled.
-\begin{thebibliography}{1}
-
-\bibitem{kour2014real}
-George Kour and Raid Saabne.
-\newblock Real-time segmentation of on-line handwritten arabic script.
-\newblock In {\em Frontiers in Handwriting Recognition (ICFHR), 2014 14th
-  International Conference on}, pages 417--422. IEEE, 2014.
-
-\bibitem{kour2014fast}
-George Kour and Raid Saabne.
-\newblock Fast classification of handwritten on-line arabic characters.
-\newblock In {\em Soft Computing and Pattern Recognition (SoCPaR), 2014 6th
-  International Conference of}, pages 312--318. IEEE, 2014.
-
-\bibitem{hadash2018estimate}
-Guy Hadash, Einat Kermany, Boaz Carmeli, Ofer Lavi, George Kour, and Alon
-  Jacovi.
-\newblock Estimate and replace: A novel approach to integrating deep neural
-  networks with existing applications.
-\newblock {\em arXiv preprint arXiv:1804.09028}, 2018.
-
-\end{thebibliography}
-
 
 \end{document}
