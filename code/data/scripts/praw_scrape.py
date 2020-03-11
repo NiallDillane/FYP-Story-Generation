@@ -11,7 +11,7 @@ uage = config['reddit']['uage']
 
 reddit = praw.Reddit(client_id = cid, client_secret = csec, user_agent = uage)
 
-open('ns_top_1k.txt', 'w').close()
+open('../scraped/ns_top_1k.txt', 'w').close()
 
 posts = list()
 for submission in reddit.subreddit('nosleep').top(limit=1000):
@@ -23,4 +23,4 @@ i=0
 for post in posts:
     i += 1
     print(str(i) + ' - ' + str(post.score))
-    print(post.selftext, file=open('./ns_top_1k.txt', 'a'))
+    print(post.selftext, file=open('../scraped/ns_top_1k.txt', 'a'))
