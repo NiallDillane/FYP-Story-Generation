@@ -1,4 +1,5 @@
-code/app/__pycache__/
+code/app/test/__pycache__/
+code/app/react-flask-app/api/__pychache__
 code/app/gpt-2-cloud-run
 code/data/scripts/config.ini
 code/transformers/examples/output*
