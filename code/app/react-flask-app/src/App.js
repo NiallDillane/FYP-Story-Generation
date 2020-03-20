@@ -1,26 +1,46 @@
 import React, { useState, useEffect } from 'react';
-// import logo from './logo.svg';
+import clippy from './images/coolClippy.png';
 import './App.css';
 
-function App() {
-	const [story, setStory] = useState(0);
+function Story() {
+	const [story, setStory] = useState('One stormy night in Arkansas');
 
-	useEffect(() => {
-		fetch('/getText')
-		.then(res => res.json())
-		.then(data => {
-			setStory(data.text);
-		});
-	}, []);
+	// useEffect(() => {
+	// 	fetch('/getText', {
+	// 		method:"POST",
+	// 		cache: "no-cache",
+	// 		headers:{
+	// 			"content_type":"application/json",
+	// 		},
+	// 		body:JSON.stringify(story)
+	// 		}
+	// 	)
+	// 	.then(res => res.json())
+	// 	.then(data => {
+	// 		console.log(data)
+	// 		setStory(data.text.slice(0, -1));
+	// 	});
+	// }, []);
 
 	return (
+		<textarea name="text"
+			className="text-body"
+			value={story}
+		/>
+	);
+}
+
+function App() {
+	return (
 		<div className="App">
-			<header className="App-header">
-				<textarea name="text"
-					className="text-body"
-					defaultValue={story}
-				/>
-			</header>
+			<div className="col sidebar">
+				<div className="title">
+					<img src={clippy} />
+				</div>
+			</div>
+			<div className="col story">
+				<Story />
+			</div>
 		</div>
 	);
 }
