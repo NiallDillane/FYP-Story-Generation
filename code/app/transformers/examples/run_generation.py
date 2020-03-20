@@ -23,6 +23,7 @@ import logging
 
 import numpy as np
 import torch
+import random
 
 from transformers import (
     CTRLLMHeadModel,
@@ -164,7 +165,7 @@ def main():
 
     parser.add_argument("--prompt", type=str, default="")
     parser.add_argument("--length", type=int, default=20)
-    parser.add_argument("--stop_token", type=str, default=None, help="Token at which text generation is stopped")
+    parser.add_argument("--stop_token", type=str, default="!", help="Token at which text generation is stopped")
 
     parser.add_argument(
         "--temperature",
@@ -181,7 +182,7 @@ def main():
     parser.add_argument("--padding_text", type=str, default="", help="Padding text for Transfo-XL and XLNet.")
     parser.add_argument("--xlm_language", type=str, default="", help="Optional language when used with the XLM model.")
 
-    parser.add_argument("--seed", type=int, default=42, help="random seed for initialization")
+    parser.add_argument("--seed", type=int, default=random.randint(0, 2000000000), help="random seed for initialization")
     parser.add_argument("--no_cuda", action="store_true", help="Avoid using CUDA when available")
     args = parser.parse_args()
 
