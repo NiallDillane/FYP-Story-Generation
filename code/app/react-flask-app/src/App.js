@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import clippy from './images/coolClippy.png';
+import playButton from './images/play-button.png'
+import pauseButton from './images/pause-button.png'
 import './App.css';
 
-function Story() {
-	const [story, setStory] = useState('One stormy night in Arkansas');
+function GenStory() {
+	const [story, setStory] = useState(StoryContent());
 
 	// useEffect(() => {
 	// 	fetch('/getText', {
@@ -23,23 +25,62 @@ function Story() {
 	// }, []);
 
 	return (
-		<textarea name="text"
+		<div name="text"
+			contentEditable="true"
 			className="text-body"
-			value={story}
-		/>
+			defaultValue={story}>
+		</div>
 	);
+}
+
+function StoryPane() {
+	return(
+		<div name="text"
+			contentEditable="true"
+			className="text-body">
+			<StoryContent />
+		</div>
+	)
+}
+
+function StoryContent() {
+	return "Once upon a time ";
+}
+
+function PlayButton(){
+	const [play, setPlay] = useState(false);
+	while (play) {
+		console.log({play});
+		return (
+			<div name="pauseButton"	className="playPause">
+				<img src={pauseButton} onClick={() => setPlay(false)} />
+			</div>
+		)
+	}
+	return (
+		<div name="playButton" className="playPause">
+			<img src={playButton} onClick={() => setPlay(true)} />
+		</div>
+	)
+}
+
+function Title() {
+	return(
+		<div className="title">
+			<img src={clippy} />
+		</div>
+	)
 }
 
 function App() {
 	return (
 		<div className="App">
 			<div className="col sidebar">
-				<div className="title">
-					<img src={clippy} />
-				</div>
+				<Title />
+				<PlayButton />
 			</div>
 			<div className="col story">
-				<Story />
+				<StoryPane />
 			</div>
 		</div>
 	);

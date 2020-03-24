@@ -40,11 +40,22 @@
 	border-left: 1px solid #fafafa;
 }
 
-.title img{
+.title img {
 	margin-top: 20vh;
 	margin-left: auto;
 	margin-right: auto;
 	display: block;
 	width: 15vh;
 	height: 30vh;
+}
+
+.playPause img {
+	margin-top: 5vh;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	width: 5vh;
+	height: 5vh;
+	cursor: pointer;
+	
 }
