@@ -14,60 +14,46 @@ A level-1 auxiliary file: 6_conclusions/conclusions.aux
 The style file: agsm.bst
 Database file #1: 7_references/references_myphd.bib
 Warning--I didn't find a database entry for "mydownloadedimage"
-Warning--I didn't find a database entry for "poem"
-Warning--I didn't find a database entry for "mybook"
-Warning--I didn't find a database entry for "mybookchapter"
-Warning--I didn't find a database entry for "mybookcontribution"
-Warning--I didn't find a database entry for "mycddvd"
-Warning--I didn't find a database entry for "myjournal"
-Warning--I didn't find a database entry for "mypatent"
-Warning--I didn't find a database entry for "myphd"
-Warning--I didn't find a database entry for "myproceeding"
-Warning--I didn't find a database entry for "mytechreport"
-Warning--I didn't find a database entry for "myunpublishedreport"
-Warning--I didn't find a database entry for "mywebvideos"
-Warning--I didn't find a database entry for "mywebpaper"
-Warning--I didn't find a database entry for "mywebarticlejournal"
-Warning--I didn't find a database entry for "mywebpage"
-You've used 7 entries,
+Warning--can't use both volume and number fields in todorov1969structural
+You've used 10 entries,
             2909 wiz_defined-function locations,
-            710 strings with 6251 characters,
-and the built_in function-call counts, 27653 in all, are:
-= -- 4438
-> -- 405
-< -- 1
-+ -- 2140
-- -- 126
-* -- 2379
-:= -- 5621
-add.period$ -- 7
-call.type$ -- 7
-change.case$ -- 95
-chr.to.int$ -- 7
-cite$ -- 7
-duplicate$ -- 111
-empty$ -- 221
-format.name$ -- 145
-if$ -- 4923
+            714 strings with 6491 characters,
+and the built_in function-call counts, 36476 in all, are:
+= -- 5849
+> -- 500
+< -- 2
++ -- 2772
+- -- 154
+* -- 3106
+:= -- 7444
+add.period$ -- 10
+call.type$ -- 10
+change.case$ -- 137
+chr.to.int$ -- 10
+cite$ -- 11
+duplicate$ -- 165
+empty$ -- 326
+format.name$ -- 183
+if$ -- 6506
 int.to.chr$ -- 5
 int.to.str$ -- 0
-missing$ -- 10
-newline$ -- 24
-num.names$ -- 71
-pop$ -- 39
+missing$ -- 13
+newline$ -- 33
+num.names$ -- 101
+pop$ -- 52
 preamble$ -- 1
-purify$ -- 105
+purify$ -- 150
 quote$ -- 0
-skip$ -- 82
+skip$ -- 129
 stack$ -- 0
-substring$ -- 6305
-swap$ -- 15
-text.length$ -- 99
+substring$ -- 8252
+swap$ -- 29
+text.length$ -- 142
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 22
-warning$ -- 0
-while$ -- 153
+type$ -- 34
+warning$ -- 1
+while$ -- 221
 width$ -- 0
-write$ -- 89
-(There were 16 warnings)
+write$ -- 128
+(There were 2 warnings)

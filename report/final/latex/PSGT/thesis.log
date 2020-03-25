@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2020.2.5)  25 MAR 2020 13:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2020.2.5)  25 MAR 2020 17:21
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -595,7 +595,7 @@ LaTeX Info: Redefining \nameref on input line 126.
 \openout4 = `thesis.out'.
 
 \c@lstlisting=\count148
-<0_frontmatter/figures/centre_UL_logo.jpg, id=168, 2370.8575pt x 1185.42876pt>
+<0_frontmatter/figures/centre_UL_logo.jpg, id=249, 2370.8575pt x 1185.42876pt>
 File: 0_frontmatter/figures/centre_UL_logo.jpg Graphic file (type jpg)
 <use 0_frontmatter/figures/centre_UL_logo.jpg>
 Package pdftex.def Info: 0_frontmatter/figures/centre_UL_logo.jpg  used on inpu
@@ -657,34 +657,33 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 as been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.25 ...r}{\numberline {3}Chapter 3}{9}{chapter.3}
+l.25 ...pter}{\numberline {3}Design}{9}{chapter.3}
                                                   % [3
 \FN@pp@footnotehinttrue 
 
 
-])
+]pdfTeX warning (ext4): destination with the same identifier (name{page.iv}) ha
+s been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.54 ...ions and Future Directions}{15}{chapter.6}
+                                                  % [4])
 \tf@toc=\write5
 \openout5 = `thesis.toc'.
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.iv}) has
- been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.198 \listoftables
-                     % print list of tables [4] (./thesis.lot)
+ [5] [6
+
+] (./thesis.lot)
 \tf@lot=\write6
 \openout6 = `thesis.lot'.
 
- [5
+[7] [8
 
-] [6
-
-]
-(./thesis.lof)
+] (./thesis.lof)
 \tf@lof=\write7
 \openout7 = `thesis.lof'.
 
- [7] [8
+ [9] [10
 
 ]
 \openout2 = `1_introduction/introduction.aux'.
@@ -711,16 +710,12 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 
 ]
  2.
-[5] [6]) [7]
+[5] [6] [7]) [8]
 \openout2 = `3_design/design.aux'.
 
- (./3_design/design.tex [8
-
-
-
-]
+ (./3_design/design.tex
  3.
-<3_design/figures/image02.jpg, id=331, 401.5pt x 401.5pt>
+<3_design/figures/image02.jpg, id=446, 401.5pt x 401.5pt>
 File: 3_design/figures/image02.jpg Graphic file (type jpg)
 <use 3_design/figures/image02.jpg>
 Package pdftex.def Info: 3_design/figures/image02.jpg  used on input line 20.
@@ -733,130 +728,63 @@ ut line 20.
 Package natbib Warning: Citation `mydownloadedimage' on page 9 undefined on inp
 ut line 20.
 
-[9 <./3_design/figures/image02.jpg>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+[9
 
- [10]
 
-Package natbib Warning: Citation `poem' on page 11 undefined on input line 80.
 
-) [11]
+ <./3_design/figures/image02.jpg>]) [10]
 \openout2 = `4_implementation/implementation.aux'.
 
- (./4_implementation/implementation.tex [12
 
-
-
-]
+(./4_implementation/implementation.tex
  4.
-[13]) [14]
+[11
+
+
+
+]) [12]
 \openout2 = `5_evaluation/evaluation.aux'.
 
  (./5_evaluation/evaluation.tex
  5.
-
-Package natbib Warning: Citation `mybook' on page 15 undefined on input line 26
-.
-
-
-Package natbib Warning: Citation `mybookchapter' on page 15 undefined on input 
-line 27.
-
-
-Package natbib Warning: Citation `mybookcontribution' on page 15 undefined on i
-nput line 27.
-
-
-Package natbib Warning: Citation `mycddvd' on page 15 undefined on input line 2
-8.
-
-
-Package natbib Warning: Citation `myjournal' on page 15 undefined on input line
- 29.
-
-
-Package natbib Warning: Citation `mypatent' on page 15 undefined on input line 
-30.
-
-
-Package natbib Warning: Citation `myphd' on page 15 undefined on input line 31.
-
-
-
-Package natbib Warning: Citation `myproceeding' on page 15 undefined on input l
-ine 32.
-
-
-Package natbib Warning: Citation `mytechreport' on page 15 undefined on input l
-ine 33.
-
-
-Package natbib Warning: Citation `myunpublishedreport' on page 15 undefined on 
-input line 34.
-
-
-Package natbib Warning: Citation `mywebvideos' on page 15 undefined on input li
-ne 35.
-
-[15
+) [13
 
 
 
 ]
-
-Package natbib Warning: Citation `mywebpaper' on page 16 undefined on input lin
-e 36.
-
-
-Package natbib Warning: Citation `mywebarticlejournal' on page 16 undefined on 
-input line 37.
-
-
-Package natbib Warning: Citation `mywebpage' on page 16 undefined on input line
- 38.
-
-
-Package natbib Warning: Citation `mydownloadedimage' on page 16 undefined on in
-put line 39.
-
-
-Package natbib Warning: Citation `mybookchapter' on page 16 undefined on input 
-line 45.
-
-) [16]
 \openout2 = `6_conclusions/conclusions.aux'.
 
- (./6_conclusions/conclusions.tex
- 6.
-) [17
+ (./6_conclusions/conclusions.tex [14
 
-
-
-] [18
 
 
 ]
-<image01.jpg, id=384, 401.5pt x 401.5pt>
+ 6.
+) [15] [16
+
+
+]
+<image01.jpg, id=482, 401.5pt x 401.5pt>
 File: image01.jpg Graphic file (type jpg)
 <use image01.jpg>
-Package pdftex.def Info: image01.jpg  used on input line 263.
+Package pdftex.def Info: image01.jpg  used on input line 259.
 (pdftex.def)             Requested size: 330.05322pt x 330.07756pt.
 
 
-Package natbib Warning: Citation `mydownloadedimage' on page 19 undefined on in
-put line 263.
+Package natbib Warning: Citation `mydownloadedimage' on page 17 undefined on in
+put line 259.
 
 
-Package natbib Warning: Citation `mydownloadedimage' on page 19 undefined on in
-put line 263.
+Package natbib Warning: Citation `mydownloadedimage' on page 17 undefined on in
+put line 259.
 
-[19 <./image01.jpg>] [20
+[17 <./image01.jpg>] [18
 
-] [21] [22
+] [19] [20
 
 ]
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 308.
+nput line 304.
  (./ahrs_triad_mote.c
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <6> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 2.
@@ -867,43 +795,49 @@ File: omlcmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <6> not available
 (Font)              Font shape `OML/cmm/m/it' tried instead on input line 35.
- [23]
+ [21]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [24])
+ [22])
 (./thesis.bbl (./thesis.brf)
 \tf@brf=\write8
 \openout8 = `thesis.brf'.
 
- [25] [26
+ [23] [24
 
 ])
 
 Package natbib Warning: There were undefined citations.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 365.
-[27]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 365.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 361.
+[25]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 361.
  (./thesis.aux (./0_frontmatter/abstract.aux)
 (./0_frontmatter/declaration.aux) (./0_frontmatter/acknowledgement.aux)
 (./0_frontmatter/dedication.aux) (./1_introduction/introduction.aux)
 (./2_related_research/related_research.aux) (./3_design/design.aux)
 (./4_implementation/implementation.aux) (./5_evaluation/evaluation.aux)
 (./6_conclusions/conclusions.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 365.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 365.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 361.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 361.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 7A462EF648A9AA135C142AD9A08F671F;2648.
-Package rerunfilecheck Info: File `thesis.brf' has not changed.
-(rerunfilecheck)             Checksum: 3EBF2721212895A52C2390CDB577B6B7;377.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 365.
+(rerunfilecheck)             Checksum: 0EC14466B095C2763FCD6710ACB19309;4034.
+
+
+Package rerunfilecheck Warning: File `thesis.brf' has changed.
+(rerunfilecheck)                Rerun to get bibliographical references right.
+
+Package rerunfilecheck Info: Checksums for `thesis.brf':
+(rerunfilecheck)             Before: 99E80EF244A0E5544C6908A72AF8068C;434
+(rerunfilecheck)             After:  CC29D758F8D1D09CBC26B8958CAA203B;548.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 361.
  )
 (\end occurred when \iftrue on line 85 was incomplete) 
 Here is how much of TeX's memory you used:
- 12829 strings out of 492616
- 192143 string characters out of 6129482
+ 12877 strings out of 492616
+ 193209 string characters out of 6129482
  690321 words of memory out of 5000000
- 16218 multiletter control sequences out of 15000+600000
+ 16249 multiletter control sequences out of 15000+600000
  12966 words of font info for 48 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  47i,12n,83p,915b,2071s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -911,23 +845,18 @@ Here is how much of TeX's memory you used:
 texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2019/t
 exmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2019/te
 xmf-dist/fonts/type1/public/amsfonts/cm/cmbx6.pfb></usr/local/texlive/2019/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2019/texmf
--dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2019/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2019/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2019/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2019/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2019/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2019/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2019/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmti10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmti12.pfb>
-Output written on thesis.pdf (39 pages, 845630 bytes).
+f-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2019/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2019/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2019/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2019/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2019/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2019/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2019/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmti12.pfb>
+Output written on thesis.pdf (39 pages, 802987 bytes).
 PDF statistics:
- 691 PDF objects out of 1000 (max. 8388607)
- 624 compressed objects within 7 object streams
- 240 named destinations out of 1000 (max. 500000)
- 344 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 779 PDF objects out of 1000 (max. 8388607)
+ 716 compressed objects within 8 object streams
+ 257 named destinations out of 1000 (max. 500000)
+ 504 words of extra memory for PDF output out of 10000 (max. 10000000)
 

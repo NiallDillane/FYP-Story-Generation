@@ -1,6 +1,6 @@
 \babel@toc {english}{}
-\contentsline {chapter}{List of Tables}{v}{chapter*.2}% 
-\contentsline {chapter}{List of Figures}{vii}{chapter*.3}% 
+\contentsline {chapter}{List of Tables}{vii}{chapter*.2}% 
+\contentsline {chapter}{List of Figures}{ix}{chapter*.3}% 
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}% 
 \contentsline {section}{\numberline {1.1}Aims and Objectives}{2}{section.1.1}% 
 \contentsline {section}{\numberline {1.2}Methodology}{2}{section.1.2}% 
@@ -8,35 +8,55 @@
 \contentsline {section}{\numberline {1.4}Report Outline}{3}{section.1.4}% 
 \contentsline {chapter}{\numberline {2}Related Research}{5}{chapter.2}% 
 \contentsline {section}{\numberline {2.1}Stories}{5}{section.2.1}% 
-\contentsline {subsection}{\numberline {2.1.1}Structure}{5}{subsection.2.1.1}% 
+\contentsline {subsection}{\numberline {2.1.1}Structure}{6}{subsection.2.1.1}% 
 \contentsline {subsection}{\numberline {2.1.2}Elements}{6}{subsection.2.1.2}% 
 \contentsline {subsection}{\numberline {2.1.3}Evaluation}{6}{subsection.2.1.3}% 
-\contentsline {section}{\numberline {2.2}Formulations}{6}{section.2.2}% 
-\contentsline {subsection}{\numberline {2.2.1}Abstractions}{6}{subsection.2.2.1}% 
-\contentsline {section}{\numberline {2.3}Technology}{6}{section.2.3}% 
-\contentsline {subsection}{\numberline {2.3.1}NLP}{6}{subsection.2.3.1}% 
-\contentsline {subsection}{\numberline {2.3.2}Grammars}{6}{subsection.2.3.2}% 
-\contentsline {subsection}{\numberline {2.3.3}Neural Networks}{6}{subsection.2.3.3}% 
+\contentsline {section}{\numberline {2.2}Narratology}{7}{section.2.2}% 
+\contentsline {subsection}{\numberline {2.2.1}Abstractions}{7}{subsection.2.2.1}% 
+\contentsline {section}{\numberline {2.3}Technology}{7}{section.2.3}% 
+\contentsline {subsection}{\numberline {2.3.1}NLP}{7}{subsection.2.3.1}% 
+\contentsline {subsection}{\numberline {2.3.2}Grammars}{7}{subsection.2.3.2}% 
+\contentsline {subsection}{\numberline {2.3.3}Neural Networks}{7}{subsection.2.3.3}% 
 \contentsline {subsubsection}{\numberline {2.3.3.1}Recurrent Neural Networks \& LSTMs}{7}{subsubsection.2.3.3.1}% 
 \contentsline {subsection}{\numberline {2.3.4}Transformers}{7}{subsection.2.3.4}% 
 \contentsline {subsubsection}{\numberline {2.3.4.1}BERT}{7}{subsubsection.2.3.4.1}% 
-\contentsline {subsubsection}{\numberline {2.3.4.2}GPT}{7}{subsubsection.2.3.4.2}% 
-\contentsline {subsubsection}{\numberline {2.3.4.3}GPT-2}{7}{subsubsection.2.3.4.3}% 
-\contentsline {chapter}{\numberline {3}Chapter 3}{9}{chapter.3}% 
-\contentsline {section}{\numberline {3.1}Insert a Figure}{9}{section.3.1}% 
-\contentsline {section}{\numberline {3.2}Creating a list}{10}{section.3.2}% 
-\contentsline {subsection}{\numberline {3.2.1}Creating a Table}{10}{subsection.3.2.1}% 
-\contentsline {section}{\numberline {3.3}Quote}{11}{section.3.3}% 
-\contentsline {chapter}{\numberline {4}Math formulae in Latex}{13}{chapter.4}% 
-\contentsline {section}{\numberline {4.1}Math}{13}{section.4.1}% 
-\contentsline {chapter}{\numberline {5}Chapter 5}{15}{chapter.5}% 
-\contentsline {section}{\numberline {5.1}References}{15}{section.5.1}% 
-\contentsline {chapter}{\numberline {6}Conclusions and Future Directions}{17}{chapter.6}% 
-\contentsline {section}{\numberline {6.1}Summary}{17}{section.6.1}% 
-\contentsline {section}{\numberline {6.2}Conclusions}{17}{section.6.2}% 
-\contentsline {section}{\numberline {6.3}Contributions}{17}{section.6.3}% 
-\contentsline {section}{\numberline {6.4}Future Work}{17}{section.6.4}% 
-\contentsline {chapter}{Appendix A: Insert figure in Appendix}{19}{figure.caption.8}% 
-\contentsline {chapter}{Appendix B: Insert Text in Appendix}{21}{section*.10}% 
-\contentsline {chapter}{Appendix C: Insert C++/Java et al. Code in Appendix}{25}{lstnumber.-1.143}% 
-\contentsline {chapter}{References}{27}{appendix*.13}% 
+\contentsline {subsubsection}{\numberline {2.3.4.2}GPT}{8}{subsubsection.2.3.4.2}% 
+\contentsline {subsubsection}{\numberline {2.3.4.3}GPT-2}{8}{subsubsection.2.3.4.3}% 
+\contentsline {chapter}{\numberline {3}Design}{9}{chapter.3}% 
+\contentsline {section}{\numberline {3.1}Language Model}{9}{section.3.1}% 
+\contentsline {subsection}{\numberline {3.1.1}GPT-2}{10}{subsection.3.1.1}% 
+\contentsline {subsection}{\numberline {3.1.2}Implementation}{10}{subsection.3.1.2}% 
+\contentsline {subsection}{\numberline {3.1.3}Training}{10}{subsection.3.1.3}% 
+\contentsline {subsection}{\numberline {3.1.4}Data}{10}{subsection.3.1.4}% 
+\contentsline {subsection}{\numberline {3.1.5}Generation}{10}{subsection.3.1.5}% 
+\contentsline {section}{\numberline {3.2}User Interface}{10}{section.3.2}% 
+\contentsline {subsection}{\numberline {3.2.1}Back End}{10}{subsection.3.2.1}% 
+\contentsline {subsection}{\numberline {3.2.2}Front End}{10}{subsection.3.2.2}% 
+\contentsline {chapter}{\numberline {4}Implementation}{11}{chapter.4}% 
+\contentsline {section}{\numberline {4.1}Web Scraping}{11}{section.4.1}% 
+\contentsline {subsection}{\numberline {4.1.1}Reddit API}{11}{subsection.4.1.1}% 
+\contentsline {subsection}{\numberline {4.1.2}PushShift API}{11}{subsection.4.1.2}% 
+\contentsline {subsection}{\numberline {4.1.3}Datasets}{11}{subsection.4.1.3}% 
+\contentsline {section}{\numberline {4.2}Training the Model}{11}{section.4.2}% 
+\contentsline {subsection}{\numberline {4.2.1}HuggingFace}{12}{subsection.4.2.1}% 
+\contentsline {subsubsection}{\numberline {4.2.1.1}Scripts}{12}{subsubsection.4.2.1.1}% 
+\contentsline {subsection}{\numberline {4.2.2}Google Colab}{12}{subsection.4.2.2}% 
+\contentsline {subsubsection}{\numberline {4.2.2.1}Workflow}{12}{subsubsection.4.2.2.1}% 
+\contentsline {section}{\numberline {4.3}Python Flask API}{12}{section.4.3}% 
+\contentsline {section}{\numberline {4.4}React JS}{12}{section.4.4}% 
+\contentsline {subsection}{\numberline {4.4.1}Hooks}{12}{subsection.4.4.1}% 
+\contentsline {chapter}{\numberline {5}Evaluation}{13}{chapter.5}% 
+\contentsline {section}{\numberline {5.1}Language Model Metrics}{13}{section.5.1}% 
+\contentsline {subsection}{\numberline {5.1.1}Perplexity}{13}{subsection.5.1.1}% 
+\contentsline {section}{\numberline {5.2}Human Review}{13}{section.5.2}% 
+\contentsline {subsection}{\numberline {5.2.1}Self Review}{13}{subsection.5.2.1}% 
+\contentsline {subsection}{\numberline {5.2.2}Anonymous Reviews}{13}{subsection.5.2.2}% 
+\contentsline {chapter}{\numberline {6}Conclusions and Future Directions}{15}{chapter.6}% 
+\contentsline {section}{\numberline {6.1}Summary}{15}{section.6.1}% 
+\contentsline {section}{\numberline {6.2}Conclusions}{15}{section.6.2}% 
+\contentsline {section}{\numberline {6.3}Contributions}{15}{section.6.3}% 
+\contentsline {section}{\numberline {6.4}Future Work}{15}{section.6.4}% 
+\contentsline {chapter}{Appendix A: Insert figure in Appendix}{17}{figure.caption.7}% 
+\contentsline {chapter}{Appendix B: Insert Text in Appendix}{19}{section*.9}% 
+\contentsline {chapter}{Appendix C: Insert C++/Java et al. Code in Appendix}{23}{lstnumber.-1.143}% 
+\contentsline {chapter}{References}{25}{appendix*.12}% 
