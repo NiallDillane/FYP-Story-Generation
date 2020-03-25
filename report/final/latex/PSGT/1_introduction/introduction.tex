@@ -1,0 +1,93 @@
+
+% this file is called up by thesis.tex
+% content in this file will be fed into the main document
+
+%: ----------------------- introduction file header -----------------------
+\chapter{Introduction}
+
+% the code below specifies where the figures are stored
+\ifpdf
+    \graphicspath{{1_introduction/figures/PNG/}{1_introduction/figures/PDF/}{1_introduction/figures/}}
+\else
+    \graphicspath{{1_introduction/figures/EPS/}{1_introduction/figures/}}
+\fi
+
+% ----------------------------------------------------------------------
+%: ----------------------- introduction content ----------------------- 
+% ----------------------------------------------------------------------
+
+The overall goal of this report is to investigate what makes a good story, and then methods for algorithmically generating stories of this nature. The question of "Why?" may be asked. What makes stories important enough to warrant this kind of work?
+
+Without delving too much into the later content of this report, stories are widely believed to be incredibly useful for fostering an understanding of the shared human experience and questions of existence (\Citealt{eder2010life}), for educational communication (\Citealt{birch1996says}) and at their most incisive, contributing to social and political change (\Citealt{fuertes2012storytelling}). This is all in addition to the entertainment value we all gain from stories, whether they be written, recorded, or shared via word of mouth. These stories develop whole ideologies and cultures; one need only look at religions for evidence.
+
+For these reasons, I believe this research to be incredibly worthwhile. If we can aid or expedite the writing process with the introduction of procedurally generated contributions, this should spur even more creativity in human writers. My inspiration for this is drawn from \href{https://deepmind.com/}{Google Deep Mind} and their Alpha Go (\Citealt{silver2017mastering}) research: an artificial intelligence (AI) program designed to tackle the ancient Chinese board game of Go. This is outside the scope of our research, but one takeaway from their research was that humans learned and became better for having played the AI program, in the same way they might improve while playing a superior human. We believe we can achieve similar improvements in human writers with the help of an AI writer, as well as the AI's productions themselves.
+
+\vspace{10mm}
+
+% here we declare a new section
+
+\section{Aims and Objectives} 
+
+Two main questions are addressed by this research: what is a good story, and how they may be procedurally generated.
+In order to address this question, this work focuses on the following issues:
+
+\begin{itemize}
+
+\item Firstly, an examination of stories from a linguistic perspective. Older research or that which does not concern itself so much with technology. This includes things like story structures, character development, plot devices and so on. Creating a perfect definition for a "good story" may be implausible, but narrowing our definition would be good progress.
+
+\item Secondly, we must investigate algorithms for generating these stories; work that has been done to formulate these elements in a way that we could use in a program.
+
+\item Thirdly, we will delve into the technology side, researching advancements that have been made from early stages up through state-of-the-art. From here we will produce a prototype product which will generate stories and allow human users to interact and modify these stories as they go. In the same way that a human-computer combination has proved more effective than a human alone in chess (\Citealt{michie1972programmer}), we aim to create an interactive co-writing experience.
+
+\end{itemize}
+
+
+
+% here we declare a new section
+\section{Methodology} 
+
+In order to address these questions we will follow the methodology outlined in sequence above, before designing the system itself and implementing the product. Afterwards, we will reflect and perform various types of evaluation on the productions of the system, noting that it is not primarily intended to be run alone but rather with human interaction. This will include known language generation metrics as well as human review.
+ 
+ 
+% here we declare a new section
+\section{Research Contribution}
+
+With this research, I hope to contribute a comprehensive history and discussion of what makes stories a worthwhile endeavour, how their quality and elements may be defined, and finally produce a prototype that allows us to see the potential of procedural story generation.
+
+\section{Report Outline} 
+
+The remaining chapters of this report are as follows:
+
+
+\emph{Chapter Two} outlines and discusses the history and related research to this topic, from linguistic and technological perspectives.
+
+\emph{Chapter Three} relates to the design of my chosen system and the choices that were made with regard to models, architecture etc.
+
+\emph{Chapter Four} presents the implementation of the system, portions of interesting code, struggles that were faced and how I overcame them.
+
+\emph{Chapter Five} deals with the evaluation of productions from the system, both objective metrics and subjective human review.
+
+\emph{Chapter Six} draws conclusions and evaluates my satisfaction and areas for improvement. Lastly, it suggests possible future works and research.
+
+%\vspace{5 mm}
+
+%A series of documents have been included in the Appendix section of this dissertation. These are:
+%
+%\begin{itemize}
+%\item \emph{Appendix A} outlines . . .
+%
+%\item \emph{Appendix B} presents . . .
+%
+%\item \emph{Appendix C} includes . . .
+%\end{itemize} 
+%
+%\vspace{5 mm}
+%
+%Attached to this dissertation is a CD containing the following items:
+%
+%\begin{itemize}
+%\item \emph{folder 1}: . . .
+%
+%\item \emph{folder 2}: . . .
+%
+%\end{itemize}
