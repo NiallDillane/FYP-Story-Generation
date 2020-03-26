@@ -13,47 +13,44 @@ A level-1 auxiliary file: 5_evaluation/evaluation.aux
 A level-1 auxiliary file: 6_conclusions/conclusions.aux
 The style file: agsm.bst
 Database file #1: 7_references/references_myphd.bib
-Warning--I didn't find a database entry for "mydownloadedimage"
-Warning--can't use both volume and number fields in todorov1969structural
-You've used 10 entries,
+You've used 25 entries,
             2909 wiz_defined-function locations,
-            714 strings with 6491 characters,
-and the built_in function-call counts, 36476 in all, are:
-= -- 5849
-> -- 500
-< -- 2
-+ -- 2772
-- -- 154
-* -- 3106
-:= -- 7444
-add.period$ -- 10
-call.type$ -- 10
-change.case$ -- 137
-chr.to.int$ -- 10
-cite$ -- 11
-duplicate$ -- 165
-empty$ -- 326
-format.name$ -- 183
-if$ -- 6506
+            792 strings with 8119 characters,
+and the built_in function-call counts, 74998 in all, are:
+= -- 11878
+> -- 1021
+< -- 4
++ -- 5507
+- -- 308
+* -- 6180
+:= -- 15626
+add.period$ -- 25
+call.type$ -- 25
+change.case$ -- 338
+chr.to.int$ -- 25
+cite$ -- 25
+duplicate$ -- 417
+empty$ -- 794
+format.name$ -- 374
+if$ -- 13364
 int.to.chr$ -- 5
 int.to.str$ -- 0
-missing$ -- 13
-newline$ -- 33
-num.names$ -- 101
-pop$ -- 52
+missing$ -- 37
+newline$ -- 78
+num.names$ -- 254
+pop$ -- 161
 preamble$ -- 1
-purify$ -- 150
+purify$ -- 375
 quote$ -- 0
-skip$ -- 129
+skip$ -- 308
 stack$ -- 0
-substring$ -- 8252
-swap$ -- 29
-text.length$ -- 142
+substring$ -- 16512
+swap$ -- 64
+text.length$ -- 354
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 34
-warning$ -- 1
-while$ -- 221
+type$ -- 76
+warning$ -- 0
+while$ -- 546
 width$ -- 0
-write$ -- 128
-(There were 2 warnings)
+write$ -- 316

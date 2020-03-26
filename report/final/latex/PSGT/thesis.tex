@@ -254,10 +254,6 @@ Showcase day: 18th April 2020
 \chapter*{Appendix A}
 \section*{Insert a figure}
 
-
-% here is how to add a figure in the appendix. it is the same as any other place in the latex document
-\figuremacroW{image01}{Title of Figure}{Description. [Source: (\Citealt{mydownloadedimage})]}{0.8}
-
 % here is how we close the chapter
 \addcontentsline{toc}{chapter}{Appendix A: Insert figure in Appendix}
 \chaptermark{Appendix}
@@ -265,26 +261,7 @@ Showcase day: 18th April 2020
 
 
 
-
-
-
-
-
-% here we open a new chapter in Appendix etc. etc..
 \chapter*{Appendix B}
-\section*{Title}
-
-Type here you text as usual . . .
-
-
-\addcontentsline{toc}{chapter}{Appendix B: Insert Text in Appendix}
-\chaptermark{Appendix}
-\markboth{Appendix}{Appendix}
-
-
-
-
-\chapter*{Appendix C}
 \section*{Code for estimating attitude}
 
 AHRS\_TRIAD.C
@@ -303,7 +280,7 @@ commentstyle=\color{c++green},}
 %Load your code file below
 \lstinputlisting[fontadjust=\true]{ahrs_triad_mote.c}
 
-\addcontentsline{toc}{chapter}{Appendix C: Insert C++/Java et al. Code in Appendix}
+\addcontentsline{toc}{chapter}{Appendix B: Insert Code in Appendix}
 \chaptermark{Appendix}
 \markboth{Appendix}{Appendix}
 
