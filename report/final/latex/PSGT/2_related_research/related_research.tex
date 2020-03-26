@@ -123,24 +123,65 @@ For example:
 
 This is a Context Free Grammar (CFG) that could generate a string of letters "a" and "b". 
 
-However, while these are interesting and worth exploring from a historical perspective, formal grammars like this require significant human building and labelling (\Citealt{compton2014tracery}), which is troubling from the perspectives of extensibility and originality.
+Computing systems for grammar and story generation have been built (\Citealt{compton2014tracery}, )however, formal grammars like this require significant human building and labelling. While these are interesting and worth exploring from a historical perspective, they are troubling from the perspectives of extensibility and originality.
 
 
-\section{Natural Language Processing}
+\section{Natural Language Generation}
 
-Definitions, brief history
+A subfield of linguistics and computer science, Natural Language Processing (NLP) deals with making easier the interaction between humans and computers, enabling machines to more easily understand natural, human language. It has risen to prominence since the 1990s in line with the rise of machine learning as a programming technique (\Citealt{johnson2009statistical}). Before this, early language processing systems were based on handwritten rules like the grammars outlined above (\Citealt{schank2013scripts}), which meant a comparative lack of knowledge, or features – weights on different choices based on the data. This machine learning approach allowed programs to learn rules by themselves, via analysing large amounts of input data.
+
+Further developments in the 2010s brought the advancement of deep learning and neural networks, which could achieve better results than ever before (\Citealt{goldberg2016primer}). We will examine these in more detail shortly, as these results made them quickly became the leading contender for our system.
+
+It is worth noting that the NLP field is wide, and for our purposes we will primarily focus on the area of Natural Language Generation (NLG). Natural Language Understanding, which we are perhaps more familiar with in things like virtual assistants, aims to take in natural language, abstract it and produce some kind of representation of the idea being conveyed (\Citealt{reiter2000building}). Conversely, NLG attempts to take what is structured data, weights and biases based on input data, and produce natural language.
 
 \subsection{Neural Networks}
 
-So hot right now.
+An Artificial Neural Network (ANN) is a computing system that seeks to emulate the kind of processing and problem solving done by the human brain, designed around pattern recognition (\Citealt{haykin1994neural}). The core principle is that they “learn” to perform said task by analysing examples and figuring out their own rules, rather than being explicitly told any rules up front. 
+
+An ANN is modelled after the human brain, containing nodes, or "neurons", which are connected to each other. They can receive input, process this with their internal state, and produce output (\Citealt{winston1992artificial}). This can be passed as a message to another neuron or ultimately, complete the task at hand. A basic example of the architecture looks something like the following: (Figure \ref{nn-sample}).
+ 
+\figuremacroW{nn-sample}{Artificial Neural Network Architecture}{Neurons and connections. [Source: (\Citealt{nn-sample-img})]}{0.6}
+
+Each connection between neurons has an associated weight, which represents its relative importance, which is taken into account by the receiving neuron processing its inputs.
+
+The classic example and popular use case is image identification (\Citealt{le2013building}). To teach a program to correctly separate images of cats and dogs, the basic approach would be to give it explicit rules for cats versus dogs – nose, ears, paws, etc. However, the ANN allows you to simply feed it examples (ideally many) of images of both, and then allow it to formulate those rules by itself. This saves time and work for the user, and tends to create a much more accurate model (\Citealt{lecun1989backpropagation}), especially with a large amount of input, "training" data.
+
 
 \subsubsection{Recurrent Neural Networks \& LSTMs}
 
-Better, and best for a while, but still not great.
+Examining some of the recent works on natural language generation and even specific story generation papers, Recurrent Neural Networks (RNNs) stood out as the popular technology (\Citealt{peng2018towards}), (\Citealt{fan2018hierarchical}), (\Citealt{sutskever2014sequence}). 
+
+These are like neural networks, but with loops that provide a kind of memory or persistence (\Citealt{graves2008novel}). These have feedback connections and can process sequences of data, instead of just single data points like a typical (feedforward) neural network. Particularly Long Short Term Memory (LSTM) networks, which are better at remembering long term dependencies. See (Figure \ref{rnn-unrolled}).
+ 
+\figuremacroW{rnn-unrolled}{Recurrent Neuron}{Loops for persistence [Source: (\Citealt{olah2015rnn})]}{0.8}
+
+This is incredibly important for NLG, because context matters. When identifying images, as with the previous example, this isn’t such a big deal. Examples are distinct and don’t depend on each other – one input, one output. However, with video or language, you must generate the next part of your output, piece by piece. In this case, remembering what was written previously is vital, not only to make coherent sentences but also to construct an overall narrative throughout the story. Characters should develop, plot points should advance, relevant twists should occur, and so on.
+
 
 \subsection{Transformers}
 
-vaswani et al, Attention is all you need, faster, longer range dependencies
+However, these RNNs and LSTMs appear not to be state of the art in the NLP world anymore. Things move quickly, and that has led us to the Transformer architecture. 
+
+The idea was pioneered by a team of Google researchers (\Citealt{vaswani2017attention}) and the early results are very promising. OpenAI’s GPT-2 (\Citealt{radford2019language}) is perhaps the most advanced language processing Artificial Intelligence (AI) system currently, so much so that they declined to release their full code, claiming they fear it could be used for ill means e.g. fake news.
+
+We mentioned RNNs utilising loops, but in reality it’s more like a series of connected Neurons, each performing its processing and then passing the new “state” to the next. This is what allows it to maintain memory – each stage of the computation is aware of everything that happened previously. You can see this in the following, with the RNN on top and Transformer on bottom: (Figure \ref{attention}).
+ 
+\figuremacroW{attention}{RNN vs. Transformer Architecture}{Attention replacing loops [Source: (\Citealt{kurita2017attention})]}{0.8}
+
+Note: here the example is translation, but for language generation the idea is the same. Instead of passing in a passage and translating it, we seek to find the next part of said passage. Note also that there are encoding (orange) and decoding (blue) stages, but they are practically similar. 
+
+The issues here are clear. The RNN is very difficult to parallelise since the computation must be done in sequence, passing the state along (\Citealt{bengio1994learning}). Also, the further you drift from the start (i.e. the longer the text becomes) the less your network will remember about those early stages. This is a problem for stories, where elements are often mentioned briefly at the start, only to come into prominence later – vital for continuity.
+
+Transformers, by contrast, take the entire input passage in at once, using the concept of Attention (\Citealt{vaswani2017attention}) along with positional encoding (to ensure you don’t start mixing up a sentence) to calculate the relative importance of each word. These results are then passed through a more traditional feedforward Neural Network (much faster than an RNN) and potentially another multi-head attention stage (applications differ) to produce your following piece of the passage. 
+
+For the purposes of this research, we won’t be delving into the inner workings of the Attention mechanism, but essentially what it does is calculate the relevance of each word in the input. For example, if you have the input “I grew up in France… I speak fluent” and wish to predict the next word, the word “France” will be given a much higher score, indicating to the system what it should predict based on.
+
+This helps hugely with the long term dependency issue, since at each stage the entire input is considered, and thus there is a much lower risk of earlier information being “forgotten”, something that even the finest LSTMs struggled with. 
+
+This could lead to performance issues, but thanks to the Attention mechanism and feedforward NN being used (allowing you to process the entire input at once), Transformers are in fact faster.
+
+The best models also seem to utilise unsupervised learning (to be discussed later), which has the obvious benefit of being able to feed it much more data, as seen with GPT-2 and its 1.5 billion parameters (\Citealt{radford2019language}). However, you do need to feed it a massive amount of data for it to be in any way effective. 
+
 
 \subsubsection{BERT}
 
