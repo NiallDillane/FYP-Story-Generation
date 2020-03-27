@@ -182,19 +182,28 @@ This could lead to performance issues, but thanks to the Attention mechanism and
 
 The best models also seem to utilise unsupervised learning (to be discussed later), which has the obvious benefit of being able to feed it much more data, as seen with GPT-2 and its 1.5 billion parameters (\Citealt{radford2019language}). However, you do need to feed it a massive amount of data for it to be in any way effective. 
 
+A number of models have been developed with this architecture.
+
 
 \subsubsection{BERT}
 
-Google
+Google, being the organisation behind this original Attention mechanism research (\Citealt{vaswani2017attention}), was naturally one of the first to develop a Transformer architecture based on it. 
 
-\subsubsection{GPT}
+BERT (Bidirectional Encoder Representations from Transformers) was developed in 2018 and promptly achieved excellent results on natural language understanding tasks (\Citealt{devlin2018bert}). The findings were significant enough that in October 2019, Google began applying BERT to improve its search algorithms (\Citealt{nayak2019search}), the foundation of their business.
 
-First attempt
+However, while exciting and emblematic of the potential of Transformers, BERT is not necessarily suited to our task. As mentioned, it was mainly trained and used for the purposes of natural language understanding (NLU), rather than generation (NLG). As such, I continued my search for a more appropriate model.
 
-\subsubsection{GPT-2}
+\subsubsection{GPT \& GPT-2}
 
-New and improved!
+GPT (Generative Pretrained Transformer) was also developed in 2018, this time by \href{https://openai.com/}{OpenAI}, a decoder-only Transformer architecture with largely unsupervised training. A massive corpus of text was gathered from the internet and fed to the model, which quickly produced impressive results (\Citealt{radford2018improving}). 
 
+Their research focused on initially training the model (unsupervised) on a very diverse, wide range of text, then fine-tuning to each specific task on top of that, now supervised. 
+
+It follows the simple principle of predicting \emph{the next word}, much like our phones will offer next-word suggestions based on what we have typed before, but on a much more advanced level and (ideally) not descending into gibberish. This was incredibly promising and looked ideal for my use case.
+
+GPT-2 was next, taking things a step further with entirely unsupervised learning, and achieving even more state-of-the-art results than before (\Citealt{radford2019language}). To achieve this, a huge amount of parameters was necessary. For perspective, the smallest GPT model has parameters roughly equivalent in number to the largest BERT model. The largest GPT-2 has over an order of magnitude more than that. 1.5 billion parameters at its largest. 
+
+This is clearly the ultimate NLG model at this point, and seems like the obvious choice for our system.
 
 
 % ---------------------------------------------------------------------------

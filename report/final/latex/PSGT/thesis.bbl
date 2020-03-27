@@ -36,6 +36,13 @@ Compton, K., Filstrup, B. et~al.  \harvardyearleft 2014\harvardyearright ,
   Tracery: Approachable story grammar authoring for casual users, {\em in}
   `Seventh Intelligent Narrative Technologies Workshop'.
 
+\harvarditem[Devlin et~al.]{Devlin, Chang, Lee \harvardand\
+  Toutanova}{2018}{devlin2018bert}
+Devlin, J., Chang, M.-W., Lee, K. \harvardand\ Toutanova, K.  \harvardyearleft
+  2018\harvardyearright , `Bert: Pre-training of deep bidirectional
+  transformers for language understanding', {\em arXiv preprint
+  arXiv:1810.04805} .
+
 \harvarditem{Dibell}{1999}{dibell1999elements}
 Dibell, A.  \harvardyearleft 1999\harvardyearright , {\em Elements of Fiction
   Writing-Plot}, Penguin.
@@ -137,6 +144,11 @@ Michie, D.  \harvardyearleft 1972\harvardyearright , `Programmer's gambit',
 Morrill, S. \harvardand\ Williamson, J.  \harvardyearleft 2013\harvardyearright
   , {\em Go Teen Writers: Edit Your Novel}, Luminous.
 
+\harvarditem{Nayak}{2019}{nayak2019search}
+Nayak, P.  \harvardyearleft 2019\harvardyearright , `Understanding searches
+  better than ever before'.
+\newline\harvardurl{https://www.blog.google/products/search/search-language-understanding-bert/}
+
 \harvarditem{Olah}{2015}{olah2015rnn}
 Olah, C.  \harvardyearleft 2015\harvardyearright , `Understanding lstm
   networks'.
@@ -156,6 +168,12 @@ Post, E.~L.  \harvardyearleft 1943\harvardyearright , `Formal reductions of the
 \harvarditem{Propp}{1968}{propp1968morphology}
 Propp, V.~I.  \harvardyearleft 1968\harvardyearright , {\em Morphology of the
   Folktale}, Vol.~9, University of Texas Press.
+
+\harvarditem[Radford et~al.]{Radford, Narasimhan, Salimans \harvardand\
+  Sutskever}{2018}{radford2018improving}
+Radford, A., Narasimhan, K., Salimans, T. \harvardand\ Sutskever, I.
+  \harvardyearleft 2018\harvardyearright , `Improving language understanding
+  with unsupervised learning', {\em Technical report, OpenAI} .
 
 \harvarditem[Radford et~al.]{Radford, Wu, Child, Luan, Amodei \harvardand\
   Sutskever}{2019}{radford2019language}

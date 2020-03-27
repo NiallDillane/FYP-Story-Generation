@@ -15,27 +15,48 @@
 
 
 \section{Language Model}
-Which one do we choose? But there are so many!
+
+We identified a range of potential models for this project, ranging from earlier grammars, to more recent Recurrent Neural Networks, and finally Transformers. For demonstration purposes, we decided it would be best to settle on one model.
 
 \subsection{GPT-2}
 
-Comparison with the others, why it's best
+As discussed, GPT-2 is currently the state-of-the-art model when it comes to Natural Language Generation. I identified several resources available which made it easier to utilise and fine-tune this model \footnote{\href{https://talktotransformer.com/}{Talk to Transformer} by Adam King} \footnote{\href{https://github.com/minimaxir/gpt-2-simple}{GPT-2 Simple} by Max Woolf}, as well as the original open-source code itself \footnote{\href{https://github.com/openai/gpt-2/}{GPT-2} by OpenAI}. 
+
+This made the task somewhat less daunting, but my original intention at the time was to modify the underlying architecture in some way. Training a model, I reasoned, was too basic, and I needed something more. Since the code is open source, I set about reading through it, along with many explainer articles \footnote{\href{http://jalammar.github.io/illustrated-gpt2/}{The Illustrated GPT-2} and other articles by Jay Alammar were incredibly useful} and videos \footnote{\href{https://youtu.be/S0KakHcj_rs}{Attention Is All You Need}, a talk at the AI Socratic Circles, was helpful in understanding the Attention mechanism.}.
+
+However, the realisation of the enormity of this challenge soon hit me. These were concepts and models developed by teams of post-doctorate level researchers, working full-time on these problems, with the backing of huge corporations. For myself, just getting started in the field of machine learning and NLP, it would be an Augean task.
+
+We took a step back, and considered where I might add value to the system. We discussed the fact that these models, despite being significant advancements and impressive research, were still nowhere near consistently challenging a human writer, and that curation of the AI productions was still required.
+
+This seemed like an area for exploration, to create an environment for human writers to work together with a language generation model, editing and inserting their own text as they go. This was settled.
 
 \subsection{Implementation}
 
-HuggingFace, extensibility, open source
+The implementation of GPT-2 I settled on was \href{https://huggingface.co/}{Huggingface}'s repository of \href{https://huggingface.co/transformers/}{Transformers}. This contains not only GPT-2, but a collection of all state-of-the-art architectures, which leaves room for extensibility and including other models in the future.
+
+The repository allows for a variety of approaches for optimal accessibility: from simply running generation on a pre-trained model, to fine-tuning your own model, to custom generation or even altering the lower level code. A variety of scripts were included, making it quick and straightforward to get up and running.
+
+This seemed ideal for our purposes.
 
 \subsection{Training}
 
-Hardware?! Google colab!
+One concern that had prevailed since I delved into Neural Networks was the hardware that is required to train these models. Transformers utilise Convolutional Neural Networks, which are faster than the Recurrent variant but still require significant computing power. Working on my own machine which lacked even a discrete GPU of any kind, or a lab machine with not much better hardware and limited availability, left me searching for alternatives.
+
+Fortunately, those alternatives do exist. There are numerous cloud services available for training machine learning models on third-party hardware: \href{https://www.kaggle.com/}{Kaggle}, \href{https://lambdalabs.com/}{Lambda} and \href{https://www.wandb.com/}{Weights \& Biases}, just to name a few. There were drawbacks, namely cost, but these were promising.
+
+I eventually settled on \href{https://colab.research.google.com/}{Google Colab}, which provides a Python Notebook interface and allows you to run code on advanced GPUs. There are limits on time and use cases, but I was comfortable I could fall within or work around these restrictions, especially considering that the product was free to use. 
+
+Of course, if I wanted to train a model then I would need data.
 
 \subsection{Data}
 
-/r/nosleep
+Another issue that came up in the early stages was scope. Often an issue with projects of this nature, we wanted to make sure that I had a reasonable prototype which demonstrated progress. To generalise from the beginning would make the model's ability to optimise less clear, so we decided to focus on one type of story initially and perhaps generalise later, or at least leave that option open to ourselves.
 
-\subsection{Generation}
+I was careful when choosing a genre, since it was important to have a large and high quality data source to support it. Being a \href{https://www.reddit.com/}{Reddit} user for some time, I recognised the wealth of data available on the website, not just as a whole but categorised neatly into different sub-communities dedicated to certain topics. 
 
-Scripts, not too intensive
+The \href{https://www.reddit.com/r/writingprompts}{Writing Prompts} subreddit was the leading contender. A forum devoted to short story writing, it seemed like the perfect match. However, it was not specific to any genre of story and categorisation of the stories was minimal, meaning it was more of a general data source. Good, but not quite what we needed.
+
+Ultimately, I settled on \href{https://www.reddit.com/r/nosleep}{No Sleep}, a community for short horror stories which, as the title goes, denied their users sleep. This was much more suitable, with focused data and a significant amount of it too. As of 26 March 2020, the subreddit has been going for 10 years with 13.9 million subscribers. This was perfect.
 
 
 \section{User Interface}
