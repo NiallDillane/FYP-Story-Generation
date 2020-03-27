@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2020.2.5)  27 MAR 2020 12:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2020.2.5)  27 MAR 2020 15:40
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1134,8 +1134,15 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 340.
 (./5_evaluation/evaluation.aux) (./6_conclusions/conclusions.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 340.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 340.
-Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: C12792A3996AF857DF8A7FD68585F51F;3829.
+
+
+Package rerunfilecheck Warning: File `thesis.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `thesis.out':
+(rerunfilecheck)             Before: C16E5E62E16FA1F142B3495437AE20CE;3831
+(rerunfilecheck)             After:  C12792A3996AF857DF8A7FD68585F51F;3829.
 Package rerunfilecheck Info: File `thesis.brf' has not changed.
 (rerunfilecheck)             Checksum: 454B9C201B949EA1C14A80E07826FBE5;3117.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 340.
@@ -1164,7 +1171,7 @@ e1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type
 1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/
 public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/p
 ublic/amsfonts/cm/cmti12.pfb>
-Output written on thesis.pdf (52 pages, 1500145 bytes).
+Output written on thesis.pdf (52 pages, 1500150 bytes).
 PDF statistics:
  1085 PDF objects out of 1200 (max. 8388607)
  979 compressed objects within 10 object streams
