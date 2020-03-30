@@ -15,9 +15,10 @@ def get_current_time():
 @app.route('/getText', methods = ['POST'])
 def get_text():
     promptText = request.json
+    length = promptText.count(' ') + 20
     result = subprocess.run(['python', 'run_generation.py', 
         '--model_type=gpt2',
-        '--length=15', 
+        '--length=' + str(length), 
         '--model_name_or_path=output', 
         '--prompt=' + promptText], 
         stdout=subprocess.PIPE, cwd='./../../transformers/examples')

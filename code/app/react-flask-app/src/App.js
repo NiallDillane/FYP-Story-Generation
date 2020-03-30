@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { createGlobalState } from 'react-hooks-global-state';
 import clippy from './images/coolClippy.png';
 import playButton from './images/play-button.png'
@@ -6,12 +6,14 @@ import pauseButton from './images/pause-button.png'
 import './App.css';
 
 
-const initialState = { story: "Once upon a time in Hollywoo" , play: false};
+const initialState = { story: "Once upon a time in Hollywoo County, I lived in a" , play: false};
 const { useGlobalState } = createGlobalState(initialState);
 
 
 function GenStory() {
 	const [story, setStory] = useGlobalState('story');
+
+	console.log("story based on: " + story)
 
 	useEffect(() => {
 		fetch('/getText', {
@@ -20,37 +22,33 @@ function GenStory() {
 			headers:{
 				"content_type":"application/json",
 			},
-			body:JSON.stringify(story)
+			body:JSON.stringify(story),
 			}
 		)
 		.then(res => res.json())
 		.then(data => {
-			console.log(data)
+			console.log("result = ");
+			console.log(data);
 			setStory(data.text.slice(0, -1));
 		});
-	}, []);
+	}, [story]); // callback
 
 	return null;
-
-	// return (
-	// 	<div name="text"
-	// 		contentEditable="true"
-	// 		className="text-body"
-	// 		defaultValue={story}>
-	// 	</div>
-	// );
 }
 
 function StoryPane() {
 	const [story, setStory] = useGlobalState('story');	
 	const [play, setPlay] = useGlobalState('play');
 
+	// focus on text?
+
 	return(
 		<div name="text"
-			ref={r=>this.ref = r}
 			contentEditable="true"
 			className="text-body"
-			onChange={() => setStory(this.ref.innerHTML)}>
+			onInput={e => {
+				setStory(e.currentTarget.innerText);
+			}}>
 			{story}
 			{play ? <GenStory /> : ""}
 		</div>
@@ -66,13 +64,13 @@ function PlayButton(){
 	if (play) {
 		return (
 			<div name="pauseButton"	className="playPause">
-				<img src={pauseButton} onClick={() => setPlay(false)} />
+				<img src={pauseButton} alt="pauseButton" onClick={() => setPlay(false)} />
 			</div>
 		)
 	}
 	return (
 		<div name="playButton" className="playPause">
-			<img src={playButton} onClick={() => setPlay(true)} />
+			<img src={playButton} alt="playButton" onClick={() => setPlay(true)} />
 		</div>
 	)
 }
@@ -80,7 +78,7 @@ function PlayButton(){
 function Title() {
 	return(
 		<div className="title">
-			<img src={clippy} />
+			<img src={clippy} alt="logo" />
 		</div>
 	)
 }
