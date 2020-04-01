@@ -33,10 +33,14 @@
 % to display Math
 \usepackage{mathtools}
 
-% to Display C++ code
-\definecolor{c++red}{rgb}{0.6,0,0} % for strings
-\definecolor{c++green}{rgb}{0.25,0.5,0.35} % comments
-\definecolor{c++purple}{rgb}{0.5,0,0.35} % keyword
+% to Display code
+\DeclareFixedFont{\ttb}{T1}{txtt}{bx}{n}{12} % for bold
+\DeclareFixedFont{\ttm}{T1}{txtt}{m}{n}{12}  % for normal
+
+\usepackage{color}
+\definecolor{deepblue}{rgb}{0,0,0.5}
+\definecolor{deepred}{rgb}{0.6,0,0}
+\definecolor{deepgreen}{rgb}{0,0.5,0}
 \usepackage{listings}
 \lstset{language=Python}
 
@@ -271,16 +275,25 @@ AHRS\_TRIAD.C
 
 
 
-\lstset{language=Python}
-\lstset{basicstyle=\tiny, 
-breaklines=true, 
-rulesepcolor=\color{c++green}, 
-keywordstyle=\color{c++purple}\bfseries, 
-stringstyle=\color{c++red}, 
-commentstyle=\color{c++green},}  
+\lstset
+{ 
+    language=Python,
+    basicstyle=\ttm,
+    otherkeywords={self},             % Add keywords here
+    keywordstyle=\ttb\color{deepblue},
+    emph={MyClass,__init__},          % Custom highlighting 
+    emphstyle=\ttb\color{deepred},    % Custom highlighting style
+    stringstyle=\color{deepgreen},
+    numbers=left,
+    stepnumber=1,
+    showstringspaces=false,
+    tabsize=1,
+    breaklines=true,
+    breakatwhitespace=false
+}
 
 %Load your code file below
-\lstinputlisting[fontadjust=\true]{ahrs_triad_mote.c}
+\lstinputlisting[fontadjust=\true,firstline=61,lastline=67]{ahrs_triad_mote.c}
 
 \addcontentsline{toc}{chapter}{Appendix B: Insert Code in Appendix}
 \chaptermark{Appendix}

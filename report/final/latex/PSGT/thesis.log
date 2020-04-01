@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2020.2.5)  27 MAR 2020 15:40
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2020.2.5)  1 APR 2020 15:35
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -784,6 +784,11 @@ LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
 \l_MT_above_shortintertext_sep=\dimen192
 \l_MT_below_shortintertext_sep=\dimen193
 )
+LaTeX Font Info:    Try loading font information for T1+txtt on input line 37.
+
+(/usr/local/texlive/2019/texmf-dist/tex/latex/txfonts/t1txtt.fd
+File: t1txtt.fd 2000/12/15 v3.1
+)
 (/usr/local/texlive/2019/texmf-dist/tex/latex/listings/listings.sty
 \lst@mode=\count154
 \lst@gtempboxa=\box67
@@ -823,20 +828,20 @@ File: lstlang1.sty 2019/02/27 1.8b listings language file
 (./6_conclusions/conclusions.aux))
 \openout1 = `thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 128.
-LaTeX Font Info:    ... okay on input line 128.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 128.
-LaTeX Font Info:    ... okay on input line 128.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 128.
-LaTeX Font Info:    ... okay on input line 128.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 128.
-LaTeX Font Info:    ... okay on input line 128.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 128.
-LaTeX Font Info:    ... okay on input line 128.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 128.
-LaTeX Font Info:    ... okay on input line 128.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 128.
-LaTeX Font Info:    ... okay on input line 128.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 132.
+LaTeX Font Info:    ... okay on input line 132.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 132.
+LaTeX Font Info:    ... okay on input line 132.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 132.
+LaTeX Font Info:    ... okay on input line 132.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 132.
+LaTeX Font Info:    ... okay on input line 132.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 132.
+LaTeX Font Info:    ... okay on input line 132.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 132.
+LaTeX Font Info:    ... okay on input line 132.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 132.
+LaTeX Font Info:    ... okay on input line 132.
 
 (/usr/local/texlive/2019/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -872,8 +877,8 @@ Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \AtBeginShipoutBox=\box70
-Package backref Info: ** backref set up for natbib ** on input line 128.
-Package hyperref Info: Link coloring OFF on input line 128.
+Package backref Info: ** backref set up for natbib ** on input line 132.
+Package hyperref Info: Link coloring OFF on input line 132.
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -883,9 +888,9 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count168
 )
-LaTeX Info: Redefining \ref on input line 128.
-LaTeX Info: Redefining \pageref on input line 128.
-LaTeX Info: Redefining \nameref on input line 128.
+LaTeX Info: Redefining \ref on input line 132.
+LaTeX Info: Redefining \pageref on input line 132.
+LaTeX Info: Redefining \nameref on input line 132.
 
 (./thesis.out) (./thesis.out)
 \@outlinefile=\write5
@@ -897,7 +902,7 @@ LaTeX Info: Redefining \nameref on input line 128.
 File: 0_frontmatter/figures/centre_UL_logo.jpg Graphic file (type jpg)
 <use 0_frontmatter/figures/centre_UL_logo.jpg>
 Package pdftex.def Info: 0_frontmatter/figures/centre_UL_logo.jpg  used on inpu
-t line 141.
+t line 145.
 (pdftex.def)             Requested size: 199.16928pt x 99.57533pt.
  [1
 
@@ -1102,79 +1107,57 @@ t line 169.
 
 ]
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 283.
- (./ahrs_triad_mote.c
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <6> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 2.
-LaTeX Font Info:    Try loading font information for OML+cmr on input line 35.
-
-(/usr/local/texlive/2019/texmf-dist/tex/latex/base/omlcmr.fd
-File: omlcmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <6> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 35.
- [31]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [32])
-(./thesis.bbl (./thesis.brf)
+nput line 296.
+ (./ahrs_triad_mote.c) (./thesis.bbl (./thesis.brf)
 \tf@brf=\write9
 \openout9 = `thesis.brf'.
 
- [33] [34
 
-] [35] [36] [37]) [38]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 340.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 340.
- (./thesis.aux
-(./0_frontmatter/abstract.aux) (./0_frontmatter/declaration.aux)
-(./0_frontmatter/acknowledgement.aux) (./0_frontmatter/dedication.aux)
-(./1_introduction/introduction.aux) (./2_related_research/related_research.aux)
-(./3_design/design.aux) (./4_implementation/implementation.aux)
-(./5_evaluation/evaluation.aux) (./6_conclusions/conclusions.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 340.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 340.
+[31] [32
 
-
-Package rerunfilecheck Warning: File `thesis.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `thesis.out':
-(rerunfilecheck)             Before: C16E5E62E16FA1F142B3495437AE20CE;3831
-(rerunfilecheck)             After:  C12792A3996AF857DF8A7FD68585F51F;3829.
+] [33] [34] [35]) [36]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 353.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 353.
+ (./thesis.aux (./0_frontmatter/abstract.aux)
+(./0_frontmatter/declaration.aux) (./0_frontmatter/acknowledgement.aux)
+(./0_frontmatter/dedication.aux) (./1_introduction/introduction.aux)
+(./2_related_research/related_research.aux) (./3_design/design.aux)
+(./4_implementation/implementation.aux) (./5_evaluation/evaluation.aux)
+(./6_conclusions/conclusions.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 353.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 353.
+Package rerunfilecheck Info: File `thesis.out' has not changed.
+(rerunfilecheck)             Checksum: 011EC9E158D03D0459ED83D8CEA1CF1C;3827.
 Package rerunfilecheck Info: File `thesis.brf' has not changed.
 (rerunfilecheck)             Checksum: 454B9C201B949EA1C14A80E07826FBE5;3117.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 340.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 353.
  )
-(\end occurred when \iftrue on line 87 was incomplete) 
+(\end occurred when \iftrue on line 91 was incomplete) 
 Here is how much of TeX's memory you used:
- 23264 strings out of 492616
- 417220 string characters out of 6129482
- 878944 words of memory out of 5000000
- 26360 multiletter control sequences out of 15000+600000
- 15268 words of font info for 58 fonts, out of 8000000 for 9000
+ 22910 strings out of 492616
+ 412594 string characters out of 6129482
+ 720994 words of memory out of 5000000
+ 26142 multiletter control sequences out of 15000+600000
+ 15613 words of font info for 59 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 64i,12n,83p,915b,2073s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 64i,12n,83p,915b,1288s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2019/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2019/t
 exmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2019/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmbx6.pfb></usr/local/texlive/2019/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2019/texmf
--dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2019/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2019/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2019/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2019/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2019/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2019/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmti12.pfb>
-Output written on thesis.pdf (52 pages, 1500150 bytes).
+xmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2019/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2019/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2019/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2019/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2019/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2019/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2019/texmf-dist/font
+s/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2019/texmf-dist/fonts
+/type1/public/txfonts/t1xbtt.pfb></usr/local/texlive/2019/texmf-dist/fonts/type
+1/public/txfonts/t1xtt.pfb>
+Output written on thesis.pdf (50 pages, 1447107 bytes).
 PDF statistics:
- 1085 PDF objects out of 1200 (max. 8388607)
- 979 compressed objects within 10 object streams
- 316 named destinations out of 1000 (max. 500000)
+ 903 PDF objects out of 1000 (max. 8388607)
+ 802 compressed objects within 9 object streams
+ 178 named destinations out of 1000 (max. 500000)
  517 words of extra memory for PDF output out of 10000 (max. 10000000)
 
