@@ -40,24 +40,32 @@ function StoryPane() {
 	const [story, setStory] = useGlobalState('story');	
 	const [play, setPlay] = useGlobalState('play');
 
-	// focus on text?
-
 	return(
 		<div name="text"
+			id="text"
 			contentEditable="true"
+			suppressContentEditableWarning={true}
 			className="text-body"
 			onInput={e => {
 				setStory(e.currentTarget.innerText);
+
+			var el = document.getElementById("text");
+			var range = document.createRange();
+			var sel = window.getSelection();
+
+			range.setStart(el, 1);
+			range.collapse(true);
+			sel.removeAllRanges();
+			sel.addRange(range);
+			el.focus();
+					
+				console.log("doing stuff");
 			}}>
 			{story}
 			{play ? <GenStory /> : ""}
 		</div>
 	)
 }
-
-// function StoryContent() {
-// 	return "Once upon a time ";
-// }
 
 function PlayButton(){
 	const [play, setPlay] = useGlobalState('play');
