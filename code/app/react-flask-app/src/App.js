@@ -2,20 +2,22 @@ import React, { useState, useEffect, useRef } from 'react';
 import { createGlobalState } from 'react-hooks-global-state';
 
 import clippy from './images/coolClippy.png';
-import playButton from './images/play-button.png'
-import pauseButton from './images/pause-button.png'
+import playButton from './images/play.svg'
+import stopButton from './images/stop.svg'
+import loadingIcon from './images/loadingIcon.svg'
 
 import './App.css';
 
 
-const initialState = { story: "Once upon a time in Hollywoo County, I lived in a" , play: false};
+const initialState = { story: "Once upon a time in Hollywoo County, I lived in a" , play: false, gen: false};
 const { useGlobalState } = createGlobalState(initialState);
 
 
 function GenStory() {
 	const [story, setStory] = useGlobalState('story');
+	const [gen, setGen] = useGlobalState('gen');
 
-	console.log("story based on: " + story)
+	setGen(true);
 
 	useEffect(() => {
 		fetch('/getText', {
@@ -32,6 +34,7 @@ function GenStory() {
 			console.log("result = ");
 			console.log(data);
 			setStory(data.text.slice(0, -1));
+			setGen(false);
 		});
 	}, [story]); // callback
 
@@ -55,12 +58,30 @@ function StoryPane() {
 	)
 }
 
-function PlayButton(){
+function Title() {
+	return(
+		<div className="title">
+			<img src={clippy} alt="logo" />
+		</div>
+	);
+}
+
+function Options() {
+	return(
+		<div className="options">
+			A<br />
+			B<br />
+			C
+		</div>
+	);
+}
+
+function PlayButton() {
 	const [play, setPlay] = useGlobalState('play');
 	if (play) {
 		return (
 			<div name="pauseButton"	className="playPause">
-				<img src={pauseButton} alt="pauseButton" onClick={() => setPlay(false)} />
+				<img src={stopButton} alt="pauseButton" onClick={() => setPlay(false)} />
 			</div>
 		)
 	}
@@ -71,12 +92,14 @@ function PlayButton(){
 	)
 }
 
-function Title() {
-	return(
-		<div className="title">
-			<img src={clippy} alt="logo" />
+function LoadingIcon() {
+	const [gen, setGen] = useGlobalState('gen');
+	
+	return (
+		<div name="loadingIcon" className="loadingIcon" hidden={gen}>
+			<img src={loadingIcon} alt="loadingIcon" />
 		</div>
-	)
+	);
 }
 
 function App() {
@@ -84,7 +107,9 @@ function App() {
 		<div className="App">
 			<div className="col sidebar">
 				<Title />
+				<Options />
 				<PlayButton />
+				<LoadingIcon />
 			</div>
 			<div className="col story">
 				<StoryPane />
