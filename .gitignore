@@ -2,3 +2,4 @@ code/app/react-flask-app/api/__pycache__/*
 code/app/gpt-2-cloud-run
 code/data/scripts/config.ini
 code/app/transformers/examples/output*
+code/app/react-flask-app/package-lock.json
