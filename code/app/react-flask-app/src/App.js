@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { createGlobalState } from 'react-hooks-global-state';
-import {Editor, EditorState, ContentState} from 'draft-js';
 
 import clippy from './images/coolClippy.png';
 import playButton from './images/play-button.png'
@@ -49,25 +48,11 @@ function StoryPane() {
 			contentEditable="true"
 			suppressContentEditableWarning={true}
 			className="text-body"
-			onInput={e => {
-				setStory(e.currentTarget.innerText);
-			}}>
+			onBlur={e => { setStory(e.currentTarget.innerText); }}>
 			{story}
 			{play ? <GenStory /> : ""}
 		</div>
 	)
-}
-
-function MyEditor() {;
-	const [story, setStory] = useGlobalState('story');
-	const [play, setPlay] = useGlobalState('play');
-	const [editorState, setEditorState] = useState(EditorState.createWithContent(ContentState.createFromText(story)));
-
-	return (
-		<div className="text-body">
-			<Editor editorState={editorState} onChange={setEditorState} />
-		</div>
-	);
 }
 
 function PlayButton(){
@@ -102,7 +87,7 @@ function App() {
 				<PlayButton />
 			</div>
 			<div className="col story">
-				<MyEditor />
+				<StoryPane />
 			</div>
 		</div>
 	);
