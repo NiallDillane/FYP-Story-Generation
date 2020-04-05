@@ -29,6 +29,8 @@
 	float: left;
 	padding: 0px 10px;
 	height: 100vh;
+	overflow-y: scroll;
+	overflow-x: hidden;
 }
 
 .sidebar {
@@ -68,11 +70,12 @@
 	cursor: pointer;
 }
 
-.loadingIcon img {
+.loadingIcon {
 	margin-top: 0vh;
 	margin-left: auto;
 	margin-right: auto;
 	display: block;
 	width: 15vh;
 	height: 5vh;
+	visibility: hidden;
 }

@@ -9,17 +9,19 @@ import loadingIcon from './images/loadingIcon.svg'
 import './App.css';
 
 
-const initialState = { story: "Once upon a time in Hollywoo County, I lived in a" , play: false, gen: false};
+const initialState = { story: "Once upon a time " , play: false};
 const { useGlobalState } = createGlobalState(initialState);
 
 
 function GenStory() {
 	const [story, setStory] = useGlobalState('story');
-	const [gen, setGen] = useGlobalState('gen');
 
-	setGen(true);
+	console.log("generating");
 
 	useEffect(() => {
+		document.getElementById("loadingIcon").style.visibility = "visible"; // Loading icon display
+		document.getElementById("text").style.pointerEvents = "none"; // Disable user text entry
+
 		fetch('/getText', {
 			method:"POST",
 			cache: "no-cache",
@@ -34,9 +36,11 @@ function GenStory() {
 			console.log("result = ");
 			console.log(data);
 			setStory(data.text.slice(0, -1));
-			setGen(false);
+
+			document.getElementById("loadingIcon").style.visibility = "hidden"; // Loading icon hide
+			document.getElementById("text").style.pointerEvents = "auto"; // Enable user text entry
 		});
-	}, [story]); // callback
+	}, [story]); // callback, generate again with result
 
 	return null;
 }
@@ -51,11 +55,11 @@ function StoryPane() {
 			contentEditable="true"
 			suppressContentEditableWarning={true}
 			className="text-body"
-			onBlur={e => { setStory(e.currentTarget.innerText); }}>
+			onBlur={e => { setStory(e.currentTarget.innerHTML); }}>
 			{story}
 			{play ? <GenStory /> : ""}
 		</div>
-	)
+	);
 }
 
 function Title() {
@@ -89,16 +93,15 @@ function PlayButton() {
 		<div name="playButton" className="playPause">
 			<img src={playButton} alt="playButton" onClick={() => setPlay(true)} />
 		</div>
-	)
+	);
 }
 
 function LoadingIcon() {
-	const [gen, setGen] = useGlobalState('gen');
-	
 	return (
-		<div name="loadingIcon" className="loadingIcon" hidden={gen}>
-			<img src={loadingIcon} alt="loadingIcon" />
-		</div>
+		<img name="loadingIcon" 
+			id="loadingIcon" 
+			className="loadingIcon" 
+			src={loadingIcon} alt="loadingIcon" />
 	);
 }
 
