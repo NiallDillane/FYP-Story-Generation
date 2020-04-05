@@ -20,6 +20,7 @@ def get_text():
         '--model_type=gpt2',
         '--length=' + str(length), 
         '--model_name_or_path=output', 
+        '--padding_text=" "',
         '--prompt=' + promptText], 
         stdout=subprocess.PIPE, cwd='./../../transformers/examples')
     result = result.stdout.decode('utf-8')

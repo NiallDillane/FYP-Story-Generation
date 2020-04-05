@@ -9,14 +9,14 @@ import loadingIcon from './images/loadingIcon.svg'
 import './App.css';
 
 
-const initialState = { story: "Once upon a time " , play: false};
+const initialState = { play: false};
 const { useGlobalState } = createGlobalState(initialState);
 
 
 function GenStory() {
-	const [story, setStory] = useGlobalState('story');
+	const [story, setStory] = useState(document.getElementById("text").innerText);
 
-	console.log("generating");
+	console.log("generating from: " + story);
 
 	useEffect(() => {
 		document.getElementById("loadingIcon").style.visibility = "visible"; // Loading icon display
@@ -33,20 +33,19 @@ function GenStory() {
 		)
 		.then(res => res.json())
 		.then(data => {
-			console.log("result = ");
-			console.log(data);
-			setStory(data.text.slice(0, -1));
+			setStory(data.text.slice(0, -1))
 
 			document.getElementById("loadingIcon").style.visibility = "hidden"; // Loading icon hide
 			document.getElementById("text").style.pointerEvents = "auto"; // Enable user text entry
 		});
+		document.getElementById("text").innerHTML = "<b>" + story + "</b>";
 	}, [story]); // callback, generate again with result
 
 	return null;
 }
 
 function StoryPane() {
-	const [story, setStory] = useGlobalState('story');	
+	const [story, setStory] = useState("Once upon a time ");	
 	const [play, setPlay] = useGlobalState('play');
 
 	return(
@@ -55,7 +54,7 @@ function StoryPane() {
 			contentEditable="true"
 			suppressContentEditableWarning={true}
 			className="text-body"
-			onBlur={e => { setStory(e.currentTarget.innerHTML); }}>
+			onBlur={e => { setStory(e.currentTarget.innerText); }}>
 			{story}
 			{play ? <GenStory /> : ""}
 		</div>
