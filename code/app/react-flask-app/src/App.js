@@ -1,7 +1,8 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, Fragment } from 'react';
 import { createGlobalState } from 'react-hooks-global-state';
+import Slider from 'react-input-slider';
 
-import clippy from './images/coolClippy.png';
+import logo from './images/arrow.svg';
 import playButton from './images/play.svg'
 import stopButton from './images/stop.svg'
 import loadingIcon from './images/loadingIcon.svg'
@@ -9,12 +10,29 @@ import loadingIcon from './images/loadingIcon.svg'
 import './App.css';
 
 
-const initialState = { play: false};
+const initialState = { play: false };
 const { useGlobalState } = createGlobalState(initialState);
 
 
+function getParams() {
+	var text = document.getElementById("text").innerText;
+	var temp = parseFloat(document.getElementById("temperature").innerText.split(' ')[1]);
+	var length = parseFloat(document.getElementById("temperature").innerText.split(' ')[1]);
+	
+	var seedStr = document.getElementById("seed").value;
+	var seed = 0;
+	var i = seedStr.length;
+	while (i--) {
+		seed += seedStr.charCodeAt(i);
+	}
+
+	return [text, temp, length, seed];
+}
+
 function GenStory() {
-	const [story, setStory] = useState(document.getElementById("text").innerText);
+	var params = getParams();
+	console.log(params[0]);
+	const [story, setStory] = params[0];
 
 	console.log("generating from: " + story);
 
@@ -38,7 +56,7 @@ function GenStory() {
 			document.getElementById("loadingIcon").style.visibility = "hidden"; // Loading icon hide
 			document.getElementById("text").style.pointerEvents = "auto"; // Enable user text entry
 		});
-		document.getElementById("text").innerHTML = "<b>" + story + "</b>";
+		document.getElementById("text").innerHTML = story;
 	}, [story]); // callback, generate again with result
 
 	return null;
@@ -64,7 +82,7 @@ function StoryPane() {
 function Title() {
 	return(
 		<div className="title">
-			<img src={clippy} alt="logo" />
+			<img src={logo} alt="logo" />
 		</div>
 	);
 }
@@ -72,10 +90,85 @@ function Title() {
 function Options() {
 	return(
 		<div className="options">
-			A<br />
-			B<br />
-			C
+			<Temperature /> <br /><br />
+			<Length /><br /><br />
+			<Seed />
 		</div>
+	);
+}
+
+function Temperature() {
+	const [temp, setTemp] = useState(1);
+  
+	return (
+	  <Fragment>
+		<div id="temperature">
+			{'temperature: ' + temp.toFixed(2)}
+		</div>
+		<Slider
+		  axis="x"
+		  xstep={0.01}
+		  xmin={0}
+		  xmax={3}
+		  x={temp}
+		  onChange={x => setTemp(parseFloat(x.x.toFixed(2)))}
+		  styles={{
+			track: {
+			  backgroundColor: '#90CAF9',
+			  height: 2
+			},
+			active: {
+			  backgroundColor: '#ef9a9a'
+			},
+			thumb: {
+				height: 10,
+				width: 10
+			}
+		  }}
+		/>
+	  </Fragment>
+	);
+}
+
+function Length() {
+	const [length, setLength] = useState(1.5);
+  
+	return (
+	  <Fragment>
+		<div id="length">
+			{'length: ' + length.toFixed(2)}
+		</div>
+		<Slider
+		  axis="x"
+		  xstep={0.01}
+		  xmin={1.1}
+		  xmax={5}
+		  x={length}
+		  onChange={x => setLength(parseFloat(x.x.toFixed(2)))}
+		  styles={{
+			track: {
+			  backgroundColor: '#BDBDBD',
+			  height: 2
+			},
+			active: {
+			  backgroundColor: '#424242'
+			},
+			thumb: {
+				height: 10,
+				width: 10
+			}
+		  }}
+		/>
+	  </Fragment>
+	);
+}
+
+function Seed() {
+	return(
+		<form>
+			<label>Seed: </label>
+			<input type="text" id="seed" name="seed" />
+		</form>
 	);
 }
 
