@@ -31,8 +31,7 @@ function getParams() {
 
 function GenStory() {
 	var params = getParams();
-	console.log(params[0]);
-	const [story, setStory] = params[0];
+	const [story, setStory] = useState(params[0]);
 
 	console.log("generating from: " + story);
 
@@ -46,7 +45,7 @@ function GenStory() {
 			headers:{
 				"content_type":"application/json",
 			},
-			body:JSON.stringify(story),
+			body:JSON.stringify(params),
 			}
 		)
 		.then(res => res.json())
@@ -166,8 +165,8 @@ function Length() {
 function Seed() {
 	return(
 		<form>
-			<label>Seed: </label>
-			<input type="text" id="seed" name="seed" />
+			<label>seed: </label><br />
+			<input type="text" id="seed" name="seed" placeholder="optional seed" />
 		</form>
 	);
 }
