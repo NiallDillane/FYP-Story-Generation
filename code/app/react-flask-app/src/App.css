@@ -41,11 +41,49 @@
 	max-width: -webkit-fill-available;
 }
 
+
+
+
+
 .sidebar {
-	width: 25%;
-	/* filter: blur(0.5rem); */
-	/* transition: 0.3s; */
+	width: 5%;
+	overflow: hidden;
+	/* filter: blur(0.5rem);  */
+	transition: 0.3s;
 }
+
+.sidebar > .title img {
+	min-width: 75%;
+	max-width: 75%;
+	transition: 0.3s;
+}
+
+.sidebar > .options div div,
+.sidebar .options div input {
+	visibility: hidden;
+}
+
+.sidebar:hover {
+	width: 25%;
+	filter: none;
+}
+
+.sidebar:hover > .title img {
+	min-width: 15vh;
+	max-width: 15vh;
+}
+
+.sidebar:hover .options div div,
+.sidebar:hover .options div input {
+	visibility: visible;
+}
+
+.seed {
+	margin-left: 2vh;
+}
+
+
+
 
 .title img {
 	margin-top: 20vh;
@@ -55,9 +93,6 @@
 	width: 15vh;
 	height: 30vh;
 }
-
-
-
 
 .options {
 	margin-top: 3vh;
@@ -106,9 +141,6 @@
 	max-width: 4vh;
 }
 
-
-
-
 .playPause img {
 	margin-top: 5vh;
 	margin-left: auto;
@@ -128,39 +160,3 @@
 	height: 5vh;
 	visibility: hidden;
 }
-
-
-
-
-/* 
-.sidebar > .title img {
-	min-width: 5vh;
-	max-width: 5vh;
-	transition: 0.3s;
-}
-
-.sidebar > .options div {
-	visibility: hidden;
-}
-
-.sidebar:hover {
-	width: 25%;
-	filter: none;
-}
-
-.sidebar:hover > .title img {
-	min-width: 15vh;
-	max-width: 15vh;
-}
-
-.sidebar:hover div > * {
-	visibility: visible;
-} */
-
-/* .slider {
-	margin-bottom: 1.5vh;
-}
-
-.seed {
-	margin-left: 2vh;
-} */
