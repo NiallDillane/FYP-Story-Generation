@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { createGlobalState } from 'react-hooks-global-state';
-import Slider from 'react-input-slider';
+import Slider, {createSliderWithTooltip} from 'rc-slider';
 
 import logo from './images/robot.svg';
 import playButton from './images/play.svg'
@@ -11,10 +11,12 @@ import lengthIcon from './images/length.svg'
 import seedIcon from './images/seed.svg'
 
 import './App.css';
+import 'rc-slider/assets/index.css';
 
 
 const initialState = { play: false };
 const { useGlobalState } = createGlobalState(initialState);
+const SliderToolTip = createSliderWithTooltip(Slider);
 
 
 function getParams() {
@@ -104,31 +106,28 @@ function Options() {
 
 function Temperature() {
 	const [temp, setTemp] = useState(1);
-  
+
 	return (
 	  <div>
 		<img src={tempIcon} alt="temperature" title={"temperature ("  + temp.toFixed(2) + ")"} />
 		<div id="temperature" hidden>{temp}</div>
-		<Slider
-		  axis="x"
-		  xstep={0.01}
-		  xmin={0}
-		  xmax={3}
-		  x={temp}
+		<SliderToolTip
+		  step={0.01}
+		  min={0}
+		  max={3}
+		  defaultValue={temp}
 		  className="slider"
-		  onChange={x => setTemp(parseFloat(x.x.toFixed(2)))}
-		  styles={{
-			track: {
-			  backgroundColor: '#90CAF9',
-			  height: 2
-			},
-			active: {
-			  backgroundColor: '#ef9a9a'
-			},
-			thumb: {
-				height: 10,
-				width: 10
-			}
+		  onAfterChange={v => setTemp(parseFloat(v.toFixed(2)))}
+          railStyle={{
+			height: 2,
+			backgroundColor: "#90caf9"
+          }}
+          handleStyle={{
+            backgroundColor: "white",
+            border: 0
+          }}
+          trackStyle={{
+            background: "#ef9a9a" //90CAF9 ef9a9a
 		  }}
 		/>
 	  </div>
@@ -142,26 +141,23 @@ function Length() {
 	  <div>
 		<img src={lengthIcon} alt="length" title={"length ("  + length.toFixed(2) + ")"} />
 		<div id="length" hidden>{length}</div>
-		<Slider
-		  axis="x"
-		  xstep={0.01}
-		  xmin={1.1}
-		  xmax={5}
-		  x={length}
+		<SliderToolTip
+		  step={0.01}
+		  min={1.1}
+		  max={5}
+		  defaultValue={length}
 		  className="slider"
-		  onChange={x => setLength(parseFloat(x.x.toFixed(2)))}
-		  styles={{
-			track: {
-			  backgroundColor: '#BDBDBD',
-			  height: 2
-			},
-			active: {
-			  backgroundColor: '#424242'
-			},
-			thumb: {
-				height: 10,
-				width: 10
-			}
+		  onAfterChange={v => setLength(parseFloat(v.toFixed(2)))}
+          railStyle={{
+			height: 2,
+			background: "#bdbdbd"
+          }}
+          handleStyle={{
+            backgroundColor: "white",
+            border: 0
+          }}
+          trackStyle={{
+            background: "#424242"
 		  }}
 		/>
 	  </div>

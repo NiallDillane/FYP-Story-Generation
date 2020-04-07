@@ -19,7 +19,7 @@ def get_current_time():
 def get_text():
     params = request.json
     print(params)
-    length = math.floor((params[0].count(' ') * 1.5) + ((params[1][2] - 0.5) * 30))
+    length = math.floor((params[0].count(' ') * 1.5) + ((params[1][2] / 2) * 30))
     seed = str(params[1][3]) if params[1][3] != 0 else str(random.randint(0, 2000000000))
     
     result = subprocess.run(['python', 'run_generation.py', 
