@@ -1,11 +1,14 @@
-import React, { useState, useEffect, Fragment } from 'react';
+import React, { useState, useEffect } from 'react';
 import { createGlobalState } from 'react-hooks-global-state';
 import Slider from 'react-input-slider';
 
-import logo from './images/arrow.svg';
+import logo from './images/robot.svg';
 import playButton from './images/play.svg'
 import stopButton from './images/stop.svg'
 import loadingIcon from './images/loadingIcon.svg'
+import tempIcon from './images/temperature.svg'
+import lengthIcon from './images/length.svg'
+import seedIcon from './images/seed.svg'
 
 import './App.css';
 
@@ -15,9 +18,9 @@ const { useGlobalState } = createGlobalState(initialState);
 
 
 function getParams() {
-	var text = document.getElementById("text").innerText;
-	var temp = parseFloat(document.getElementById("temperature").innerText.split(' ')[1]);
-	var length = parseFloat(document.getElementById("length").innerText.split(' ')[1]);
+	var text = document.getElementById("text").innerHTML;
+	var temp = parseFloat(document.getElementById("temperature").innerText);
+	var length = parseFloat(document.getElementById("length").innerText);
 	
 	var seedStr = document.getElementById("seed").value;
 	var seed = 0;
@@ -46,7 +49,7 @@ function GenStory() {
 			headers:{
 				"content_type":"application/json",
 			},
-			body:JSON.stringify([story, params]), // maintaining callback
+			body:JSON.stringify([story.replace('<br /> <br />', '\n'), params]), // maintaining callback
 			}
 		)
 		.then(res => res.json())
@@ -57,7 +60,7 @@ function GenStory() {
 			document.getElementById("loadingIcon").style.visibility = "hidden"; 
 			document.getElementById("text").style.pointerEvents = "auto"; 
 		});
-		document.getElementById("text").innerHTML = story;
+		document.getElementById("text").innerHTML = story.replace('\n', '<br /> <br />');
 		console.log("setting story to: \n" + story);
 	}, [story]); // callback, generate again with result
 
@@ -103,16 +106,16 @@ function Temperature() {
 	const [temp, setTemp] = useState(1);
   
 	return (
-	  <Fragment>
-		<div id="temperature">
-			{'temperature: ' + temp.toFixed(2)}
-		</div>
+	  <div>
+		<img src={tempIcon} alt="temperature" title={"temperature ("  + temp.toFixed(2) + ")"} />
+		<div id="temperature" hidden>{temp}</div>
 		<Slider
 		  axis="x"
 		  xstep={0.01}
 		  xmin={0}
 		  xmax={3}
 		  x={temp}
+		  className="slider"
 		  onChange={x => setTemp(parseFloat(x.x.toFixed(2)))}
 		  styles={{
 			track: {
@@ -128,7 +131,7 @@ function Temperature() {
 			}
 		  }}
 		/>
-	  </Fragment>
+	  </div>
 	);
 }
 
@@ -136,16 +139,16 @@ function Length() {
 	const [length, setLength] = useState(1.5);
   
 	return (
-	  <Fragment>
-		<div id="length">
-			{'length: ' + length.toFixed(2)}
-		</div>
+	  <div>
+		<img src={lengthIcon} alt="length" title={"length ("  + length.toFixed(2) + ")"} />
+		<div id="length" hidden>{length}</div>
 		<Slider
 		  axis="x"
 		  xstep={0.01}
 		  xmin={1.1}
 		  xmax={5}
 		  x={length}
+		  className="slider"
 		  onChange={x => setLength(parseFloat(x.x.toFixed(2)))}
 		  styles={{
 			track: {
@@ -161,16 +164,16 @@ function Length() {
 			}
 		  }}
 		/>
-	  </Fragment>
+	  </div>
 	);
 }
 
 function Seed() {
 	return(
-		<form>
-			<label>seed: </label><br />
-			<input type="text" id="seed" name="seed" placeholder="seed" />
-		</form>
+		<div>
+			<img src={seedIcon} alt="seed" title="seed" />
+			<input type="text" id="seed" name="seed" className="seed" placeholder="seed" />
+		</div>
 	);
 }
 

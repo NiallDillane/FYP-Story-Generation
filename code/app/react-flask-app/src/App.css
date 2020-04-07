@@ -10,6 +10,20 @@
   	color: #61dafb;
 }
 
+.col {
+	float: left;
+	padding: 0px 10px;
+	height: 100vh;
+	overflow-y: scroll;
+}
+
+
+
+.story {
+	width: 55%;
+	border-left: 1px solid #fff;
+}
+
 .text-body {
     background-color: transparent;
     resize: none;
@@ -23,23 +37,15 @@
 	line-height: 25px;
 	padding: 2px 10px;
 	border: none;
-}
-
-.col {
-	float: left;
-	padding: 0px 10px;
-	height: 100vh;
-	overflow-y: scroll;
-	overflow-x: hidden;
+	caret-color: #29B6F6;
+	max-width: -moz-available;
+	max-width: -webkit-fill-available;
 }
 
 .sidebar {
 	width: 25%;
-}
-
-.story {
-	width: 55%;
-	border-left: 1px solid #fff;
+	/* filter: blur(0.5rem); */
+	/* transition: 0.3s; */
 }
 
 .title img {
@@ -51,20 +57,38 @@
 	height: 30vh;
 }
 
+
+
+
 .options {
-	margin-top: 5vh;
+	margin-top: 3vh;
 	margin-left: auto;
 	margin-right: auto;
 	display: block;
-	width: 60%;
+	width: 75%;
 	height: fit-content;
 	font-size: 12pt;
 	white-space: nowrap;
 }
 
-.options > * {
-	width: 100% !important;
-	margin-bottom: 2%;
+.options > div {
+	margin-bottom: 1vh;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.options > div > * {
+	margin-left: 5%;
+	vertical-align: middle;
+}
+
+.options > div > .slider{
+	max-width: 80%;
+}
+
+.options > div > .seed {
+	max-width: 75%;
 }
 
 .options input {
@@ -73,12 +97,20 @@
 	background: transparent;
 	border-bottom: 1px solid black;
 	line-height: 1.5em;
-	min-width: 100%;
-	max-width: 100%;
+	width: 100%;
+	margin-left: 1.5vh;
 }
 
+.options img {
+	min-width: 4vh;
+	max-width: 4vh;
+}
+
+
+
+
 .playPause img {
-	margin-top: 10%;
+	margin-top: 5vh;
 	margin-left: auto;
 	margin-right: auto;
 	display: block;
@@ -97,3 +129,38 @@
 	visibility: hidden;
 }
 
+
+
+
+/* 
+.sidebar > .title img {
+	min-width: 5vh;
+	max-width: 5vh;
+	transition: 0.3s;
+}
+
+.sidebar > .options div {
+	visibility: hidden;
+}
+
+.sidebar:hover {
+	width: 25%;
+	filter: none;
+}
+
+.sidebar:hover > .title img {
+	min-width: 15vh;
+	max-width: 15vh;
+}
+
+.sidebar:hover div > * {
+	visibility: visible;
+} */
+
+/* .slider {
+	margin-bottom: 1.5vh;
+}
+
+.seed {
+	margin-left: 2vh;
+} */
