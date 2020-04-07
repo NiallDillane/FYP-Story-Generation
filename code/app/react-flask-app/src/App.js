@@ -17,7 +17,7 @@ const { useGlobalState } = createGlobalState(initialState);
 function getParams() {
 	var text = document.getElementById("text").innerText;
 	var temp = parseFloat(document.getElementById("temperature").innerText.split(' ')[1]);
-	var length = parseFloat(document.getElementById("temperature").innerText.split(' ')[1]);
+	var length = parseFloat(document.getElementById("length").innerText.split(' ')[1]);
 	
 	var seedStr = document.getElementById("seed").value;
 	var seed = 0;
@@ -33,11 +33,12 @@ function GenStory() {
 	var params = getParams();
 	const [story, setStory] = useState(params[0]);
 
-	console.log("generating from: " + story);
+	console.log("generating from: \n" + story);
 
 	useEffect(() => {
-		document.getElementById("loadingIcon").style.visibility = "visible"; // Loading icon display
-		document.getElementById("text").style.pointerEvents = "none"; // Disable user text entry
+		// begin generation -> show loading icon and disable text entry
+		document.getElementById("loadingIcon").style.visibility = "visible"; 
+		document.getElementById("text").style.pointerEvents = "none"; 
 
 		fetch('/getText', {
 			method:"POST",
@@ -45,17 +46,19 @@ function GenStory() {
 			headers:{
 				"content_type":"application/json",
 			},
-			body:JSON.stringify(params),
+			body:JSON.stringify([story, params]), // maintaining callback
 			}
 		)
 		.then(res => res.json())
 		.then(data => {
-			setStory(data.text.slice(0, -1))
-
-			document.getElementById("loadingIcon").style.visibility = "hidden"; // Loading icon hide
-			document.getElementById("text").style.pointerEvents = "auto"; // Enable user text entry
+			setStory(data.text.slice(0, -1));
+			
+			// loading finished -> hide icon and enable text entry
+			document.getElementById("loadingIcon").style.visibility = "hidden"; 
+			document.getElementById("text").style.pointerEvents = "auto"; 
 		});
 		document.getElementById("text").innerHTML = story;
+		console.log("setting story to: \n" + story);
 	}, [story]); // callback, generate again with result
 
 	return null;
@@ -166,7 +169,7 @@ function Seed() {
 	return(
 		<form>
 			<label>seed: </label><br />
-			<input type="text" id="seed" name="seed" placeholder="optional seed" />
+			<input type="text" id="seed" name="seed" placeholder="seed" />
 		</form>
 	);
 }
@@ -176,13 +179,15 @@ function PlayButton() {
 	if (play) {
 		return (
 			<div name="pauseButton"	className="playPause">
-				<img src={stopButton} alt="pauseButton" onClick={() => setPlay(false)} />
+				<img src={stopButton} alt="pauseButton" 
+					onClick={() => setPlay(false)} />
 			</div>
 		)
 	}
 	return (
 		<div name="playButton" className="playPause">
-			<img src={playButton} alt="playButton" onClick={() => setPlay(true)} />
+			<img src={playButton} alt="playButton" 
+				onClick={() => setPlay(true)} />
 		</div>
 	);
 }

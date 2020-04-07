@@ -1,4 +1,5 @@
 import time
+import math
 import subprocess
 import random
 
@@ -17,13 +18,14 @@ def get_current_time():
 @app.route('/getText', methods = ['POST'])
 def get_text():
     params = request.json
-    length = (params[0].count(' ') * 2) + (params[2] * 30)
-    seed = str(params[3]) if params[3] != 0 else str(random.randint(0, 2000000000))
+    print(params)
+    length = math.floor((params[0].count(' ') * 1.8) + ((params[1][2] - 0.5) * 30))
+    seed = str(params[1][3]) if params[1][3] != 0 else str(random.randint(0, 2000000000))
     
     result = subprocess.run(['python', 'run_generation.py', 
         '--model_type=gpt2',
         '--length=' + str(length), 
-        '--temperature=' + str(params[1]),
+        '--temperature=' + str(params[1][1]),
         '--model_name_or_path=output', 
         '--padding_text=" "',
         '--seed=' + seed,
