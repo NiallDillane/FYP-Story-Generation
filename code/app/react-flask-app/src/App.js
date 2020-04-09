@@ -14,16 +14,36 @@ import './App.css';
 import 'rc-slider/assets/index.css';
 
 
+// Global state for [play] boolean, giving all functions access
 const initialState = { play: false };
 const { useGlobalState } = createGlobalState(initialState);
 const SliderToolTip = createSliderWithTooltip(Slider);
 
 
+/**
+ * Hide/show loading icon; enable/disable text editing
+ * @param {bool} loading If text is being generated
+ */
+function setLoading(loading){
+	if(loading){
+		document.getElementById("loadingIcon").style.visibility = "visible"; 
+		document.getElementById("text").style.pointerEvents = "none"; 
+	}
+	else {
+		document.getElementById("loadingIcon").style.visibility = "hidden"; 
+		document.getElementById("text").style.pointerEvents = "auto"; 
+	}
+}
+
+/**
+ * Return parameters for generation
+ */
 function getParams() {
 	var text = document.getElementById("text").innerHTML;
 	var temp = parseFloat(document.getElementById("temperature").innerText);
 	var length = parseFloat(document.getElementById("length").innerText);
 	
+	// Convert seed (string) into number by summing characters. Imperfect
 	var seedStr = document.getElementById("seed").value;
 	var seed = 0;
 	var i = seedStr.length;
@@ -34,33 +54,33 @@ function getParams() {
 	return [text, temp, length, seed];
 }
 
+/**
+ * Call API, generate story and insert into StoryPane
+ */
 function GenStory() {
 	var params = getParams();
+	// How state is used, with an array of getter/setter
 	const [story, setStory] = useState(params[0]);
 
-	console.log("generating from: \n" + story);
-
 	useEffect(() => {
-		// begin generation -> show loading icon and disable text entry
-		document.getElementById("loadingIcon").style.visibility = "visible"; 
-		document.getElementById("text").style.pointerEvents = "none"; 
+		setLoading(true);
 
+		// API call to api.py with parameters
 		fetch('/getText', {
 			method:"POST",
 			cache: "no-cache",
 			headers:{
 				"content_type":"application/json",
 			},
-			body:JSON.stringify([story.replace('<br /> <br />', '\n'), params]), // maintaining callback
+			// Convert HTML linebreaks, maintain callback using story 
+			body:JSON.stringify([story.replace('<br /> <br />', '\n'), params]),
 			}
 		)
 		.then(res => res.json())
 		.then(data => {
+			// Updating the state 
 			setStory(data.text.slice(0, -1));
-			
-			// loading finished -> hide icon and enable text entry
-			document.getElementById("loadingIcon").style.visibility = "hidden"; 
-			document.getElementById("text").style.pointerEvents = "auto"; 
+			setLoading(false);
 		});
 		document.getElementById("text").innerHTML = story.replace('\n', '<br /> <br />');
 		console.log("setting story to: \n" + story);
@@ -69,6 +89,10 @@ function GenStory() {
 	return null;
 }
 
+/**
+ * Writing environment for generation and manual editing
+ * Story Generation called when global state [play] is true
+ */
 function StoryPane() {
 	const [story, setStory] = useState("Once upon a time ");	
 	const [play, setPlay] = useGlobalState('play');
@@ -76,16 +100,20 @@ function StoryPane() {
 	return(
 		<div name="text"
 			id="text"
-			contentEditable="true"
+			contentEditable="true" // Allows user input
 			suppressContentEditableWarning={true}
 			className="text-body"
-			onBlur={e => { setStory(e.currentTarget.innerText); }}>
+			// onBlur so change only grabbed when user clicks out
+			onBlur={e => { setStory(e.currentTarget.innerHTML); }}>
 			{story}
 			{play ? <GenStory /> : ""}
 		</div>
 	);
 }
 
+/**
+ * Title section with logo
+ */
 function Title() {
 	return(
 		<div className="title">
@@ -94,6 +122,9 @@ function Title() {
 	);
 }
 
+/**
+ * Container for parameter tuners
+ */
 function Options() {
 	return(
 		<div className="options">
@@ -104,6 +135,11 @@ function Options() {
 	);
 }
 
+/**
+ * Slider for temperature, using rc-slider
+ * Lower = heavier sampling from data, more consistent but less creative
+ * Higher = more unique output, possibly nonsensical
+ */
 function Temperature() {
 	const [temp, setTemp] = useState(1);
 
@@ -134,6 +170,9 @@ function Temperature() {
 	);
 }
 
+/**
+ * How long the generation will be, relatively
+ */
 function Length() {
 	const [length, setLength] = useState(1.5);
   
@@ -164,6 +203,9 @@ function Length() {
 	);
 }
 
+/**
+ * Seed to initialise generation, using same seed will generate same text
+ */
 function Seed() {
 	return(
 		<div>
@@ -173,6 +215,9 @@ function Seed() {
 	);
 }
 
+/**
+ * Play/puase buttons, clicking changes global [play] state
+ */
 function PlayButton() {
 	const [play, setPlay] = useGlobalState('play');
 	if (play) {
@@ -191,6 +236,9 @@ function PlayButton() {
 	);
 }
 
+/**
+ * Loading animation to display during generation
+ */
 function LoadingIcon() {
 	return (
 		<img name="loadingIcon" 
@@ -200,6 +248,9 @@ function LoadingIcon() {
 	);
 }
 
+/**
+ * Overall app
+ */
 function App() {
 	return (
 		<div className="App">
