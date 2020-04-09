@@ -29,22 +29,32 @@ def get_text():
     Calls run_generation.py script to generate text with parameters
     """
     params = request.json
+    print('\n\nparams[0] = ' + params[0] + '\n\n')
+    prompt = params[0].replace('</b> <b>', ' ').rstrip()
+    print('\n\nprompt = ' + prompt + '\n\n')
     # Length is total including existing text,
     # based on tokens so requires some maths is required to adjust
     length = math.floor((params[0].count(' ') * 1.5) + ((params[1][2] / 2) * 30))
     # If seed isn't set, use a random number
     seed = str(params[1][3]) if params[1][3] != 0 else str(random.randint(0, 2000000000))
     
-    result = subprocess.run(['python', 'run_generation.py', 
+    output = subprocess.run(['python', 'run_generation.py', 
         '--model_type=gpt2',
         '--length=' + str(length), 
         '--temperature=' + str(params[1][1]),
         '--model_name_or_path=output', 
         '--padding_text=" "',
         '--seed=' + seed,
-        '--prompt=' + params[0]], 
+        '--prompt=' + prompt], 
         stdout=subprocess.PIPE, cwd='./../../transformers/examples')
-    result = result.stdout.decode('utf-8')
-    print(result)
+    
+    output = output.stdout.decode('utf-8')
+    newText = output[:-1].replace(prompt, '')
+    print('\n\nnewText = ' + newText + '\n\n')
+    newText = newText.replace(' ', '</b> <b>')
+    print('\n\nnewText = ' + newText + '\n\n')
+    
+    result = params[0] + newText + '</b>'
+    print('\n\nresult = ' + result + '\n\n')
 
     return {'text':result}

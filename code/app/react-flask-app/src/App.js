@@ -79,11 +79,11 @@ function GenStory() {
 		.then(res => res.json())
 		.then(data => {
 			// Updating the state 
-			setStory(data.text.slice(0, -1));
+			console.log(data);
+			setStory(data.text);
 			setLoading(false);
 		});
 		document.getElementById("text").innerHTML = story.replace('\n', '<br /> <br />');
-		console.log("setting story to: \n" + story);
 	}, [story]); // callback, generate again with result
 
 	return null;
@@ -94,7 +94,7 @@ function GenStory() {
  * Story Generation called when global state [play] is true
  */
 function StoryPane() {
-	const [story, setStory] = useState("Once upon a time ");	
+	const [story, setStory] = useState("Once upon a time");	
 	const [play, setPlay] = useGlobalState('play');
 
 	return(
