@@ -30,7 +30,7 @@ def get_text():
     """
     params = request.json
     print('\n\nparams[0] = ' + params[0] + '\n\n')
-    prompt = params[0].replace('</b><span> <span><b>', ' ').rstrip()
+    prompt = params[0].replace('</b> <b>', ' ').rstrip()
     print('\n\nprompt = ' + prompt + '\n\n')
     # Length is total including existing text,
     # based on tokens so requires some maths is required to adjust
@@ -51,7 +51,7 @@ def get_text():
     output = output.stdout.decode('utf-8')
     newText = output[:-1].replace(prompt, '')
     print('\n\nnewText = ' + newText + '\n\n')
-    newText = newText.replace(' ', '</b><span> </span><b>')
+    newText = newText.replace(' ', '</b> <b>')
     print('\n\nnewText = ' + newText + '\n\n')
     
     result = params[0] + newText + '</b>'

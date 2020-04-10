@@ -89,6 +89,65 @@ function GenStory() {
 	return null;
 }
 
+
+function getCaretPosition (node) {
+    var range = window.getSelection().getRangeAt(0),
+        preCaretRange = range.cloneRange(),
+        caretPosition,
+        tmp = document.createElement("div");
+
+    preCaretRange.selectNodeContents(node);
+    preCaretRange.setEnd(range.endContainer, range.endOffset);
+    tmp.appendChild(preCaretRange.cloneContents());
+    caretPosition = tmp.innerHTML.length;
+    return caretPosition;
+}
+
+function getHTMLCaretPosition(element) {
+	var textPosition = getCaretPosition(element),
+		htmlContent = element.innerHTML,
+		textIndex = 0,
+		htmlIndex = 0,
+		insideHtml = false,
+		htmlBeginChars = ['&', '<'],
+		htmlEndChars = [';', '>'];
+	
+	
+	if (textPosition == 0) {
+	  return 0;
+	}
+	
+	while(textIndex < textPosition) {
+	
+	  htmlIndex++;
+	
+	  // check if next character is html and if it is, iterate with htmlIndex to the next non-html character
+	  while(htmlBeginChars.indexOf(htmlContent.charAt(htmlIndex)) > -1) {
+		// console.log('encountered HTML');
+		// now iterate to the ending char
+		insideHtml = true;
+	
+		while(insideHtml) {
+		  if (htmlEndChars.indexOf(htmlContent.charAt(htmlIndex)) > -1) {
+			if (htmlContent.charAt(htmlIndex) == ';') {
+			  htmlIndex--; // entity is char itself
+			}
+			// console.log('encountered end of HTML');
+			insideHtml = false;
+		  }
+		  htmlIndex++;
+		}
+	  }
+	  textIndex++;
+	}
+	
+	//console.log(htmlIndex);
+	//console.log(textPosition);
+	// in htmlIndex is caret position inside html
+	return htmlIndex;
+}
+
+
 /**
  * Writing environment for generation and manual editing
  * Story Generation called when global state [play] is true
@@ -103,6 +162,16 @@ function StoryPane() {
 			contentEditable="true" // Allows user input
 			suppressContentEditableWarning={true}
 			className="text-body"
+			onClick={e => {
+				var pos = getCaretPosition(e.currentTarget);
+				var after = (e.currentTarget.innerHTML).substring(pos,);
+				var before = (e.currentTarget.innerHTML).substring(0,pos);
+				console.log(pos);
+				console.log(before);
+				console.log(after);
+				after = '</b>' + after;
+				// e.currentTarget.innerHTML = before + after;
+			}}
 			// onBlur so change only grabbed when user clicks out
 			onBlur={e => { setStory(e.currentTarget.innerHTML); }}>
 			{story}
