@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2020.2.5)  10 APR 2020 13:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2020.2.5)  10 APR 2020 18:09
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -999,12 +999,12 @@ l.56 ...berline {6.4}Future Work}{27}{section.6.4}
 
 
 ]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 36.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 35.
  (/usr/local/texlive/2019/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 36.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 35.
  [2]) [3]
 \openout2 = `2_related_research/related_research.aux'.
 
@@ -1016,66 +1016,72 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 ]
  2.
 [5]
-<2_related_research/figures/3-act-structure.jpg, id=432, 642.4pt x 321.2pt>
+<2_related_research/figures/3-act-structure.jpg, id=434, 642.4pt x 321.2pt>
 File: 2_related_research/figures/3-act-structure.jpg Graphic file (type jpg)
 <use 2_related_research/figures/3-act-structure.jpg>
 Package pdftex.def Info: 2_related_research/figures/3-act-structure.jpg  used o
-n input line 46.
+n input line 42.
 (pdftex.def)             Requested size: 330.05322pt x 165.03021pt.
  [6 <./2_related_research/figures/3-act-structure.jpg>]
-<2_related_research/figures/heros-journey.png, id=451, 803.0pt x 807.015pt>
+<2_related_research/figures/heros-journey.png, id=454, 803.0pt x 807.015pt>
 File: 2_related_research/figures/heros-journey.png Graphic file (type png)
 <use 2_related_research/figures/heros-journey.png>
 Package pdftex.def Info: 2_related_research/figures/heros-journey.png  used on 
-input line 52.
+input line 48.
 (pdftex.def)             Requested size: 330.05322pt x 331.70334pt.
+
+Underfull \vbox (badness 1009) has occurred while \output is active []
+
  [7 <./2_related_research/figures/heros-journey.png>] [8]
-<2_related_research/figures/propp-eg.png, id=490, 513.92pt x 193.72375pt>
+<2_related_research/figures/propp-eg.png, id=494, 513.92pt x 193.72375pt>
 File: 2_related_research/figures/propp-eg.png Graphic file (type png)
 <use 2_related_research/figures/propp-eg.png>
 Package pdftex.def Info: 2_related_research/figures/propp-eg.png  used on input
- line 86.
+ line 80.
 (pdftex.def)             Requested size: 330.05322pt x 124.4173pt.
-<2_related_research/figures/propp-eg-2.png, id=496, 612.2875pt x 321.2pt>
+<2_related_research/figures/propp-eg-2.png, id=500, 612.2875pt x 321.2pt>
 File: 2_related_research/figures/propp-eg-2.png Graphic file (type png)
 <use 2_related_research/figures/propp-eg-2.png>
 Package pdftex.def Info: 2_related_research/figures/propp-eg-2.png  used on inp
-ut line 90.
+ut line 84.
 (pdftex.def)             Requested size: 330.05322pt x 173.14154pt.
  [9 <./2_related_research/figures/propp-eg.png>] [10 <./2_related_research/figu
 res/propp-eg-2.png>] [11]
-<2_related_research/figures/nn-sample.png, id=550, 501.875pt x 603.25375pt>
+<2_related_research/figures/nn-sample.png, id=554, 501.875pt x 603.25375pt>
 File: 2_related_research/figures/nn-sample.png Graphic file (type png)
 <use 2_related_research/figures/nn-sample.png>
 Package pdftex.def Info: 2_related_research/figures/nn-sample.png  used on inpu
-t line 143.
+t line 133.
 (pdftex.def)             Requested size: 247.54149pt x 297.54836pt.
- [12] [13 <./2_related_research/figures/nn-sample.png>]
-<2_related_research/figures/rnn-unrolled.png, id=585, 977.8131pt x 256.91985pt>
+ [12]
+Underfull \vbox (badness 7925) has occurred while \output is active []
+
+ [13 <./2_related_research/figures/nn-sample.png>]
+<2_related_research/figures/rnn-unrolled.png, id=591, 977.8131pt x 256.91985pt>
 
 File: 2_related_research/figures/rnn-unrolled.png Graphic file (type png)
 <use 2_related_research/figures/rnn-unrolled.png>
 Package pdftex.def Info: 2_related_research/figures/rnn-unrolled.png  used on i
-nput line 156.
+nput line 144.
 (pdftex.def)             Requested size: 330.05322pt x 86.72041pt.
  [14 <./2_related_research/figures/rnn-unrolled.png>]
-<2_related_research/figures/attention.png, id=607, 1378.14874pt x 748.7975pt>
+<2_related_research/figures/attention.png, id=611, 1378.14874pt x 748.7975pt>
 File: 2_related_research/figures/attention.png Graphic file (type png)
 <use 2_related_research/figures/attention.png>
 Package pdftex.def Info: 2_related_research/figures/attention.png  used on inpu
-t line 169.
+t line 157.
 (pdftex.def)             Requested size: 330.05322pt x 179.3266pt.
- [15 <./2_related_research/figures/attention.png>] [16] [17])
-[18]
+ [15 <./2_related_research/figures/attention.png>] [16]) [17]
 \openout2 = `3_design/design.aux'.
 
- (./3_design/design.tex
+
+(./3_design/design.tex [18
+
+
+
+]
  3.
-[19
-
-
-
-] [20] [21]) [22]
+[19] [20] [21]) [22]
 \openout2 = `4_implementation/implementation.aux'.
 
  (./4_implementation/implementation.tex
@@ -1131,18 +1137,18 @@ Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 312.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
 (rerunfilecheck)             Checksum: 011EC9E158D03D0459ED83D8CEA1CF1C;3827.
 Package rerunfilecheck Info: File `thesis.brf' has not changed.
-(rerunfilecheck)             Checksum: 454B9C201B949EA1C14A80E07826FBE5;3117.
+(rerunfilecheck)             Checksum: E01B78C8CE31CB0A4C252B8931B7EB83;3175.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 312.
  )
 (\end occurred when \iftrue on line 92 was incomplete) 
 Here is how much of TeX's memory you used:
- 22910 strings out of 492616
- 412594 string characters out of 6129482
+ 22918 strings out of 492616
+ 412734 string characters out of 6129482
  720960 words of memory out of 5000000
- 26142 multiletter control sequences out of 15000+600000
+ 26152 multiletter control sequences out of 15000+600000
  15613 words of font info for 59 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 64i,12n,83p,1071b,1288s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 64i,15n,83p,1189b,1288s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2019/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2019/t
 exmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2019/te
@@ -1156,10 +1162,10 @@ ts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2019/texmf-dist/font
 s/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2019/texmf-dist/fonts
 /type1/public/txfonts/t1xbtt.pfb></usr/local/texlive/2019/texmf-dist/fonts/type
 1/public/txfonts/t1xtt.pfb>
-Output written on thesis.pdf (50 pages, 1447054 bytes).
+Output written on thesis.pdf (50 pages, 1446004 bytes).
 PDF statistics:
- 905 PDF objects out of 1000 (max. 8388607)
- 804 compressed objects within 9 object streams
- 178 named destinations out of 1000 (max. 500000)
+ 910 PDF objects out of 1000 (max. 8388607)
+ 809 compressed objects within 9 object streams
+ 176 named destinations out of 1000 (max. 500000)
  517 words of extra memory for PDF output out of 10000 (max. 10000000)
 
