@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2020.2.5)  8 APR 2020 14:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2020.2.5)  10 APR 2020 13:03
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -784,7 +784,7 @@ LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
 \l_MT_above_shortintertext_sep=\dimen192
 \l_MT_below_shortintertext_sep=\dimen193
 )
-LaTeX Font Info:    Try loading font information for T1+txtt on input line 37.
+LaTeX Font Info:    Try loading font information for T1+txtt on input line 38.
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/txfonts/t1txtt.fd
 File: t1txtt.fd 2000/12/15 v3.1
@@ -828,20 +828,20 @@ File: lstlang1.sty 2019/02/27 1.8b listings language file
 (./6_conclusions/conclusions.aux))
 \openout1 = `thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 132.
-LaTeX Font Info:    ... okay on input line 132.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 132.
-LaTeX Font Info:    ... okay on input line 132.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 132.
-LaTeX Font Info:    ... okay on input line 132.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 132.
-LaTeX Font Info:    ... okay on input line 132.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 132.
-LaTeX Font Info:    ... okay on input line 132.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 132.
-LaTeX Font Info:    ... okay on input line 132.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 132.
-LaTeX Font Info:    ... okay on input line 132.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 114.
+LaTeX Font Info:    ... okay on input line 114.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 114.
+LaTeX Font Info:    ... okay on input line 114.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 114.
+LaTeX Font Info:    ... okay on input line 114.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 114.
+LaTeX Font Info:    ... okay on input line 114.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 114.
+LaTeX Font Info:    ... okay on input line 114.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 114.
+LaTeX Font Info:    ... okay on input line 114.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 114.
+LaTeX Font Info:    ... okay on input line 114.
 
 (/usr/local/texlive/2019/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -877,8 +877,8 @@ Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \AtBeginShipoutBox=\box70
-Package backref Info: ** backref set up for natbib ** on input line 132.
-Package hyperref Info: Link coloring OFF on input line 132.
+Package backref Info: ** backref set up for natbib ** on input line 114.
+Package hyperref Info: Link coloring OFF on input line 114.
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -888,9 +888,9 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count168
 )
-LaTeX Info: Redefining \ref on input line 132.
-LaTeX Info: Redefining \pageref on input line 132.
-LaTeX Info: Redefining \nameref on input line 132.
+LaTeX Info: Redefining \ref on input line 114.
+LaTeX Info: Redefining \pageref on input line 114.
+LaTeX Info: Redefining \nameref on input line 114.
 
 (./thesis.out) (./thesis.out)
 \@outlinefile=\write5
@@ -902,7 +902,7 @@ LaTeX Info: Redefining \nameref on input line 132.
 File: 0_frontmatter/figures/centre_UL_logo.jpg Graphic file (type jpg)
 <use 0_frontmatter/figures/centre_UL_logo.jpg>
 Package pdftex.def Info: 0_frontmatter/figures/centre_UL_logo.jpg  used on inpu
-t line 145.
+t line 127.
 (pdftex.def)             Requested size: 199.16928pt x 99.57533pt.
  [1
 
@@ -911,19 +911,23 @@ t line 145.
 \FN@pp@footnotehinttrue 
 
 {/usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./0_fro
-ntmatter/figures/centre_UL_logo.jpg>] [2]
+ntmatter/figures/centre_UL_logo.jpg>]
 \openout2 = `0_frontmatter/abstract.aux'.
 
- (./0_frontmatter/abstract.tex
-[3
+ (./0_frontmatter/abstract.tex [2
 
 ])
 \openout2 = `0_frontmatter/declaration.aux'.
 
- (./0_frontmatter/declaration.tex [4
+
+(./0_frontmatter/declaration.tex [3
 
 
-])
+]) [4
+\FN@pp@footnotehinttrue 
+
+
+]
 \openout2 = `0_frontmatter/acknowledgement.aux'.
 
  (./0_frontmatter/acknowledgement.texpdfTeX warning (ext4): destination with th
@@ -932,8 +936,6 @@ e same identifier (name{page.i}) has been already used, duplicate ignored
                    \relax 
 l.11 \end{acknowledgements}
                             [1
-
-
 
 ])
 \openout2 = `0_frontmatter/dedication.aux'.
@@ -1014,27 +1016,27 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 ]
  2.
 [5]
-<2_related_research/figures/3-act-structure.jpg, id=430, 642.4pt x 321.2pt>
+<2_related_research/figures/3-act-structure.jpg, id=432, 642.4pt x 321.2pt>
 File: 2_related_research/figures/3-act-structure.jpg Graphic file (type jpg)
 <use 2_related_research/figures/3-act-structure.jpg>
 Package pdftex.def Info: 2_related_research/figures/3-act-structure.jpg  used o
 n input line 46.
 (pdftex.def)             Requested size: 330.05322pt x 165.03021pt.
  [6 <./2_related_research/figures/3-act-structure.jpg>]
-<2_related_research/figures/heros-journey.png, id=449, 803.0pt x 807.015pt>
+<2_related_research/figures/heros-journey.png, id=451, 803.0pt x 807.015pt>
 File: 2_related_research/figures/heros-journey.png Graphic file (type png)
 <use 2_related_research/figures/heros-journey.png>
 Package pdftex.def Info: 2_related_research/figures/heros-journey.png  used on 
 input line 52.
 (pdftex.def)             Requested size: 330.05322pt x 331.70334pt.
  [7 <./2_related_research/figures/heros-journey.png>] [8]
-<2_related_research/figures/propp-eg.png, id=488, 513.92pt x 193.72375pt>
+<2_related_research/figures/propp-eg.png, id=490, 513.92pt x 193.72375pt>
 File: 2_related_research/figures/propp-eg.png Graphic file (type png)
 <use 2_related_research/figures/propp-eg.png>
 Package pdftex.def Info: 2_related_research/figures/propp-eg.png  used on input
  line 86.
 (pdftex.def)             Requested size: 330.05322pt x 124.4173pt.
-<2_related_research/figures/propp-eg-2.png, id=494, 612.2875pt x 321.2pt>
+<2_related_research/figures/propp-eg-2.png, id=496, 612.2875pt x 321.2pt>
 File: 2_related_research/figures/propp-eg-2.png Graphic file (type png)
 <use 2_related_research/figures/propp-eg-2.png>
 Package pdftex.def Info: 2_related_research/figures/propp-eg-2.png  used on inp
@@ -1042,14 +1044,14 @@ ut line 90.
 (pdftex.def)             Requested size: 330.05322pt x 173.14154pt.
  [9 <./2_related_research/figures/propp-eg.png>] [10 <./2_related_research/figu
 res/propp-eg-2.png>] [11]
-<2_related_research/figures/nn-sample.png, id=548, 501.875pt x 603.25375pt>
+<2_related_research/figures/nn-sample.png, id=550, 501.875pt x 603.25375pt>
 File: 2_related_research/figures/nn-sample.png Graphic file (type png)
 <use 2_related_research/figures/nn-sample.png>
 Package pdftex.def Info: 2_related_research/figures/nn-sample.png  used on inpu
 t line 143.
 (pdftex.def)             Requested size: 247.54149pt x 297.54836pt.
  [12] [13 <./2_related_research/figures/nn-sample.png>]
-<2_related_research/figures/rnn-unrolled.png, id=583, 977.8131pt x 256.91985pt>
+<2_related_research/figures/rnn-unrolled.png, id=585, 977.8131pt x 256.91985pt>
 
 File: 2_related_research/figures/rnn-unrolled.png Graphic file (type png)
 <use 2_related_research/figures/rnn-unrolled.png>
@@ -1057,7 +1059,7 @@ Package pdftex.def Info: 2_related_research/figures/rnn-unrolled.png  used on i
 nput line 156.
 (pdftex.def)             Requested size: 330.05322pt x 86.72041pt.
  [14 <./2_related_research/figures/rnn-unrolled.png>]
-<2_related_research/figures/attention.png, id=605, 1378.14874pt x 748.7975pt>
+<2_related_research/figures/attention.png, id=607, 1378.14874pt x 748.7975pt>
 File: 2_related_research/figures/attention.png Graphic file (type png)
 <use 2_related_research/figures/attention.png>
 Package pdftex.def Info: 2_related_research/figures/attention.png  used on inpu
@@ -1107,7 +1109,7 @@ t line 169.
 
 ]
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 296.
+nput line 255.
  (./ahrs_triad_mote.c) (./thesis.bbl (./thesis.brf)
 \tf@brf=\write9
 \openout9 = `thesis.brf'.
@@ -1116,31 +1118,31 @@ nput line 296.
 [31] [32
 
 ] [33] [34] [35]) [36]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 353.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 353.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 312.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 312.
  (./thesis.aux (./0_frontmatter/abstract.aux)
 (./0_frontmatter/declaration.aux) (./0_frontmatter/acknowledgement.aux)
 (./0_frontmatter/dedication.aux) (./1_introduction/introduction.aux)
 (./2_related_research/related_research.aux) (./3_design/design.aux)
 (./4_implementation/implementation.aux) (./5_evaluation/evaluation.aux)
 (./6_conclusions/conclusions.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 353.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 353.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 312.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 312.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
 (rerunfilecheck)             Checksum: 011EC9E158D03D0459ED83D8CEA1CF1C;3827.
 Package rerunfilecheck Info: File `thesis.brf' has not changed.
 (rerunfilecheck)             Checksum: 454B9C201B949EA1C14A80E07826FBE5;3117.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 353.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 312.
  )
-(\end occurred when \iftrue on line 91 was incomplete) 
+(\end occurred when \iftrue on line 92 was incomplete) 
 Here is how much of TeX's memory you used:
  22910 strings out of 492616
  412594 string characters out of 6129482
- 720994 words of memory out of 5000000
+ 720960 words of memory out of 5000000
  26142 multiletter control sequences out of 15000+600000
  15613 words of font info for 59 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 64i,12n,83p,915b,1288s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 64i,12n,83p,1071b,1288s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2019/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2019/t
 exmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2019/te
@@ -1154,10 +1156,10 @@ ts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2019/texmf-dist/font
 s/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2019/texmf-dist/fonts
 /type1/public/txfonts/t1xbtt.pfb></usr/local/texlive/2019/texmf-dist/fonts/type
 1/public/txfonts/t1xtt.pfb>
-Output written on thesis.pdf (50 pages, 1447107 bytes).
+Output written on thesis.pdf (50 pages, 1447054 bytes).
 PDF statistics:
- 903 PDF objects out of 1000 (max. 8388607)
- 802 compressed objects within 9 object streams
+ 905 PDF objects out of 1000 (max. 8388607)
+ 804 compressed objects within 9 object streams
  178 named destinations out of 1000 (max. 500000)
  517 words of extra memory for PDF output out of 10000 (max. 10000000)
 
