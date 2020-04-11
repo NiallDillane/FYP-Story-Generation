@@ -135,7 +135,7 @@ An ANN contains nodes, or "neurons", which are connected to each other. They can
 The classic example and popular use case of ANNs is image identification (\Citealt{le2013building}). To teach a program to correctly separate images of cats and dogs, the basic approach would be to give it explicit rules for cats versus dogs – nose, ears, paws, etc. However, the ANN allows you to simply feed it examples (ideally many) of images of both, and then allow it to formulate those rules by itself. This saves time and work for the user, and tends to create a much more accurate model (\Citealt{lecun1989backpropagation}), especially with a large amount of input, "training" data. Moreover, in some cases (like ours) it is not feasible to create a comprehensive list of rules by hand, and there is often an abundant source of data to feed the model.
 
 
-\subsubsection{Recurrent Neural Networks \& LSTMs}
+\subsubsection{Recurrent Neural Networks \& LSTMs} \label{rnn}
 
 Examining some of the recent works on natural language generation and even specific story generation papers, Recurrent Neural Networks (RNNs) stood out as the popular technology (\Citealt{peng2018towards}), (\Citealt{fan2018hierarchical}), (\Citealt{sutskever2014sequence}). 
 
@@ -150,25 +150,21 @@ However, these RNNs and LSTMs appear not to be state of the art in the NLP world
 
 \subsection{Transformers}
 
-The Transformer architecture was pioneered by a team of Google researchers (\Citealt{vaswani2017attention}) and the early results are very promising. OpenAI’s GPT-2 (\Citealt{radford2019language}) is perhaps the most advanced language processing Artificial Intelligence (AI) system currently, so much so that they declined to release their full code, claiming they fear it could be used for ill means e.g. fake news.
+The Transformer architecture was pioneered by a team of Google researchers (\Citealt{vaswani2017attention}) and the early results are very promising. OpenAI’s GPT-2 (\Citealt{radford2019language}) is perhaps the most advanced language processing Artificial Intelligence (AI) system currently (discussed more in Section~\ref{gpt}), so much so that they declined to release their full code, claiming they fear it could be used for ill means e.g. fake news.
 
-We mentioned RNNs utilising loops, but in reality it’s more like a series of connected Neurons, each performing its processing and then passing the new “state” to the next. This is what allows it to maintain memory – each stage of the computation is aware of everything that happened previously. You can see this in the following, with the RNN on top and Transformer on bottom: (Figure \ref{attention}).
+We mentioned RNNs utilising loops in Section~\ref{rnn}, but in reality it’s more like a series of connected Neurons, each performing its processing and then passing the new “state” to the next. This is what allows it to maintain memory – each stage of the computation is aware of everything that happened previously. You can see this in Figure~\ref{attention}, with the RNN on top and Transformer on bottom.
  
 \figuremacroW{attention}{RNN vs. Transformer Architecture}{Attention replacing loops [Source: (\Citealt{kurita2017attention})]}{0.8}
 
-Note: here the example is translation, but for language generation the idea is the same. Instead of passing in a passage and translating it, we seek to find the next part of said passage. Note also that there are encoding (orange) and decoding (blue) stages, but they are practically similar. 
+It should be noted that in the Figure~\ref{attention} example the targeted operation is translation, but for language generation the idea is the same. Instead of passing in a passage and translating it, we seek to find the next part of said passage. Note also that there are encoding (orange) and decoding (blue) stages, but they are practically similar. 
 
-The issues here are clear. The RNN is very difficult to parallelise since the computation must be done in sequence, passing the state along (\Citealt{bengio1994learning}). Also, the further you drift from the start (i.e. the longer the text becomes) the less your network will remember about those early stages. This is a problem for stories, where elements are often mentioned briefly at the start, only to come into prominence later – vital for continuity.
+The issues here are clear: the RNN is very difficult to parallelise since the computation must be done in sequence, passing the state along (\Citealt{bengio1994learning}); also, the longer the generation runs (i.e. the longer the text becomes) the less your network will remember about those early stages. This could potentially pose problems if it was used in the generation of stories, where elements are often mentioned briefly at the start, only to come into prominence later – vital for continuity.
 
 Transformers, by contrast, take the entire input passage in at once, using the concept of Attention (\Citealt{vaswani2017attention}) along with positional encoding (to ensure you don’t start mixing up a sentence) to calculate the relative importance of each word. These results are then passed through a more traditional feedforward Neural Network (much faster than an RNN) and potentially another multi-head attention stage (applications differ) to produce your following piece of the passage. 
 
-For the purposes of this research, we won’t be delving into the inner workings of the Attention mechanism, but essentially what it does is calculate the relevance of each word in the input. For example, if you have the input “I grew up in France… I speak fluent” and wish to predict the next word, the word “France” will be given a much higher score, indicating to the system what it should predict based on.
+For the purposes of this research, we won’t be delving into the inner workings of the Attention mechanism, but essentially what it does is calculate the relevance of each word in the input. For example, if you have the input “I grew up in France… I speak fluent” and wish to predict the next word, the word “France” will be given a much higher score, indicating to the system what it should predict based on. This helps hugely with the long term dependency issue, since at each stage the entire input is considered, and thus there is a much lower risk of earlier information being “forgotten”, something that even the finest LSTMs struggled with. This could lead to performance issues, but thanks to the Attention mechanism and feedforward NN being used (allowing you to process the entire input at once), Transformers are in fact faster.
 
-This helps hugely with the long term dependency issue, since at each stage the entire input is considered, and thus there is a much lower risk of earlier information being “forgotten”, something that even the finest LSTMs struggled with. 
-
-This could lead to performance issues, but thanks to the Attention mechanism and feedforward NN being used (allowing you to process the entire input at once), Transformers are in fact faster.
-
-The best models also seem to utilise unsupervised learning (to be discussed later), which has the obvious benefit of being able to feed it much more data, as seen with GPT-2 and its 1.5 billion parameters (\Citealt{radford2019language}). However, you do need to feed it a massive amount of data for it to be in any way effective. 
+The best models also seem to utilise unsupervised learning (see Section~\ref{gpt}), which has the obvious benefit of being able to feed it much more data, as seen with GPT-2 and its 1.5 billion parameters (\Citealt{radford2019language}). However, you do need to feed it a massive amount of data for it to be in any way effective. 
 
 A number of models have been developed with this architecture.
 
@@ -177,11 +173,11 @@ A number of models have been developed with this architecture.
 
 Google, being the organisation behind this original Attention mechanism research (\Citealt{vaswani2017attention}), was naturally one of the first to develop a Transformer architecture based on it. 
 
-BERT (Bidirectional Encoder Representations from Transformers) was developed in 2018 and promptly achieved excellent results on natural language understanding tasks (\Citealt{devlin2018bert}). The findings were significant enough that in October 2019, Google began applying BERT to improve its search algorithms (\Citealt{nayak2019search}), the foundation of their business.
+BERT (Bidirectional Encoder Representations from Transformers) was developed in 2018 and promptly achieved excellent results on natural language understanding tasks (\Citealt{devlin2018bert}). The findings were significant enough that in October 2019, Google began applying BERT to improve its search algorithms (\Citealt{nayak2019search}), the foundation of their business. 
 
-However, while exciting and emblematic of the potential of Transformers, BERT is not necessarily suited to our task. As mentioned, it was mainly trained and used for the purposes of natural language understanding (NLU), rather than generation (NLG). As such, I continued my search for a more appropriate model.
+However, while exciting and emblematic of the potential of Transformers, BERT is not necessarily suited to our task. As mentioned, it was mainly trained and used for the purposes of natural language understanding (NLU) – the clue being in the name "Bidirectional" – filling in missing words in sentences and machine translation (\Citealt{devlin2018bert}). For the purposes of our system, we are focused on NLG, so this isn't ideal.
 
-\subsubsection{GPT \& GPT-2}
+\subsubsection{GPT \& GPT-2} \label{gpt}
 
 GPT (Generative Pretrained Transformer) was also developed in 2018, this time by \href{https://openai.com/}{OpenAI}, a decoder-only Transformer architecture with largely unsupervised training. A massive corpus of text was gathered from the internet and fed to the model, which quickly produced impressive results (\Citealt{radford2018improving}). 
 
@@ -189,9 +185,7 @@ Their research focused on initially training the model (unsupervised) on a very 
 
 It follows the simple principle of predicting \emph{the next word}, much like our phones will offer next-word suggestions based on what we have typed before, but on a much more advanced level and (ideally) not descending into gibberish. This was incredibly promising and looked ideal for my use case.
 
-GPT-2 was next, taking things a step further with entirely unsupervised learning, and achieving even more state-of-the-art results than before (\Citealt{radford2019language}). To achieve this, a huge amount of parameters was necessary. For perspective, the smallest GPT model has parameters roughly equivalent in number to the largest BERT model. The largest GPT-2 has over an order of magnitude more than that. 1.5 billion parameters at its largest. 
-
-This is clearly the ultimate NLG model at this point, and seems like the obvious choice for our system.
+Having looked the potential of GPT for use in our system we next looked at its successor, GPT-2, taking things a step further with entirely unsupervised learning, and achieving even more state-of-the-art results than before (\Citealt{radford2019language}). To achieve this, a huge amount of parameters was necessary. For perspective, the smallest GPT model has parameters roughly equivalent in number to the largest BERT model. The largest GPT-2 has over an order of magnitude more than that. 1.5 billion parameters at its largest. This would seem to be the most appropriate architecture for our system.
 
 
 % ---------------------------------------------------------------------------

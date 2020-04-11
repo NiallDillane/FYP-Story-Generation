@@ -18,7 +18,7 @@
 \contentsline {section}{\numberline {2.4}Natural Language Generation}{11}{section.2.4}% 
 \contentsline {subsection}{\numberline {2.4.1}Neural Networks}{12}{subsection.2.4.1}% 
 \contentsline {subsubsection}{\numberline {2.4.1.1}Recurrent Neural Networks \& LSTMs}{14}{subsubsection.2.4.1.1}% 
-\contentsline {subsection}{\numberline {2.4.2}Transformers}{14}{subsection.2.4.2}% 
+\contentsline {subsection}{\numberline {2.4.2}Transformers}{15}{subsection.2.4.2}% 
 \contentsline {subsubsection}{\numberline {2.4.2.1}BERT}{16}{subsubsection.2.4.2.1}% 
 \contentsline {subsubsection}{\numberline {2.4.2.2}GPT \& GPT-2}{17}{subsubsection.2.4.2.2}% 
 \contentsline {chapter}{\numberline {3}Design}{19}{chapter.3}% 
