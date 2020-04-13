@@ -105,9 +105,10 @@ function StoryPane() {
 			suppressContentEditableWarning={true}
 			className="text-body"
 			// onBlur so change only grabbed when user clicks out
-			onBlur={e => { setStory(e.currentTarget.innerHTML); }}>
-			{story}
-			{play ? <GenStory /> : ""}
+			onBlur={e => { setStory(e.currentTarget.innerHTML); }}
+			dangerouslySetInnerHTML={{__html: story}}>
+			{/* {story} */}
+			{/* {play ? <GenStory /> : ""} */}
 		</div>
 	);
 }
@@ -226,6 +227,7 @@ function PlayButton() {
 			<div name="pauseButton"	className="playPause">
 				<img src={stopButton} alt="pauseButton" 
 					onClick={() => setPlay(false)} />
+				{play ? <GenStory /> : ""}
 			</div>
 		)
 	}
