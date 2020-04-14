@@ -90,70 +90,13 @@ function GenStory() {
 	return null;
 }
 
-function getCaretPosition (node) {
-    var range = window.getSelection().getRangeAt(0),
-        preCaretRange = range.cloneRange(),
-        caretPosition,
-        tmp = document.createElement("div");
-
-    preCaretRange.selectNodeContents(node);
-    preCaretRange.setEnd(range.endContainer, range.endOffset);
-    tmp.appendChild(preCaretRange.cloneContents());
-    caretPosition = tmp.innerHTML.length;
-    return caretPosition;
-}
-
-function getHTMLCaretPosition(element) {
-	var textPosition = getCaretPosition(element),
-		htmlContent = element.innerHTML,
-		textIndex = 0,
-		htmlIndex = 0,
-		insideHtml = false,
-		htmlBeginChars = ['&', '<'],
-		htmlEndChars = [';', '>'];
-	
-	
-	if (textPosition == 0) {
-	  return 0;
-	}
-	
-	while(textIndex < textPosition) {
-	
-	  htmlIndex++;
-	
-	  // check if next character is html and if it is, iterate with htmlIndex to the next non-html character
-	  while(htmlBeginChars.indexOf(htmlContent.charAt(htmlIndex)) > -1) {
-		// console.log('encountered HTML');
-		// now iterate to the ending char
-		insideHtml = true;
-	
-		while(insideHtml) {
-		  if (htmlEndChars.indexOf(htmlContent.charAt(htmlIndex)) > -1) {
-			if (htmlContent.charAt(htmlIndex) == ';') {
-			  htmlIndex--; // entity is char itself
-			}
-			// console.log('encountered end of HTML');
-			insideHtml = false;
-		  }
-		  htmlIndex++;
-		}
-	  }
-	  textIndex++;
-	}
-	
-	//console.log(htmlIndex);
-	//console.log(textPosition);
-	// in htmlIndex is caret position inside html
-	return htmlIndex;
-}
-
 
 /**
  * Writing environment for generation and manual editing
  * Story Generation called when global state [play] is true
  */
 function StoryPane() {
-	const [story, setStory] = useState("Once upon a time");	
+	const [story, setStory] = useState("Once upon a time ");	
 	const [play, setPlay] = useGlobalState('play');
 
 	const [caretStart, setCaretStart] = useState(0);
@@ -161,7 +104,7 @@ function StoryPane() {
 
 	// when caret moves, restore to saved position
 	useEffect(()=>{
-		document.getElementById('text').innerHTML = story.substring(0, caretStart-1) + '<b>' + story.substring(caretStart-1, caretStart+1) + '</b>' + story.substring(caretStart+1,);
+		// document.getElementById('text').innerHTML = story.substring(0, caretStart-1) + '<b>' + story.substring(caretStart-1, caretStart+1) + '</b>' + story.substring(caretStart+1,);
 		// document.getElementById('text').innerHTML = ('<b>' + story + '</b>');
 		CaretPositioning.restoreSelection(document.getElementById("text"), caretStart, caretEnd);
 
@@ -181,8 +124,8 @@ function StoryPane() {
 				let savedCaretPosition = CaretPositioning.saveSelection(e.currentTarget);
 						
 				setStory(targetValue);
-				setCaretStart(savedCaretPosition);
-				setCaretEnd(savedCaretPosition);
+				setCaretStart(savedCaretPosition.start);
+				setCaretEnd(savedCaretPosition.end);
 			}}
 			onBlur={e => { setStory(e.currentTarget.innerHTML); }}>
 			{story}
