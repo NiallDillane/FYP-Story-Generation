@@ -159,8 +159,12 @@ function StoryPane() {
 	const [caretStart, setCaretStart] = useState(0);
 	const [caretEnd, setCaretEnd] = useState(0);
 
+	// when caret moves, restore to saved position
 	useEffect(()=>{
+		document.getElementById('text').innerHTML = story.substring(0, caretStart-1) + '<b>' + story.substring(caretStart-1, caretStart+1) + '</b>' + story.substring(caretStart+1,);
+		// document.getElementById('text').innerHTML = ('<b>' + story + '</b>');
 		CaretPositioning.restoreSelection(document.getElementById("text"), caretStart, caretEnd);
+
 	}, [caretStart, caretEnd]);
 	
 
@@ -176,17 +180,12 @@ function StoryPane() {
 				//save caret position(s), so can restore when component reloads
 				let savedCaretPosition = CaretPositioning.saveSelection(e.currentTarget);
 						
-				setStory('<b>' + targetValue + '</b>');
-				setCaretStart(savedCaretPosition.start);
-				setCaretEnd(savedCaretPosition.end);
-				console.log(savedCaretPosition.start);
-				console.log(savedCaretPosition.end);
-				
-				//restore caret position(s)
+				setStory(targetValue);
+				setCaretStart(savedCaretPosition);
+				setCaretEnd(savedCaretPosition);
 			}}
-			onBlur={e => { setStory(e.currentTarget.innerHTML); }}
-			dangerouslySetInnerHTML={{__html: story}}>
-			{/* {story} */}
+			onBlur={e => { setStory(e.currentTarget.innerHTML); }}>
+			{story}
 			{/* {play ? <GenStory /> : ""} */}
 		</div>
 	);
