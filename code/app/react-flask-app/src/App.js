@@ -176,7 +176,7 @@ function StoryPane() {
 				//save caret position(s), so can restore when component reloads
 				let savedCaretPosition = CaretPositioning.saveSelection(e.currentTarget);
 						
-				setStory(targetValue);
+				setStory('<b>' + targetValue + '</b>');
 				setCaretStart(savedCaretPosition.start);
 				setCaretEnd(savedCaretPosition.end);
 				console.log(savedCaretPosition.start);
