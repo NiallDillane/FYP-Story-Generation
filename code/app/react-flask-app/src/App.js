@@ -10,7 +10,8 @@ import tempIcon from './images/temperature.svg'
 import lengthIcon from './images/length.svg'
 import seedIcon from './images/seed.svg'
 
-import './App.css';
+import './expandingParams.css';
+// import './App.css';
 import 'rc-slider/assets/index.css';
 
 
