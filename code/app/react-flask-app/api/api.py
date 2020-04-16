@@ -2,6 +2,7 @@ import time
 import math
 import subprocess
 import random
+import re
 
 from contextlib import contextmanager
 from flask import Flask, request
@@ -29,12 +30,15 @@ def get_text():
     Calls run_generation.py script to generate text with parameters
     """
     params = request.json
-    print('\n\nPARAMS[0]:\n', params[0])
-    prompt = params[0].replace('</b> &#8203; <b>', ' ').rstrip()
+    params[0] = params[0].rstrip()
+    print('\n\nPARAMS[0]:\n', repr(params[0]))
+    prompt = params[0].replace('<b>', '')
     prompt = prompt.replace('</b>', '')
-    print('\n\nPROMPT:\n', prompt)
+    prompt = prompt.replace('<br><br>', '')
+    prompt = prompt.replace(' \u200b', '')
+    print('\n\nPROMPT:\n', repr(prompt))
     # Total length of new text, based on tokens
-    length = math.floor((params[0].count(' ') * 1.5) + ((params[1][2] / 2) * 30))
+    length = math.floor((prompt.count(' ') * 1.5) + ((params[1][2] / 2) * 20))
     # If seed isn't set, use a random number
     seed = str(params[1][3]) if params[1][3] != 0 else str(random.randint(0, 2000000000))
     
@@ -49,12 +53,13 @@ def get_text():
         stdout=subprocess.PIPE, cwd='./../../transformers/examples')
     
     output = output.stdout.decode('utf-8')
-    print('\n\nOUTPUT:\n', output)
+    print('\n\nOUTPUT:\n', repr(output))
     newText = output[:-1].replace(prompt, '')
-    print('\n\nNEWTEXT:\n',newText)
-    newText = newText.replace(' ', '</b> &#8203; <b>')
+    print('\n\nNEWTEXT:\n',repr(newText))
+    newText = newText.replace(' ', '</b> \u200b <b>')
     
-    result = params[0] + newText + '</b> '
-    print('\n\nRESULT:\n', result)
+    result = params[0] + newText + '</b> \u200b'
+    result = re.sub('\n+', '</b> \u200b<br><br><b>', result)
+    print('\n\nRESULT:\n', repr(result), '\n\n')
 
     return {'text':result}
