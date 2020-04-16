@@ -73,7 +73,7 @@ function GenStory() {
 				"content_type":"application/json",
 			},
 			// Convert HTML linebreaks, maintain callback using story 
-			body:JSON.stringify([story.replace('<br /> <br />', '\n').replace('<br>', ''), params]),
+			body:JSON.stringify([story, params]),
 			}
 		)
 		.then(res => res.json())
@@ -82,7 +82,7 @@ function GenStory() {
 			setStory(data.text);
 			setLoading(false);
 		});
-		document.getElementById("text").innerHTML = story.replace('\n', '<br /> <br />');
+		document.getElementById("text").innerHTML = story;
 		console.log("setting story to: \n" + story);
 	}, [story]); // callback, generate again with result
 
