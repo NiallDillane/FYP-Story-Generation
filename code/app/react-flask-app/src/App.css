@@ -1,3 +1,5 @@
+/*** Base app style ***/
+
 .App {
 	background-color: #f1f1f1;
 	font-size: calc(10px + 2vmin);
@@ -18,6 +20,7 @@
 }
 
 
+/*** Story/writing pane ***/
 
 .story {
 	width: 50%;
@@ -29,6 +32,7 @@
     resize: none;
     outline: none;
 	color: #282c34;
+	font-weight: bold;
 	font-family: 'Courier New', Courier, monospace;
 	font-size: 16pt;
 	height:90vh;
@@ -41,31 +45,31 @@
 	max-width: -webkit-fill-available;
 }
 
+/* regular text is bold, bold text is regular,
+   for highlighting user inputted text */
+b {
+	font-weight: normal;
+}
 
 
-
+/*** Sidebar with title/options ***/
 
 .sidebar {
 	width: 5%;
 	overflow: hidden;
-	/* filter: blur(0.5rem);  */
 	transition: 0.3s;
+	margin-left: 15%;
 }
 
-.sidebar > .title img {
-	min-width: 75%;
-	max-width: 75%;
-	transition: 0.3s;
-}
-
+/* Hide details/shrink images normally, display on hover */
 .sidebar > .options div div,
 .sidebar .options div input {
 	visibility: hidden;
 }
 
 .sidebar:hover {
-	width: 25%;
-	filter: none;
+	width: 20%;
+	margin-left: 0%;
 }
 
 .sidebar:hover > .title img {
@@ -78,12 +82,12 @@
 	visibility: visible;
 }
 
-.seed {
-	margin-left: 2vh;
+/* Title image */
+.sidebar > .title img {
+	min-width: 75%;
+	max-width: 75%;
+	transition: 0.3s;
 }
-
-
-
 
 .title img {
 	margin-top: 20vh;
@@ -94,6 +98,7 @@
 	height: 30vh;
 }
 
+/* Parameters section */
 .options {
 	margin-top: 3vh;
 	margin-left: auto;
@@ -126,6 +131,10 @@
 	max-width: 75%;
 }
 
+.seed {
+	margin-left: 2vh;
+}
+
 .options input {
 	border: 0;
 	outline: 0;
@@ -140,6 +149,9 @@
 	min-width: 4vh;
 	max-width: 4vh;
 }
+
+
+/*** Play/pause and loading images */
 
 .playPause img {
 	margin-top: 5vh;
