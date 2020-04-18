@@ -27,6 +27,11 @@
 	border-left: 1px solid #fff;
 }
 
+.story ::selection {
+	background: #fcf113;
+	/* background: linear-gradient(to top, #fcf113 50%, transparent 50%); */
+  }
+
 .text-body {
     background-color: transparent;
     resize: none;
