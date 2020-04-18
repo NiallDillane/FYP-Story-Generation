@@ -91,6 +91,14 @@ function GenStory() {
 	return null;
 }
 
+function Header(){
+	return(
+		<div class="header-container" contentEditable="true">
+			<span class="header">Title</span>
+		</div>
+	)
+}
+
 /**
  * Writing environment for generation and manual editing
  * Story Generation called when global state [play] is true
@@ -263,6 +271,7 @@ function App() {
 				<LoadingIcon />
 			</div>
 			<div className="col story">
+				<Header />
 				<StoryPane />
 			</div>
 		</div>
