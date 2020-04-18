@@ -119,7 +119,7 @@ function StoryPane() {
 function Title() {
 	return(
 		<div className="title">
-			<img src={sleeplessText} alt="logo" />
+			<img src={logo} alt="logo" />
 		</div>
 	);
 }

@@ -82,12 +82,12 @@ b {
 
 /* Title image */
 .title img {
-	margin-top: 15vh;
+	margin-top: 25vh;
 	margin-right: auto;
 	margin-left: 70%;
 	display: block;
 	width: 15vh;
-	height: 30vh;
+	height: 25vh;
 	min-width: 25%;
 	max-width: 25%;
 	transition: 0.3s;
@@ -95,7 +95,7 @@ b {
 
 /* Parameters section */
 .options {
-	margin-top: 8vh;
+	margin-top: 3vh;
 	float:right;
 	display: block;
 	width: 100%;
@@ -149,7 +149,7 @@ b {
 /*** Play/pause and loading images */
 
 .playPause img {
-	margin-top: 38vh;
+	margin-top: 33vh;
 	margin-left: 75%;
 	margin-right: auto;
 	display: block;
