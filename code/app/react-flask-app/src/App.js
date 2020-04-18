@@ -9,6 +9,7 @@ import loadingIcon from './images/loadingIcon.svg'
 import tempIcon from './images/temperature.svg'
 import lengthIcon from './images/length.svg'
 import seedIcon from './images/seed.svg'
+import sleeplessText from './images/sleeplessText.svg'
 
 import './expandingParams.css';
 // import './App.css';
@@ -118,7 +119,7 @@ function StoryPane() {
 function Title() {
 	return(
 		<div className="title">
-			<img src={logo} alt="logo" />
+			<img src={sleeplessText} alt="logo" />
 		</div>
 	);
 }

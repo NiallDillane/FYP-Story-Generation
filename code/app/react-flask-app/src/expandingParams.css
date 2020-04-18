@@ -81,36 +81,21 @@ b {
 }
 
 /* Title image */
-.sidebar > .title img {
-	min-width: 25%;
-	max-width: 25%;
-	transition: 0.3s;
-	margin-left: 70%;
-}
-
-.sidebar > .title:hover img {
-	min-width: 50%;
-	max-width: 50%;
-	transition: 0.3s;
-	margin-left: 50%;
-	animation: shake 0.5s;
-
-  /* When the animation is finished, start again */
-  animation-iteration-count: 1; 
-}
-
 .title img {
-	margin-top: 20vh;
-	margin-left: auto;
+	margin-top: 15vh;
 	margin-right: auto;
+	margin-left: 70%;
 	display: block;
 	width: 15vh;
 	height: 30vh;
+	min-width: 25%;
+	max-width: 25%;
+	transition: 0.3s;
 }
 
 /* Parameters section */
 .options {
-	margin-top: 3vh;
+	margin-top: 8vh;
 	float:right;
 	display: block;
 	width: 100%;
@@ -164,7 +149,7 @@ b {
 /*** Play/pause and loading images */
 
 .playPause img {
-	margin-top: 33vh;
+	margin-top: 38vh;
 	margin-left: 75%;
 	margin-right: auto;
 	display: block;
@@ -174,13 +159,8 @@ b {
 	transition: 0.1s;
 }
 
-.playPause:hover img {
-/* 	width: 5.5vh;
-	height: 5.5vh; 
-	transition: 0.1s;*/
-	animation: shake2 0.2s;
-
-  /* When the animation is finished, start again */
+.playPause img:hover {
+	animation: spin 0.2s;
   animation-iteration-count: 1; 
 }
 
@@ -195,22 +175,7 @@ b {
 }
 
 
-
-@keyframes shake {
-  0% { transform: translate(1px, 1px) rotate(0deg); }
-  10% { transform: translate(-1px, -2px) rotate(-1deg); }
-  20% { transform: translate(-3px, 0px) rotate(1deg); }
-  30% { transform: translate(3px, 2px) rotate(0deg); }
-  40% { transform: translate(1px, -1px) rotate(1deg); }
-  50% { transform: translate(-1px, 2px) rotate(-1deg); }
-  60% { transform: translate(-3px, 1px) rotate(0deg); }
-  70% { transform: translate(3px, 1px) rotate(-1deg); }
-  80% { transform: translate(-1px, -1px) rotate(1deg); }
-  90% { transform: translate(1px, 2px) rotate(0deg); }
-  100% { transform: translate(1px, -2px) rotate(-1deg); }
-}
-
-@keyframes shake2 {
+@keyframes spin {
   0% { transform: translate(0px, 0px) rotate(36deg); }
   10% { transform: translate(0px, 0px) rotate(72deg); }
   20% { transform: translate(0px, 0px) rotate(108deg); }
