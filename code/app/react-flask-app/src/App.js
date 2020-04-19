@@ -12,7 +12,6 @@ import seedIcon from './images/seed.svg'
 import sleeplessText from './images/sleeplessText.svg'
 
 import './expandingParams.css';
-// import './App.css';
 import 'rc-slider/assets/index.css';
 
 
