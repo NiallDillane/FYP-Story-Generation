@@ -31,12 +31,10 @@ def get_text():
     """
     params = request.json
     params[0] = params[0].rstrip()
-    print('\n\nPARAMS[0]:\n', repr(params[0]))
     prompt = params[0].replace('<b>', '')
     prompt = prompt.replace('</b>', '')
     prompt = prompt.replace('<br><br>', '')
     prompt = prompt.replace(' \u200b', '')
-    print('\n\nPROMPT:\n', repr(prompt))
     # Total length of new text, based on tokens
     length = math.floor((prompt.count(' ') * 1.5) + ((params[1][2] / 2) * 20))
     # If seed isn't set, use a random number
@@ -53,13 +51,10 @@ def get_text():
         stdout=subprocess.PIPE, cwd='./../../transformers/examples')
     
     output = output.stdout.decode('utf-8')
-    print('\n\nOUTPUT:\n', repr(output))
     newText = output[:-1].replace(prompt, '')
-    print('\n\nNEWTEXT:\n',repr(newText))
     newText = newText.replace(' ', '</b> \u200b <b>')
     
     result = params[0] + newText + '</b> \u200b'
     result = re.sub('\n+', '</b> \u200b<br><br><b>', result)
-    print('\n\nRESULT:\n', repr(result), '\n\n')
 
     return {'text':result}
