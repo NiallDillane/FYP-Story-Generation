@@ -29,6 +29,7 @@ def get_text():
     """
     Calls run_generation.py script to generate text with parameters
     """
+    model = 'output'
     params = request.json
     params[0] = params[0].rstrip()
     prompt = params[0].replace('<b>', '')
@@ -44,7 +45,7 @@ def get_text():
         '--model_type=gpt2',
         '--length=' + str(length), 
         '--temperature=' + str(params[1][1]),
-        '--model_name_or_path=output', 
+        '--model_name_or_path=' + model, 
         '--padding_text=" "',
         '--seed=' + seed,
         '--prompt=' + prompt], 
