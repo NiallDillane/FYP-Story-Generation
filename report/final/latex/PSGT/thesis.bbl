@@ -82,6 +82,10 @@ Goldberg, Y.  \harvardyearleft 2016\harvardyearright , `A primer on neural
   network models for natural language processing', {\em Journal of Artificial
   Intelligence Research} {\bf 57},~345--420.
 
+\harvarditem{Gordon}{1978}{gordon1978star}
+Gordon, A.  \harvardyearleft 1978\harvardyearright , `Star wars: A myth for our
+  time', {\em Literature/Film Quarterly} {\bf 6}(4),~314.
+
 \harvarditem[Graves et~al.]{Graves, Liwicki, Fern{\'a}ndez, Bertolami, Bunke
   \harvardand\ Schmidhuber}{2008}{graves2008novel}
 Graves, A., Liwicki, M., Fern{\'a}ndez, S., Bertolami, R., Bunke, H.
@@ -166,8 +170,9 @@ Post, E.~L.  \harvardyearleft 1943\harvardyearright , `Formal reductions of the
   mathematics} {\bf 65}(2),~197--215.
 
 \harvarditem{Propp}{1968}{propp1968morphology}
-Propp, V.~I.  \harvardyearleft 1968\harvardyearright , {\em Morphology of the
-  Folktale}, Vol.~9, University of Texas Press.
+Propp, V.  \harvardyearleft 1968\harvardyearright , `Morphology of the
+  folktale. 1928', {\em Trans. Svatava Pirkova-Jakobson. 2nd ed. Austin: U of
+  Texas P} .
 
 \harvarditem[Radford et~al.]{Radford, Narasimhan, Salimans \harvardand\
   Sutskever}{2018}{radford2018improving}
