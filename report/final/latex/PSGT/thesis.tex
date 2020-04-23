@@ -191,6 +191,23 @@
 
 \renewcommand{\chaptername}{} % uncomment to print only "1" not "Chapter 1"
 
+\lstset
+{ 
+    language=Python,
+    basicstyle=\ttm,
+    otherkeywords={self},             % Add keywords here
+    keywordstyle=\ttb\color{deepblue},
+    emph={MyClass,__init__},          % Custom highlighting 
+    emphstyle=\ttb\color{deepred},    % Custom highlighting style
+    stringstyle=\color{deepgreen},
+    numbers=left,
+    stepnumber=1,
+    showstringspaces=false,
+    tabsize=1,
+    breaklines=true,
+    breakatwhitespace=false,
+    captionpos=b
+}
 
 %: ----------------------- subdocuments ------------------------
 
@@ -231,28 +248,8 @@
 
 AHRS\_TRIAD.C
 
-
-
-
-\lstset
-{ 
-    language=Python,
-    basicstyle=\ttm,
-    otherkeywords={self},             % Add keywords here
-    keywordstyle=\ttb\color{deepblue},
-    emph={MyClass,__init__},          % Custom highlighting 
-    emphstyle=\ttb\color{deepred},    % Custom highlighting style
-    stringstyle=\color{deepgreen},
-    numbers=left,
-    stepnumber=1,
-    showstringspaces=false,
-    tabsize=1,
-    breaklines=true,
-    breakatwhitespace=false
-}
-
 %Load your code file below
-\lstinputlisting[fontadjust=\true,firstline=61,lastline=67]{ahrs_triad_mote.c}
+%\lstinputlisting[fontadjust=\true,firstline=1,lastline=20]{praw_scrape.py}
 
 \addcontentsline{toc}{chapter}{Appendix B: Insert Code in Appendix}
 \chaptermark{Appendix}
