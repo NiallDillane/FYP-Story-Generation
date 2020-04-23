@@ -28,13 +28,13 @@ However, the enormity of this challenge was soon realised. These were concepts a
 
 We took a step back, and considered where I might add value to the system. We discussed the fact that these models, despite being significant advancements and impressive research, were still nowhere near consistently challenging a human writer, and that curation of the AI productions was still required. This seemed like an area for exploration, to create an environment for human writers to work together with a language generation model, editing and inserting their own text as they go. A decision was made to pursue this direction.
 
-\subsection{Implementation}
+\subsection{Implementation} \label{modelImpl}
 
 The implementation of GPT-2 I settled on was \href{https://huggingface.co/}{Huggingface}'s (https://huggingface.co/) repository of \href{https://huggingface.co/transformers/}{Transformers} (https://huggingface.co/transformers/). This contains not only GPT-2, but a collection of all state-of-the-art architectures, which leaves room for extensibility and including other models in the future.
 
 The code provided in this repository allows for a variety of approaches for optimal accessibility: from simply running generation on a pre-trained model, to fine-tuning your own model, to custom generation or even altering the lower level code. A variety of scripts were included, making it quick and straightforward to get up and running. This seemed ideal for our purposes.
 
-\subsection{Training}
+\section{Training}
 
 One concern that had prevailed since we delved into NNs was the hardware that is required to train these models. Transformers utilise Convolutional Neural Networks, which are faster than the Recurrent variant but still require significant computing power. Throughout the development process there was limited availability of, and accessibility to, hardware, which are especially important for the training phase.
 
@@ -50,38 +50,34 @@ I was careful when choosing a genre, since it was important to have a large and 
 
 The \href{https://www.reddit.com/r/writingprompts}{Writing Prompts} (https://www.reddit.com/r/writingprompts) subreddit was the leading contender. A forum devoted to short story writing, it seemed like the perfect match. However, it was not specific to any genre of story and categorisation of the stories was minimal, meaning it was more of a general data source. Good, but not quite what we needed.
 
-having carefully analysed the alternatives, a decision was made to use \href{https://www.reddit.com/r/nosleep}{No Sleep} (https://www.reddit.com/r/nosleep), a community for short horror stories which, as the title goes, denied their users sleep. This was much more suitable, with focused data and a significant amount of it too. As of 26 March 2020, the subreddit has been going for 10 years with 13.9 million subscribers. This was an ideal data source for our purposes.
+Having carefully analysed the alternatives, a decision was made to use \href{https://www.reddit.com/r/nosleep}{No Sleep} (https://www.reddit.com/r/nosleep), a community for short horror stories which, as the title goes, denied their users sleep. This was much more suitable, with focused data and a significant amount of it too. As of 26 March 2020, the subreddit has been going for 10 years with 13.9 million subscribers – an ideal data source for our purposes.
 
 
-\section{User Experience}
+\section{User Interface}
 
-Simple webapp, user interaction, generate and change parameters, add/edit text as you go (Sketches of UI and structure)
+The user interface was a key aspect to the project, as we had decided to pursue a collaborative writing environment for the language model AI and human writer to work together in a live manner. Aiming to keep things minimal, we wanted the text to be the main focus, with parameter tuning and any buttons remaining subtle and in the background. A webapp was finalised as the most portable and adaptable solution, for ease of development and use, and initial sketches looked something like Figure~\ref{ui_sketch}.
+
+\figuremacroW{ui_sketch}{Initial UI Sketch}{Hand drawn}{0.8}
+
+The architecture of the system was designed in line with Figure~\ref{architecture_sketch}, with the intention of separating concerns. The front end of the application would perform minimal processing, since the language model was anticipated to be quite heavy, and in a production scenario one could not expect the user to carry this burden. As such, calls would be made to an API (Application Programming Interface) to generate the next piece of text, based on the existing text and the parameters selected. This API would parse through and validate the input before making another call to the underlying Transformer model, formatting the result and passing it back to the front end.
+
+\figuremacroW{architecture_sketch}{Early Architecture Sketch}{Hand drawn}{0.8}
 
 \subsection{Back End}
 
 Python/Flask API to call scripts based on huggingface implementation, take in parameters and text, return json with text object of generated string to replace existing one
 
+With the generation script provided by the Huggingface implementation (mentioned in Section~\ref{modelImpl}), a minimal API was necessary, and for this the Python \href{https://flask.palletsprojects.com/}{Flask} (https://flask.palletsprojects.com/) framework was ideal. This is a minimal web framework that allows for easy exposition of API endpoints and interaction with front-end code via the request-response model and JSON objects.
+
 \subsection{Front End}
 
 ReactJS framework, library for building UI. Make calls to API and display results.
 
+For the front end portion of the application we wished to use a modern framework and a reliable library for building UI elements. For these purposes, we found the \href{https://reactjs.org/}{React.js} (https://reactjs.org/) library to be ideal. This has become a recognised leader in the webapp development industry, particularly in data-driven applications as ours would be (\Citealt{krill2014react}). This meant the languages used on the front end would be JavaScript, HTML and CSS for styling. 
 
+Initial layouts of the app were boxed out like Figure~\ref{front_boxed}, in line with our previous sketches of how the system would communicate in Figure~\ref{architecture_sketch}.
 
-%\subsection{Creating a Table}
-%
-%\begin{table}[htp]
-%\caption{Table Title}
-%\begin{center}
-%\begin{tabular}{| p{3cm} | c | c | c |}
-%\hline 
-% & Resolution & Min & Max \\ \hline 
-%Gyroscope & 4.5mV / {$^{\circ}$}/s & 0.27 $^{\circ}$/s & 406 $^{\circ}$/s \\ \hline
-%Accelerometer & 600mV /g &  0.002g & 2g \\ \hline
-%Magnetometer & 385mV/ gauss & 0.317 gauss & 6 gauss \\ \hline
-%\end{tabular}
-%\end{center}
-%\label{Sensors' Resolution}
-%\end{table}%
+\figuremacroW{front_boxed}{Abstract layout of UI}{Hand drawn}{0.8}
 
 
 %% here is how to do a page break

@@ -13,44 +13,44 @@ A level-1 auxiliary file: 5_evaluation/evaluation.aux
 A level-1 auxiliary file: 6_conclusions/conclusions.aux
 The style file: agsm.bst
 Database file #1: 7_references/references_myphd.bib
-You've used 47 entries,
+You've used 48 entries,
             2909 wiz_defined-function locations,
-            914 strings with 12181 characters,
-and the built_in function-call counts, 171407 in all, are:
-= -- 27487
-> -- 2433
+            919 strings with 12406 characters,
+and the built_in function-call counts, 173089 in all, are:
+= -- 27733
+> -- 2457
 < -- 3
-+ -- 13027
-- -- 742
-* -- 14525
-:= -- 34936
-add.period$ -- 47
-call.type$ -- 47
-change.case$ -- 644
-chr.to.int$ -- 47
-cite$ -- 47
-duplicate$ -- 793
-empty$ -- 1522
-format.name$ -- 870
-if$ -- 30683
++ -- 13128
+- -- 749
+* -- 14653
+:= -- 35319
+add.period$ -- 48
+call.type$ -- 48
+change.case$ -- 658
+chr.to.int$ -- 48
+cite$ -- 48
+duplicate$ -- 809
+empty$ -- 1554
+format.name$ -- 879
+if$ -- 30976
 int.to.chr$ -- 5
 int.to.str$ -- 0
-missing$ -- 58
-newline$ -- 148
-num.names$ -- 484
-pop$ -- 282
+missing$ -- 59
+newline$ -- 151
+num.names$ -- 494
+pop$ -- 285
 preamble$ -- 1
-purify$ -- 705
+purify$ -- 720
 quote$ -- 0
-skip$ -- 636
+skip$ -- 649
 stack$ -- 0
-substring$ -- 38631
-swap$ -- 143
-text.length$ -- 661
+substring$ -- 38956
+swap$ -- 146
+text.length$ -- 675
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 160
+type$ -- 164
 warning$ -- 0
-while$ -- 1033
+while$ -- 1055
 width$ -- 0
-write$ -- 607
+write$ -- 619

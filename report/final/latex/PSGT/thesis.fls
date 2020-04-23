@@ -369,6 +369,15 @@ INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam5
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm
+INPUT 3_design/figures/ui_sketch.png
+INPUT ./3_design/figures/ui_sketch.png
+INPUT ./3_design/figures/ui_sketch.png
+INPUT 3_design/figures/architecture_sketch.png
+INPUT ./3_design/figures/architecture_sketch.png
+INPUT ./3_design/figures/architecture_sketch.png
+INPUT 3_design/figures/front_boxed.png
+INPUT ./3_design/figures/front_boxed.png
+INPUT ./3_design/figures/front_boxed.png
 OUTPUT 4_implementation/implementation.aux
 INPUT 4_implementation/implementation.tex
 INPUT 4_implementation/implementation.tex
