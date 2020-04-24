@@ -389,6 +389,15 @@ INPUT ../../../../code/data/scripts/pushshift_scrape.py
 INPUT ../../../../code/data/scripts/pushshift_scrape.py
 INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/base/omlcmr.fd
 INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/base/omlcmr.fd
+INPUT 4_implementation/figures/colab_env.png
+INPUT ./4_implementation/figures/colab_env.png
+INPUT ./4_implementation/figures/colab_env.png
+INPUT ../../../../code/data/scripts/hf_transformers_train.py
+INPUT ../../../../code/data/scripts/hf_transformers_train.py
+INPUT ../../../../code/data/scripts/hf_transformers_train.py
+INPUT ../../../../code/data/scripts/hf_transformers_train.py
+INPUT ../../../../code/data/scripts/hf_transformers_train.py
+INPUT ../../../../code/data/scripts/hf_transformers_train.py
 OUTPUT 5_evaluation/evaluation.aux
 INPUT 5_evaluation/evaluation.tex
 INPUT 5_evaluation/evaluation.tex

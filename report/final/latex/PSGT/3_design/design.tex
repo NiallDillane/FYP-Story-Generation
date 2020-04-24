@@ -34,13 +34,13 @@ The implementation of GPT-2 I settled on was \href{https://huggingface.co/}{Hugg
 
 The code provided in this repository allows for a variety of approaches for optimal accessibility: from simply running generation on a pre-trained model, to fine-tuning your own model, to custom generation or even altering the lower level code. A variety of scripts were included, making it quick and straightforward to get up and running. This seemed ideal for our purposes.
 
-\section{Training}
+\section{Training} \label{training}
 
 One concern that had prevailed since we delved into NNs was the hardware that is required to train these models. Transformers utilise Convolutional Neural Networks, which are faster than the Recurrent variant but still require significant computing power. Throughout the development process there was limited availability of, and accessibility to, hardware, which are especially important for the training phase.
 
 Fortunately, alternatives do exist, and there are numerous cloud services available for training machine learning models on third-party hardware: \href{https://www.kaggle.com/}{Kaggle}, \href{https://lambdalabs.com/}{Lambda} and \href{https://www.wandb.com/}{Weights \& Biases}, just to name a few. There were drawbacks, namely cost, but these were promising.
 
-Having analysed all the available alternatives a decision was made to proceed with \href{https://colab.research.google.com/}{Google Colab} (https://colab.research.google.com/), which provides a Python Notebook interface and allows you to run code on advanced (NVIDIA Tesla K80) GPUs. There are limits on time and use cases, but I was comfortable I could fall within or work around these restrictions, especially considering that the product was free to use. Of course, if we wanted to train a model then we would need data.
+Having analysed all the available alternatives, a decision was made to proceed with \href{https://colab.research.google.com/}{Google Colab} (https://colab.research.google.com/), which provides a Python Notebook interface and allows you to run code on advanced (NVIDIA Tesla K80) GPUs. There are limits on time and use cases, but I was comfortable I could fall within or work around these restrictions, especially considering that the product was free to use. Of course, if we wanted to train a model then we would need data.
 
 \subsection{Data} \label{data}
 
@@ -50,7 +50,7 @@ I was careful when choosing a genre, since it was important to have a large and 
 
 The \href{https://www.reddit.com/r/writingprompts}{Writing Prompts} (https://www.reddit.com/r/writingprompts) subreddit was the leading contender. A forum devoted to short story writing, it seemed like the perfect match. However, it was not specific to any genre of story and categorisation of the stories was minimal, meaning it was more of a general data source. Good, but not quite what we needed.
 
-Having carefully analysed the alternatives, a decision was made to use \href{https://www.reddit.com/r/nosleep}{No Sleep} (https://www.reddit.com/r/nosleep), a community for short horror stories which, as the title goes, denied their users sleep. This was much more suitable, with focused data and a significant amount of it too. As of 26 March 2020, the subreddit has been going for 10 years with 13.9 million subscribers – an ideal data source for our purposes.
+Having carefully analysed the alternatives, a decision was made to use \href{https://www.reddit.com/r/nosleep}{No Sleep} (https://www.reddit.com/r/nosleep), a community for short horror stories which, as the title goes, denied their users sleep. This was much more suitable, with focused data and a significant amount of it too. As of 26 March 2020, the subreddit has been going for 10 years with 13.9 million subscribers, as well as a built in scoring system for rating the popularity (which can reasonably be correlated with quality) of each post. This is ideal for our use case, since we can limit our data to posts which have attained some degree of user approval.
 
 
 \section{User Interface}
@@ -63,13 +63,13 @@ The architecture of the system was designed in line with Figure~\ref{architectur
 
 \figuremacroW{architecture_sketch}{Early Architecture Sketch}{Hand drawn}{0.8}
 
-\subsection{Back End}
+\subsection{Back End} \label{backend}
 
 Python/Flask API to call scripts based on huggingface implementation, take in parameters and text, return json with text object of generated string to replace existing one
 
 With the generation script provided by the Huggingface implementation (mentioned in Section~\ref{modelImpl}), a minimal API was necessary, and for this the Python \href{https://flask.palletsprojects.com/}{Flask} (https://flask.palletsprojects.com/) framework was ideal. This is a minimal web framework that allows for easy exposition of API endpoints and interaction with front-end code via the request-response model and JSON objects.
 
-\subsection{Front End}
+\subsection{Front End} \label{frontend}
 
 ReactJS framework, library for building UI. Make calls to API and display results.
 

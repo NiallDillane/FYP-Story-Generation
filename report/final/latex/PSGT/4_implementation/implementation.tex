@@ -8,9 +8,9 @@
 
 % change according to folder and file names
 \ifpdf
-    \graphicspath{{4_chapter4/figures/PNG/}{4_chapter4/figures/PDF/}{4_chapter4/figures/}}
+    \graphicspath{{4_implementation/figures/PNG/}{4_implementation/figures/PDF/}{4_implementation/figures/}}
 \else
-    \graphicspath{{4_chapter4/figures/EPS/}{4_chapter4/figures/}}
+    \graphicspath{{4_implementation/figures/EPS/}{4_implementation/figures/}}
 \fi
 
 
@@ -37,62 +37,68 @@ However, we soon ran into a problem, which was that the limit on post requests a
 
 \subsection{PushShift API}
 
-\href{https://pushshift.io/}{PushShift} (https://pushshift.io/) is a third-party data source which collects and collates reddit data into its own databse. It also provides an API, allowing us to query that with no artificial post limit. This was done with a more traditional http request as seen in Listing~\ref{pushscrape}.
+\href{https://pushshift.io/}{PushShift} (https://pushshift.io/) is a third-party data source which collects and collates reddit data into its own databse. It also provides an API, allowing us to query that with no artificial post limit. This was done with a more traditional http request as seen in Listing~\ref{pushscrape}. PushShift was slower but unlimited, meaning we could simply loop through pages of results (starting with the most recent), keeping track of the last post's creation date (line 23) and make sure that our next iteration precluded posts after that date. This took time but allowed us to assemble a variety of datasets, as discussed in Section~\ref{datasets}.
 
-\lstinputlisting[fontadjust=\true, float, caption=PushShift Scrape Script, label={pushscrape}]
+\lstinputlisting[fontadjust=\true, float, firstline=10, caption=PushShift Scrape Script, label={pushscrape}]
 {../../../../code/data/scripts/pushshift_scrape.py} 
 
 
-\subsection{Datasets}
+\subsection{Datasets} \label{datasets}
 
-Small for testing, large unwieldy, medium used. Found that perplexity score was worse with medium compared to small.
+As discussed in Section~\ref{data}, we wished only to collect posts with a relatively high score as voted by the users of the community, and several datasets were assembled on a trial-and-error basis.
+
+\begin{itemize}
+
+  \item Initially, with the official Reddit API, a file with the top 1000 posts was created, a size of 12MB.
+  \item Using PushShift, we expanded our scope and collated all posts with over 1000 points, for a size of 45.4MB.
+  \item Feeling this wasn't enough, the points threshold was reduced to 400, which gave us a file size of 102.5MB.
+  \item As a stretch goal, we set a very low bound on points, only 10 points, which created a file of 496.3MB.
+
+\end{itemize}
+
+However, when training these models individually for testing purposes, we found that perplexity (a measure for evalutating text generation, which will be discussed more in Section~\ref{evaluation}) actually worsened when moving from the first to the third dataset. As such, we decided to stop training and proceed with the third model, despite its slightly worse score, fearing the exponential increase in size from the fourth dataset.
 
 
 \section{Training the Model}
 
 Worried about hardware, online resources to the rescue! Sample scripts for GPT-2 provided by huggingface
 
-\subsection{HuggingFace}
+The training process for these models revolved around Google Colab, as designed in Section~\ref{training}. Here, we were able to connect the Python Notebook environment to Google Drive storage, where we uploaded the relevant scripts for training as well as the datasets from which we were building the models. The environment looked something like Figure~\ref{colab_env}. We can see the file explorer on the left-hand-side, which allows access to Google Drive files via the /gdrive/ folder, and on the right we see the Notebook itself. Along the top toolbar we have menus including Runtime, which is where we connect to a remote hardware accelerator (Nvidia K80 GPU).
 
-Open source abstraction of GPT-2, convenient scripts that can be modified and used. Checkpoints stored at various points.
+\figuremacroW{colab_env}{Google Colab Environment}{Python Notebook}{1}
 
-\subsubsection{Scripts}
+Initial setup code involved mounting Google Drive and importing various required packages, as in Listing~\ref{colab_setup}. As you can see, we were able to run scripts and typical unix terminal commands using the (!) prefix.
 
-script code and explanation
+\lstinputlisting[fontadjust=\true, float, firstline=12, lastline=22, caption=Colab Setup, label={colab_setup}]
+{../../../../code/data/scripts/hf_transformers_train.py} 
 
-\subsection{Google Colab}
+Then, we utilised the run\_language\_modeling.py script, provided as part of the Huggingface implementation (discussed in Section~\ref{modelImpl}), to carry out the main training process. This took a variety of parameters, notably: the input files for training and evaluation, the number of training epochs to perform, how often to save checkpoints and whether those should be resumed, and finally the output directory. A sample of how we used that script is in Listing~\ref{colab_train}. This "output" foler with our model could then be copied back over to Google Drive and downloaded.
 
-Online jupyter notebook environment, can use a hosted runtime to take advantage of GPU/TPU, free for 12 hours at a time. 
+\lstinputlisting[fontadjust=\true, float, firstline=28, lastline=42, caption=Colab Setup, label={colab_train}]
+{../../../../code/data/scripts/hf_transformers_train.py} 
 
-\subsubsection{Workflow}
-
-Results stored in runtime and can be exported to Google Drive and downloaded (checkpoints useful here).
-
-
-\section{Python Flask API}
-
-API to encapsulate scripts, easily callable and customisable.
+Checkpoints were stored at steps specified in the script, into folders in the same file system. These were very useful in resuming previous training progress, since it did take several hours at a time and Colab imposes a 12 hour time consecutive runtime limit, with a cooldown period between.
 
 
 \section{React JS}
 
 Web framework, modern JavaScript library for building UI.
 
+The front end of our application was written in JavaScript, specifically using the React library we mentioned in Section~\ref{frontend}. From a software design point of view, we went for a purely functional style with no classes, as these have become less relevant in newer versions of React. We felt this would aid the development process by virtue of being highly modular and adaptable.
+
+Code etc etc.
+
 \subsection{Hooks}
 
 Functional approach, no classes, using state which is passed around. Challenging new way of thinking but extensible and clean.
 
 
-%\lstset{language=Python}
-%\lstset{basicstyle=\tiny, 
-%breaklines=true, 
-%rulesepcolor=\color{c++green}, 
-%keywordstyle=\color{c++purple}\bfseries, 
-%stringstyle=\color{c++red}, 
-%commentstyle=\color{c++green},}  
-%
-%%Load your code file below
-%\lstinputlisting[fontadjust=\true]{ahrs_triad_mote.c}
+\section{Python Flask API}
+
+API to encapsulate scripts, easily callable and customisable.
+
+The Python Flask API (outlined in Section~\ref{backend}) would utilise.
+
 
 
 % ---------------------------------------------------------------------------
