@@ -20,7 +20,7 @@
 
 Gathered training data from reddit, few different approaches, different sized datasets produced.
 
-As outlined in Section~\ref{data}, we decided to utilise the \href{https://www.reddit.com/r/nosleep}{No Sleep} (https://www.reddit.com/r/nosleep) community on reddit as a data source, owing to its focused nature on horror stories and mass of posts. Reddit does offer API support itself, so naturally this was the first route we took.
+As outlined in Section~\ref{data}, we decided to utilise the \href{https://www.reddit.com/r/nosleep}{No Sleep} (\url{https://www.reddit.com/r/nosleep}) community on reddit as a data source, owing to its focused nature on horror stories and mass of posts. Reddit does offer API support itself, so naturally this was the first route we took.
 
 \subsection{Reddit API and PRAW}
 
@@ -80,24 +80,53 @@ Then, we utilised the run\_language\_modeling.py script, provided as part of the
 Checkpoints were stored at steps specified in the script, into folders in the same file system. These were very useful in resuming previous training progress, since it did take several hours at a time and Colab imposes a 12 hour time consecutive runtime limit, with a cooldown period between.
 
 
-\section{React JS}
-
-Web framework, modern JavaScript library for building UI.
+\section{React JS} \label{react}
 
 The front end of our application was written in JavaScript, specifically using the React library we mentioned in Section~\ref{frontend}. From a software design point of view, we went for a purely functional style with no classes, as these have become less relevant in newer versions of React. We felt this would aid the development process by virtue of being highly modular and adaptable.
 
-Code etc etc.
+\subsection{Functions}
 
-\subsection{Hooks}
+As mentioned in Section~\ref{react}, we utilised the newer development techniques and libraries in React, with a purely functional approach. This was a challenging new way of thinking, and with more limited resources for help, but it had the benefits of being highly extensible and easily handling concurrency. While not major issues in developing this relatively small prototype, it was important to bear in mind the potential growth of the system beyond this. 
 
-Functional approach, no classes, using state which is passed around. Challenging new way of thinking but extensible and clean.
+The structure of a React file looks something like Listing~\ref{hook_style}, where we can see that functions can return HTML, which can then be called in other functions and build up our app as desired. The HTML itself has some modifications, such as "className" instead of "class" for calling the relevant stylesheet, but it is largely standard. 
+
+\lstinputlisting[language=HTML, fontadjust=\true, float, firstline=251, lastline=270, caption=Hook Style, label={hook_style}]
+{../../../../code/App/react-flask-app/src/App.js} 
+
+\subsection{Hooks and State}
+
+Another key aspect to development was the utilisation of Hooks, namely to manage state and asynchronous calls to the API. These are all evident in the most vital portion of the front-end application: text generation, as in Listing~\ref{text_gen}. 
+
+Note first the "useState" hook on line 4 of Listing~\ref{text_gen}, which declares the array of getter and setter for the state "story", initialised with the value currently in the writing pane, as returned by the "getParams()" method. This "story" state can now be passed around inside this function and modified as we wish, after the initial page render, through the "useEffect()" hook.
+
+This "useEffect()" hook is how we allow for asynchronous operations, and after the page loads, which is exactly what is required when making sporadic API calls, as we are with text generation. We issue a fetch request to the API with the current story and parameters, as shown on line 17 of Listing~\ref{text_gen}, which is then used to update the "story" state on return via ".then" on line 20 and so on. The key to looping this repeatedly is the callback on line 28, which calls the function again whenever that specified value (in this case the "story" state) is modified.
+
+\lstinputlisting[language=HTML, fontadjust=\true, float, firstline=61, lastline=91, caption=Text Generation, label={text_gen}]
+{../../../../code/App/react-flask-app/src/App.js} 
+
+\subsection{Communication with API}
+
+package.json
+
+\subsection{Styling}
+
+Styling of the front-end was also a significant consideration, as this can have a large influence on how the application is perceived and used. It was important to us that the writing be the main focus, and that any AI involvement or parameter tuning be subtle, as outlined in Section~\ref{ui_design}.
+
+This was done through hiding the sliders and inputs by default, and only showing them (individually) on hover over the associated icon. We felt that this was a minimal but still functional solution, not wanting to frustrate users with too much movement or unintuitive menus. The play/pause buttons and loading icon were also kept subtle in their colours, against a light grey background which we felt would be easier on the eyes during long writing sessions. 
+
+From a user feedback perspective, one key piece of styling was the distinction of user-written text from AI-generated text. We initially considered incorporating some percentage outputs, but this did not feel like the most fluid solution. Instead, we opted for a visual approach, surrounding the AI text in HTML bold tags, increasing the font weight. Ultimately, we flipped this around so that the user's text was bolded and the AI's regular, feeling that the AI would likely be the main contributor in this kind of writing environment. 
 
 
 \section{Python Flask API}
 
 API to encapsulate scripts, easily callable and customisable.
 
-The Python Flask API (outlined in Section~\ref{backend}) would utilise.
+Finally, to tie the model and front-end together, we would utilise a Python Flask API (outlined in Section~\ref{backend}). This would encapsulate the calling of our scripts – the interface for communicating with Huggingface's transformer implementation - with an easily callable and customisable interface of our own.
+
+API endpoints were exposed as shown in Listing~\ref{api_endpoints}, assigning the function a destination and method. We will discuss how this was able to communicate with our React App in Section~\ref{link_api_react}.
+
+\lstinputlisting[language=HTML, fontadjust=\true, float, firstline=27, lastline=28, caption=API Endpoints, label={api_endpoints}]
+{../../../../code/App/react-flask-app/api/api.py} 
 
 
 
