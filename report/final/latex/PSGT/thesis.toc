@@ -41,18 +41,22 @@
 \contentsline {subsection}{\numberline {4.3.2}Hooks and State}{31}{subsection.4.3.2}% 
 \contentsline {subsection}{\numberline {4.3.3}Communication with API}{33}{subsection.4.3.3}% 
 \contentsline {subsection}{\numberline {4.3.4}Styling}{33}{subsection.4.3.4}% 
+\contentsline {subsubsection}{\numberline {4.3.4.1}Distinguishing Text}{35}{subsubsection.4.3.4.1}% 
 \contentsline {section}{\numberline {4.4}Python Flask API}{35}{section.4.4}% 
-\contentsline {chapter}{\numberline {5}Evaluation}{37}{chapter.5}% 
-\contentsline {section}{\numberline {5.1}Language Model Metrics}{37}{section.5.1}% 
-\contentsline {subsection}{\numberline {5.1.1}Perplexity}{37}{subsection.5.1.1}% 
-\contentsline {section}{\numberline {5.2}Human Review}{37}{section.5.2}% 
-\contentsline {subsection}{\numberline {5.2.1}Self Review}{37}{subsection.5.2.1}% 
-\contentsline {subsection}{\numberline {5.2.2}Anonymous Reviews}{37}{subsection.5.2.2}% 
-\contentsline {chapter}{\numberline {6}Conclusions and Future Directions}{39}{chapter.6}% 
-\contentsline {section}{\numberline {6.1}Summary}{39}{section.6.1}% 
-\contentsline {section}{\numberline {6.2}Conclusions}{39}{section.6.2}% 
-\contentsline {section}{\numberline {6.3}Contributions}{39}{section.6.3}% 
-\contentsline {section}{\numberline {6.4}Future Work}{39}{section.6.4}% 
-\contentsline {chapter}{Appendix A: Insert figure in Appendix}{41}{section*.23}% 
-\contentsline {chapter}{Appendix B: Insert Code in Appendix}{43}{section*.25}% 
-\contentsline {chapter}{References}{45}{appendix*.26}% 
+\contentsline {subsection}{\numberline {4.4.1}Generation Script}{36}{subsection.4.4.1}% 
+\contentsline {subsection}{\numberline {4.4.2}Maintaining Style}{36}{subsection.4.4.2}% 
+\contentsline {subsection}{\numberline {4.4.3}Parameter Parsing}{37}{subsection.4.4.3}% 
+\contentsline {chapter}{\numberline {5}Evaluation}{39}{chapter.5}% 
+\contentsline {section}{\numberline {5.1}Language Model Metrics}{39}{section.5.1}% 
+\contentsline {subsection}{\numberline {5.1.1}Perplexity}{39}{subsection.5.1.1}% 
+\contentsline {section}{\numberline {5.2}Human Review}{39}{section.5.2}% 
+\contentsline {subsection}{\numberline {5.2.1}Self Review}{39}{subsection.5.2.1}% 
+\contentsline {subsection}{\numberline {5.2.2}Anonymous Reviews}{39}{subsection.5.2.2}% 
+\contentsline {chapter}{\numberline {6}Conclusions and Future Directions}{41}{chapter.6}% 
+\contentsline {section}{\numberline {6.1}Summary}{41}{section.6.1}% 
+\contentsline {section}{\numberline {6.2}Conclusions}{41}{section.6.2}% 
+\contentsline {section}{\numberline {6.3}Contributions}{41}{section.6.3}% 
+\contentsline {section}{\numberline {6.4}Future Work}{41}{section.6.4}% 
+\contentsline {chapter}{Appendix A: Insert figure in Appendix}{43}{section*.28}% 
+\contentsline {chapter}{Appendix B: Insert Code in Appendix}{45}{section*.30}% 
+\contentsline {chapter}{References}{47}{appendix*.31}% 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2020.2.5)  28 APR 2020 12:30
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2020.2.5)  28 APR 2020 13:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -824,7 +824,7 @@ LaTeX Info: Redefining \nameref on input line 114.
 
 ABD: EveryShipout initializing macros
 \c@lstlisting=\count169
-<0_frontmatter/figures/centre_UL_logo.jpg, id=236, 2370.8575pt x 1185.42876pt>
+<0_frontmatter/figures/centre_UL_logo.jpg, id=252, 2370.8575pt x 1185.42876pt>
 File: 0_frontmatter/figures/centre_UL_logo.jpg Graphic file (type jpg)
 <use 0_frontmatter/figures/centre_UL_logo.jpg>
 Package pdftex.def Info: 0_frontmatter/figures/centre_UL_logo.jpg  used on inpu
@@ -893,7 +893,7 @@ l.24 ...ter}{\numberline {3}Design}{19}{chapter.3}
 s been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.56 ...nsert figure in Appendix}{41}{section*.23}
+l.55 ...ions and Future Directions}{41}{chapter.6}
                                                   % [4])
 \tf@toc=\write6
 \openout6 = `thesis.toc'.
@@ -937,14 +937,14 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 ]
  2.
 [5]
-<2_related_research/figures/3-act-structure.jpg, id=437, 642.4pt x 321.2pt>
+<2_related_research/figures/3-act-structure.jpg, id=457, 642.4pt x 321.2pt>
 File: 2_related_research/figures/3-act-structure.jpg Graphic file (type jpg)
 <use 2_related_research/figures/3-act-structure.jpg>
 Package pdftex.def Info: 2_related_research/figures/3-act-structure.jpg  used o
 n input line 42.
 (pdftex.def)             Requested size: 330.05322pt x 165.03021pt.
 [6 <./2_related_research/figures/3-act-structure.jpg>]
-<2_related_research/figures/heros-journey.png, id=457, 803.0pt x 807.015pt>
+<2_related_research/figures/heros-journey.png, id=477, 803.0pt x 807.015pt>
 File: 2_related_research/figures/heros-journey.png Graphic file (type png)
 <use 2_related_research/figures/heros-journey.png>
 Package pdftex.def Info: 2_related_research/figures/heros-journey.png  used on 
@@ -954,13 +954,13 @@ input line 48.
 Underfull \vbox (badness 1009) has occurred while \output is active []
 
 [7 <./2_related_research/figures/heros-journey.png>] [8]
-<2_related_research/figures/propp-eg.png, id=497, 513.92pt x 193.72375pt>
+<2_related_research/figures/propp-eg.png, id=517, 513.92pt x 193.72375pt>
 File: 2_related_research/figures/propp-eg.png Graphic file (type png)
 <use 2_related_research/figures/propp-eg.png>
 Package pdftex.def Info: 2_related_research/figures/propp-eg.png  used on input
  line 80.
 (pdftex.def)             Requested size: 330.05322pt x 124.4173pt.
-<2_related_research/figures/propp-eg-2.png, id=503, 612.2875pt x 321.2pt>
+<2_related_research/figures/propp-eg-2.png, id=523, 612.2875pt x 321.2pt>
 File: 2_related_research/figures/propp-eg-2.png Graphic file (type png)
 <use 2_related_research/figures/propp-eg-2.png>
 Package pdftex.def Info: 2_related_research/figures/propp-eg-2.png  used on inp
@@ -968,14 +968,14 @@ ut line 84.
 (pdftex.def)             Requested size: 330.05322pt x 173.14154pt.
 [9 <./2_related_research/figures/propp-eg.png>] [10 <./2_related_research/figur
 es/propp-eg-2.png>] [11]
-<2_related_research/figures/nn-sample.png, id=557, 501.875pt x 603.25375pt>
+<2_related_research/figures/nn-sample.png, id=577, 501.875pt x 603.25375pt>
 File: 2_related_research/figures/nn-sample.png Graphic file (type png)
 <use 2_related_research/figures/nn-sample.png>
 Package pdftex.def Info: 2_related_research/figures/nn-sample.png  used on inpu
 t line 133.
 (pdftex.def)             Requested size: 247.54149pt x 297.54836pt.
 [12] [13 <./2_related_research/figures/nn-sample.png>]
-<2_related_research/figures/rnn-unrolled.png, id=594, 977.8131pt x 256.91985pt>
+<2_related_research/figures/rnn-unrolled.png, id=614, 977.8131pt x 256.91985pt>
 
 File: 2_related_research/figures/rnn-unrolled.png Graphic file (type png)
 <use 2_related_research/figures/rnn-unrolled.png>
@@ -983,7 +983,7 @@ Package pdftex.def Info: 2_related_research/figures/rnn-unrolled.png  used on i
 nput line 144.
 (pdftex.def)             Requested size: 330.05322pt x 86.72041pt.
 [14 <./2_related_research/figures/rnn-unrolled.png>]
-<2_related_research/figures/attention.png, id=616, 1378.14874pt x 748.7975pt>
+<2_related_research/figures/attention.png, id=637, 1378.14874pt x 748.7975pt>
 File: 2_related_research/figures/attention.png Graphic file (type png)
 <use 2_related_research/figures/attention.png>
 Package pdftex.def Info: 2_related_research/figures/attention.png  used on inpu
@@ -999,21 +999,21 @@ t line 157.
 ]
  3.
 [19] [20] [21]
-<3_design/figures/ui_sketch.png, id=710, 3264.195pt x 2026.57124pt>
+<3_design/figures/ui_sketch.png, id=730, 3264.195pt x 2026.57124pt>
 File: 3_design/figures/ui_sketch.png Graphic file (type png)
 <use 3_design/figures/ui_sketch.png>
 Package pdftex.def Info: 3_design/figures/ui_sketch.png  used on input line 60.
 
 (pdftex.def)             Requested size: 330.05322pt x 204.89545pt.
 [22 <./3_design/figures/ui_sketch.png>]
-<3_design/figures/architecture_sketch.png, id=717, 4625.28pt x 2348.775pt>
+<3_design/figures/architecture_sketch.png, id=738, 4625.28pt x 2348.775pt>
 File: 3_design/figures/architecture_sketch.png Graphic file (type png)
 <use 3_design/figures/architecture_sketch.png>
 Package pdftex.def Info: 3_design/figures/architecture_sketch.png  used on inpu
 t line 64.
 (pdftex.def)             Requested size: 330.05322pt x 167.58492pt.
 [23 <./3_design/figures/architecture_sketch.png>]
-<3_design/figures/front_boxed.png, id=730, 4625.28pt x 2184.16pt>
+<3_design/figures/front_boxed.png, id=751, 4625.28pt x 2184.16pt>
 File: 3_design/figures/front_boxed.png Graphic file (type png)
 <use 3_design/figures/front_boxed.png>
 Package pdftex.def Info: 3_design/figures/front_boxed.png  used on input line 8
@@ -1044,7 +1044,7 @@ LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <12> not available
 LaTeX Warning: Reference `evaluation' on page 28 undefined on input line 59.
 
 [28]
-<4_implementation/figures/colab_env.png, id=798, 1439.3775pt x 799.98875pt>
+<4_implementation/figures/colab_env.png, id=818, 1439.3775pt x 799.98875pt>
 File: 4_implementation/figures/colab_env.png Graphic file (type png)
 <use 4_implementation/figures/colab_env.png>
 Package pdftex.def Info: 4_implementation/figures/colab_env.png  used on input 
@@ -1057,41 +1057,40 @@ File: lstlang1.sty 2019/02/27 1.8b listings language file
 ) (/usr/local/texlive/2019/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2019/02/27 1.8b (Carsten Heinz)
 ) (../../../../code/App/react-flask-app/src/App.js) [31] [32] (../../../../code
-/App/react-flask-app/src/App.js) [33] [34]
-
-LaTeX Warning: Reference `link_api_react' on page 35 undefined on input line 12
-6.
-
-(../../../../code/App/react-flask-app/api/api.py)) [35]
+/App/react-flask-app/src/App.js) (../../../../code/App/react-flask-app/package.
+json) (../../../../code/App/react-flask-app/package.json) [33] [34] (../../../.
+./code/App/react-flask-app/api/api.py) [35] (../../../../code/App/react-flask-a
+pp/api/api.py) [36] (../../../../code/App/react-flask-app/api/api.py) (../../..
+/../code/App/react-flask-app/api/api.py) [37]) [38]
 \openout2 = `5_evaluation/evaluation.aux'.
 
-(./5_evaluation/evaluation.tex [36
+(./5_evaluation/evaluation.tex
+ 5.
+) [39
 
 
 
 ]
- 5.
-) [37]
 \openout2 = `6_conclusions/conclusions.aux'.
 
-(./6_conclusions/conclusions.tex [38
+(./6_conclusions/conclusions.tex [40
 
 
 
 ]
  6.
-) [39] [40
+) [41] [42
 
 
-] [41] [42
+] [43] [44
 
 ] (./thesis.bbl (./thesis.brf)
 \tf@brf=\write9
 \openout9 = `thesis.brf'.
 
-[43] [44
+[45] [46
 
-] [45] [46] [47]) [48]
+] [47] [48] [49]) [50]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 309.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 309.
 (./thesis.aux (./0_frontmatter/abstract.aux) (./0_frontmatter/declaration.aux) 
@@ -1102,7 +1101,7 @@ tion.aux) (./6_conclusions/conclusions.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 309.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 309.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 1B40A17F30A1D349A5D8699D8B5F8D6F;3750.
+(rerunfilecheck)             Checksum: DC82A1E173A7F2AE245B621F79EEE418;4068.
 Package rerunfilecheck Info: File `thesis.brf' has not changed.
 (rerunfilecheck)             Checksum: C9DF4A69921D9CF4BA1EC8F0C18FBC34;3298.
 
@@ -1112,10 +1111,10 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 309.
  )
 (\end occurred when \iftrue on line 92 was incomplete) 
 Here is how much of TeX's memory you used:
- 23456 strings out of 492616
- 421094 string characters out of 6129482
- 772960 words of memory out of 5000000
- 26527 multiletter control sequences out of 15000+600000
+ 23561 strings out of 492616
+ 422870 string characters out of 6129482
+ 778207 words of memory out of 5000000
+ 26584 multiletter control sequences out of 15000+600000
  15781 words of font info for 60 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  64i,15n,83p,1189b,1654s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1133,10 +1132,10 @@ s/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2019/texmf-dist/fonts
 /type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2019/texmf-dist/fonts/
 type1/public/txfonts/t1xbtt.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1
 /public/txfonts/t1xtt.pfb>
-Output written on thesis.pdf (62 pages, 4567631 bytes).
+Output written on thesis.pdf (64 pages, 4578403 bytes).
 PDF statistics:
- 1155 PDF objects out of 1200 (max. 8388607)
- 1034 compressed objects within 11 object streams
- 301 named destinations out of 1000 (max. 500000)
- 529 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1228 PDF objects out of 1440 (max. 8388607)
+ 1104 compressed objects within 12 object streams
+ 336 named destinations out of 1000 (max. 500000)
+ 561 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -40,18 +40,22 @@
 \BOOKMARK [2][]{subsection.4.3.2}{4.3.2 Hooks and State}{section.4.3}% 40
 \BOOKMARK [2][]{subsection.4.3.3}{4.3.3 Communication with API}{section.4.3}% 41
 \BOOKMARK [2][]{subsection.4.3.4}{4.3.4 Styling}{section.4.3}% 42
-\BOOKMARK [1][]{section.4.4}{4.4 Python Flask API}{chapter.4}% 43
-\BOOKMARK [0][]{chapter.5}{5 Evaluation}{}% 44
-\BOOKMARK [1][]{section.5.1}{5.1 Language Model Metrics}{chapter.5}% 45
-\BOOKMARK [2][]{subsection.5.1.1}{5.1.1 Perplexity}{section.5.1}% 46
-\BOOKMARK [1][]{section.5.2}{5.2 Human Review}{chapter.5}% 47
-\BOOKMARK [2][]{subsection.5.2.1}{5.2.1 Self Review}{section.5.2}% 48
-\BOOKMARK [2][]{subsection.5.2.2}{5.2.2 Anonymous Reviews}{section.5.2}% 49
-\BOOKMARK [0][]{chapter.6}{6 Conclusions and Future Directions}{}% 50
-\BOOKMARK [1][]{section.6.1}{6.1 Summary}{chapter.6}% 51
-\BOOKMARK [1][]{section.6.2}{6.2 Conclusions}{chapter.6}% 52
-\BOOKMARK [1][]{section.6.3}{6.3 Contributions}{chapter.6}% 53
-\BOOKMARK [1][]{section.6.4}{6.4 Future Work}{chapter.6}% 54
-\BOOKMARK [0][]{section*.23}{Appendix A: Insert figure in Appendix}{}% 55
-\BOOKMARK [0][]{section*.25}{Appendix B: Insert Code in Appendix}{}% 56
-\BOOKMARK [0][]{appendix*.26}{References}{}% 57
+\BOOKMARK [3][]{subsubsection.4.3.4.1}{4.3.4.1 Distinguishing Text}{subsection.4.3.4}% 43
+\BOOKMARK [1][]{section.4.4}{4.4 Python Flask API}{chapter.4}% 44
+\BOOKMARK [2][]{subsection.4.4.1}{4.4.1 Generation Script}{section.4.4}% 45
+\BOOKMARK [2][]{subsection.4.4.2}{4.4.2 Maintaining Style}{section.4.4}% 46
+\BOOKMARK [2][]{subsection.4.4.3}{4.4.3 Parameter Parsing}{section.4.4}% 47
+\BOOKMARK [0][]{chapter.5}{5 Evaluation}{}% 48
+\BOOKMARK [1][]{section.5.1}{5.1 Language Model Metrics}{chapter.5}% 49
+\BOOKMARK [2][]{subsection.5.1.1}{5.1.1 Perplexity}{section.5.1}% 50
+\BOOKMARK [1][]{section.5.2}{5.2 Human Review}{chapter.5}% 51
+\BOOKMARK [2][]{subsection.5.2.1}{5.2.1 Self Review}{section.5.2}% 52
+\BOOKMARK [2][]{subsection.5.2.2}{5.2.2 Anonymous Reviews}{section.5.2}% 53
+\BOOKMARK [0][]{chapter.6}{6 Conclusions and Future Directions}{}% 54
+\BOOKMARK [1][]{section.6.1}{6.1 Summary}{chapter.6}% 55
+\BOOKMARK [1][]{section.6.2}{6.2 Conclusions}{chapter.6}% 56
+\BOOKMARK [1][]{section.6.3}{6.3 Contributions}{chapter.6}% 57
+\BOOKMARK [1][]{section.6.4}{6.4 Future Work}{chapter.6}% 58
+\BOOKMARK [0][]{section*.28}{Appendix A: Insert figure in Appendix}{}% 59
+\BOOKMARK [0][]{section*.30}{Appendix B: Insert Code in Appendix}{}% 60
+\BOOKMARK [0][]{appendix*.31}{References}{}% 61
