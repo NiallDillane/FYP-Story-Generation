@@ -458,6 +458,12 @@ INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/cm/cmtt8.tfm
 OUTPUT 6_conclusions/conclusions.aux
 INPUT 6_conclusions/conclusions.tex
 INPUT 6_conclusions/conclusions.tex
+INPUT figures/gui_screenshot_base.png
+INPUT ./figures/gui_screenshot_base.png
+INPUT ./figures/gui_screenshot_base.png
+INPUT figures/gui_screenshot_generating.png
+INPUT ./figures/gui_screenshot_generating.png
+INPUT ./figures/gui_screenshot_generating.png
 INPUT thesis.bbl
 INPUT thesis.bbl
 INPUT thesis.brf

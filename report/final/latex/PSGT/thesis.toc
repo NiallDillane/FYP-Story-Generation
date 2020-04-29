@@ -58,5 +58,5 @@
 \contentsline {section}{\numberline {6.3}Contributions}{43}{section.6.3}% 
 \contentsline {section}{\numberline {6.4}Future Work}{43}{section.6.4}% 
 \contentsline {chapter}{Appendix A: GUI Screenshots}{45}{section*.30}% 
-\contentsline {chapter}{Appendix B: AI Generated Story}{48}{section*.32}% 
-\contentsline {chapter}{References}{49}{appendix*.33}% 
+\contentsline {chapter}{Appendix B: AI Generated Story}{48}{section*.34}% 
+\contentsline {chapter}{References}{49}{appendix*.35}% 

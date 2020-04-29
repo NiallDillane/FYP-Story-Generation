@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2020.2.5)  29 APR 2020 14:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2020.2.5)  29 APR 2020 15:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -852,7 +852,7 @@ LaTeX Info: Redefining \nameref on input line 117.
 
 ABD: EveryShipout initializing macros
 \c@lstlisting=\count174
-<0_frontmatter/figures/centre_UL_logo.jpg, id=256, 2370.8575pt x 1185.42876pt>
+<0_frontmatter/figures/centre_UL_logo.jpg, id=252, 2370.8575pt x 1185.42876pt>
 File: 0_frontmatter/figures/centre_UL_logo.jpg Graphic file (type jpg)
 <use 0_frontmatter/figures/centre_UL_logo.jpg>
 Package pdftex.def Info: 0_frontmatter/figures/centre_UL_logo.jpg  used on inpu
@@ -921,7 +921,7 @@ l.25 ...ter}{\numberline {3}Design}{19}{chapter.3}
 s been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.56 ...ions and Future Directions}{43}{chapter.6}
+l.55 ...ions and Future Directions}{43}{chapter.6}
                                                   % [4])
 \tf@toc=\write6
 \openout6 = `thesis.toc'.
@@ -971,14 +971,14 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 ]
  2.
 [5]
-<2_related_research/figures/3-act-structure.jpg, id=497, 642.4pt x 321.2pt>
+<2_related_research/figures/3-act-structure.jpg, id=496, 642.4pt x 321.2pt>
 File: 2_related_research/figures/3-act-structure.jpg Graphic file (type jpg)
 <use 2_related_research/figures/3-act-structure.jpg>
 Package pdftex.def Info: 2_related_research/figures/3-act-structure.jpg  used o
 n input line 42.
 (pdftex.def)             Requested size: 330.05322pt x 165.03021pt.
 [6 <./2_related_research/figures/3-act-structure.jpg>]
-<2_related_research/figures/heros-journey.png, id=517, 803.0pt x 807.015pt>
+<2_related_research/figures/heros-journey.png, id=516, 803.0pt x 807.015pt>
 File: 2_related_research/figures/heros-journey.png Graphic file (type png)
 <use 2_related_research/figures/heros-journey.png>
 Package pdftex.def Info: 2_related_research/figures/heros-journey.png  used on 
@@ -988,13 +988,13 @@ input line 48.
 Underfull \vbox (badness 1009) has occurred while \output is active []
 
 [7 <./2_related_research/figures/heros-journey.png>] [8]
-<2_related_research/figures/propp-eg.png, id=556, 513.92pt x 193.72375pt>
+<2_related_research/figures/propp-eg.png, id=555, 513.92pt x 193.72375pt>
 File: 2_related_research/figures/propp-eg.png Graphic file (type png)
 <use 2_related_research/figures/propp-eg.png>
 Package pdftex.def Info: 2_related_research/figures/propp-eg.png  used on input
  line 80.
 (pdftex.def)             Requested size: 330.05322pt x 124.4173pt.
-<2_related_research/figures/propp-eg-2.png, id=562, 612.2875pt x 321.2pt>
+<2_related_research/figures/propp-eg-2.png, id=561, 612.2875pt x 321.2pt>
 File: 2_related_research/figures/propp-eg-2.png Graphic file (type png)
 <use 2_related_research/figures/propp-eg-2.png>
 Package pdftex.def Info: 2_related_research/figures/propp-eg-2.png  used on inp
@@ -1002,14 +1002,14 @@ ut line 84.
 (pdftex.def)             Requested size: 330.05322pt x 173.14154pt.
 [9 <./2_related_research/figures/propp-eg.png>] [10 <./2_related_research/figur
 es/propp-eg-2.png>] [11]
-<2_related_research/figures/nn-sample.png, id=616, 501.875pt x 603.25375pt>
+<2_related_research/figures/nn-sample.png, id=615, 501.875pt x 603.25375pt>
 File: 2_related_research/figures/nn-sample.png Graphic file (type png)
 <use 2_related_research/figures/nn-sample.png>
 Package pdftex.def Info: 2_related_research/figures/nn-sample.png  used on inpu
 t line 133.
 (pdftex.def)             Requested size: 247.54149pt x 297.54836pt.
 [12] [13 <./2_related_research/figures/nn-sample.png>]
-<2_related_research/figures/rnn-unrolled.png, id=654, 977.8131pt x 256.91985pt>
+<2_related_research/figures/rnn-unrolled.png, id=653, 977.8131pt x 256.91985pt>
 
 File: 2_related_research/figures/rnn-unrolled.png Graphic file (type png)
 <use 2_related_research/figures/rnn-unrolled.png>
@@ -1017,7 +1017,7 @@ Package pdftex.def Info: 2_related_research/figures/rnn-unrolled.png  used on i
 nput line 144.
 (pdftex.def)             Requested size: 330.05322pt x 86.72041pt.
 [14 <./2_related_research/figures/rnn-unrolled.png>]
-<2_related_research/figures/attention.png, id=676, 1378.14874pt x 748.7975pt>
+<2_related_research/figures/attention.png, id=675, 1378.14874pt x 748.7975pt>
 File: 2_related_research/figures/attention.png Graphic file (type png)
 <use 2_related_research/figures/attention.png>
 Package pdftex.def Info: 2_related_research/figures/attention.png  used on inpu
@@ -1033,13 +1033,13 @@ t line 157.
 ]
  3.
 [19] [20] [21]
-<3_design/figures/ui_sketch.png, id=790, 3264.195pt x 2026.57124pt>
+<3_design/figures/ui_sketch.png, id=789, 3264.195pt x 2026.57124pt>
 File: 3_design/figures/ui_sketch.png Graphic file (type png)
 <use 3_design/figures/ui_sketch.png>
 Package pdftex.def Info: 3_design/figures/ui_sketch.png  used on input line 60.
 
 (pdftex.def)             Requested size: 330.05322pt x 204.89545pt.
-<3_design/figures/architecture_sketch.png, id=792, 4625.28pt x 2348.775pt>
+<3_design/figures/architecture_sketch.png, id=791, 4625.28pt x 2348.775pt>
 File: 3_design/figures/architecture_sketch.png Graphic file (type png)
 <use 3_design/figures/architecture_sketch.png>
 Package pdftex.def Info: 3_design/figures/architecture_sketch.png  used on inpu
@@ -1047,7 +1047,7 @@ t line 64.
 (pdftex.def)             Requested size: 330.05322pt x 167.58492pt.
 [22] [23 <./3_design/figures/ui_sketch.png> <./3_design/figures/architecture_sk
 etch.png>]
-<3_design/figures/front_boxed.png, id=811, 4625.28pt x 2184.16pt>
+<3_design/figures/front_boxed.png, id=810, 4625.28pt x 2184.16pt>
 File: 3_design/figures/front_boxed.png Graphic file (type png)
 <use 3_design/figures/front_boxed.png>
 Package pdftex.def Info: 3_design/figures/front_boxed.png  used on input line 8
@@ -1076,7 +1076,7 @@ LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <12> not available
 LaTeX Warning: Reference `evaluation' on page 28 undefined on input line 59.
 
 [28]
-<4_implementation/figures/colab_env.png, id=880, 1439.3775pt x 799.98875pt>
+<4_implementation/figures/colab_env.png, id=879, 1439.3775pt x 799.98875pt>
 File: 4_implementation/figures/colab_env.png Graphic file (type png)
 <use 4_implementation/figures/colab_env.png>
 Package pdftex.def Info: 4_implementation/figures/colab_env.png  used on input 
@@ -1120,9 +1120,23 @@ Underfull \vbox (badness 1430) has occurred while \output is active []
 ] [44
 
 
-] [45] [46
+]
+<figures/gui_screenshot_base.png, id=1097, 1412.27625pt x 869.2475pt>
+File: figures/gui_screenshot_base.png Graphic file (type png)
+<use figures/gui_screenshot_base.png>
+Package pdftex.def Info: figures/gui_screenshot_base.png  used on input line 24
+7.
+(pdftex.def)             Requested size: 412.56496pt x 253.93222pt.
+<figures/gui_screenshot_generating.png, id=1098, 1412.27625pt x 869.2475pt>
+File: figures/gui_screenshot_generating.png Graphic file (type png)
+<use figures/gui_screenshot_generating.png>
+Package pdftex.def Info: figures/gui_screenshot_generating.png  used on input l
+ine 249.
+(pdftex.def)             Requested size: 412.56496pt x 253.93222pt.
+[45 <./figures/gui_screenshot_base.png>] [46 <./figures/gui_screenshot_generati
+ng.png>] [47
 
-] [47] (./thesis.bbl (./thesis.brf)
+] (./thesis.bbl (./thesis.brf)
 \tf@brf=\write10
 \openout10 = `thesis.brf'.
 
@@ -1136,35 +1150,29 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.323 \end{document}
+l.325 \end{document}
                     
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 323.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 323.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 325.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 325.
 (./thesis.aux (./0_frontmatter/abstract.aux) (./0_frontmatter/declaration.aux) 
 (./0_frontmatter/acknowledgement.aux) (./0_frontmatter/dedication.aux) (./1_int
 roduction/introduction.aux) (./2_related_research/related_research.aux) (./3_de
 sign/design.aux) (./4_implementation/implementation.aux) (./5_evaluation/evalua
 tion.aux) (./6_conclusions/conclusions.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 323.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 323.
-
-Package rerunfilecheck Warning: File `thesis.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `thesis.out':
-(rerunfilecheck)             Before: 69B7150CBFA60E7B2F7B6C9E0D877569;4111
-(rerunfilecheck)             After:  4817B6CD0E991A79EEB048AFBE034763;4041.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 325.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 325.
+Package rerunfilecheck Info: File `thesis.out' has not changed.
+(rerunfilecheck)             Checksum: DD68C38430EABE3057F10CF1EEF4061A;4041.
 Package rerunfilecheck Info: File `thesis.brf' has not changed.
 (rerunfilecheck)             Checksum: 2F74F26AD70871DF7331E42B3EE0B3F9;3471.
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 323.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 325.
  )
 (\end occurred inside a group at level 1)
 
@@ -1172,35 +1180,32 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 323.
 ### bottom level
 (\end occurred when \iftrue on line 95 was incomplete) 
 Here is how much of TeX's memory you used:
- 24063 strings out of 492616
- 429800 string characters out of 6129482
+ 24076 strings out of 492616
+ 430234 string characters out of 6129482
  790439 words of memory out of 5000000
- 27051 multiletter control sequences out of 15000+600000
+ 27060 multiletter control sequences out of 15000+600000
  16790 words of font info for 66 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  64i,15n,83p,1189b,1653s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): na
-me{subsection.5.2.3} has been referenced but does not exist, replaced by a fixe
-d one
-
-</usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><
-/usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></
-usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></u
-sr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr
-/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/l
-ocal/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/loca
-l/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/t
-exlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/te
-xlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texl
-ive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texli
-ve/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texliv
-e/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive
-/2019/texmf-dist/fonts/type1/public/txfonts/t1xbtt.pfb></usr/local/texlive/2019
-/texmf-dist/fonts/type1/public/txfonts/t1xtt.pfb>
-Output written on thesis.pdf (69 pages, 4598623 bytes).
+</usr/local/texlive/2019/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2019/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2019/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2019/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2019/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2019/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2019/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2019/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2019/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2019/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2019/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2019/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2019/texmf-dist/fonts/ty
+pe1/public/txfonts/t1xbtt.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/p
+ublic/txfonts/t1xtt.pfb>
+Output written on thesis.pdf (69 pages, 4638928 bytes).
 PDF statistics:
- 1318 PDF objects out of 1440 (max. 8388607)
- 1188 compressed objects within 12 object streams
- 346 named destinations out of 1000 (max. 500000)
- 569 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1321 PDF objects out of 1440 (max. 8388607)
+ 1187 compressed objects within 12 object streams
+ 347 named destinations out of 1000 (max. 500000)
+ 571 words of extra memory for PDF output out of 10000 (max. 10000000)
 
