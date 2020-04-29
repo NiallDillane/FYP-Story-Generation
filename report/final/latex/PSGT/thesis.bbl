@@ -102,6 +102,13 @@ Grimbly, S.  \harvardyearleft 2013\harvardyearright , {\em Encyclopedia of the
 Haykin, S.  \harvardyearleft 1994\harvardyearright , {\em Neural networks: a
   comprehensive foundation}, Prentice Hall PTR.
 
+\harvarditem[Jelinek et~al.]{Jelinek, Mercer, Bahl \harvardand\
+  Baker}{1977}{jelinek1977perplexity}
+Jelinek, F., Mercer, R.~L., Bahl, L.~R. \harvardand\ Baker, J.~K.
+  \harvardyearleft 1977\harvardyearright , `Perplexity—a measure of the
+  difficulty of speech recognition tasks', {\em The Journal of the Acoustical
+  Society of America} {\bf 62}(S1),~S63--S63.
+
 \harvarditem{Johnson}{2009}{johnson2009statistical}
 Johnson, M.  \harvardyearleft 2009\harvardyearright , How the statistical
   revolution changes (computational) linguistics, {\em in} `Proceedings of the

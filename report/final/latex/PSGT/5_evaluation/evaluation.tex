@@ -12,14 +12,37 @@
     \graphicspath{{5_chapter5/figures/EPS/}{5_chapter5/figures/}}
 \fi
 
+Evaluation of the system's productions was difficult for a number of reasons. Metrics available for language generation are limited, largely focused on classification (GLUE (\url{https://gluebenchmark.com}), question answering (SQuAD (\url{https://rajpurkar.github.io/SQuAD-explorer/}), or selection of the correct output from a set of options (ROCStories (\url{https://cs.rochester.edu/nlp/rocstories/}). These all relate to Natural Language Understanding, rather than Generation, and ultimately the gold standard in evaluating AI generated text is still human evaluation. 
 
-\section{Language Model Metrics}
+Furthermore, since our system is intended to be used in collaboration with a human writer, pure metrics of the generation in isolation are not necessarily indicative of its efficacy. Human writers could easily correct small mistakes and vastly improve the quality of the story, but it is reasonable to suggest that we should still optimise the model to produce high quality and interesting text. It would be better to require less modification by the human.
 
-Objective measures are a good baseline against other models. Unsure of efficacy.
+\section{Perplexity}
 
-\subsection{Perplexity}
+We attempted to utilise some metrics, namely Perplexity (Section~\ref{perplexity}), at the very least to establish a baseline versus other models, particularly the non-fine-tuned GPT-2 from which we built our custom model on horror stories.
 
-Lower the better, got worse with larger dataset. Not necessarily a good measure.
+Perplexity is a straightforward measure for predicting how well a model can replicate validation data, from given training data (\Citealt{jelinek1977perplexity}). For our purposes, we split our initial datasets into training and validation sets (with an 80:20 split). In this case, a lower score is better, indicating the model is better at replicating stories. 
+
+\begin{table}[ht]
+\centering
+\begin{tabular}[t]{lr}
+\toprule
+Model &Perplexity\\
+\midrule
+Top 1000 posts (\mytilde10MB)&19.4382\\
+Posts over 400 points (\mytilde100MB)&21.1234\\
+Default GPT2-small&37.50\footnotemark\\
+\bottomrule
+\end{tabular}
+\caption{Perplexity Scores of Datasets and Control}
+\label{perplexity_table}
+\end{table}%
+\footnotetext{Source: (\Citealt{radford2019language})}
+
+As we can see in Table~\ref{perplexity_table}, both of our datasets produced models with far better perplexity than the default GPT-2 small model. This is to be expected, since it is an earlier version of GPT-2 and trained on a much more generic dataset. With a broader range of text, prediction is naturally more difficult. One concern was our larger dataset actually received a slightly worse perplexity score than the original, smaller set. This required some consideration.
+
+We reasoned that taking a narrower slice of stories, the top 1000 posts of the NoSleep subreddit, they seemed to have more in common. Thus, prediction was easier, since the stories were more similar. This had interesting implications, suggesting that our original research into stories (Section~\ref{stories}) had correctly surmised that there are common elements to good stories. At least, among popular ones.
+
+However, we felt that despite the marginal loss in complexity, the tenfold gain in data from which to draw on made the larger dataset the preferable option to proceed with. It was important for our system to have some degree of variety and creativity, even within the bounds of the horror genre, and having access to more data would aid this. We decided not to proceed further with larger datasets, owing to large computation costs and fear of tipping the balance, ending up with significantly worse complexity.
 
 
 \section{Human Review}

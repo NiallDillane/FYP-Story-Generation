@@ -74,7 +74,7 @@ Initial setup code involved mounting Google Drive and importing various required
 
 Then, we utilised the run\_language\_modeling.py script, provided as part of the Huggingface implementation (discussed in Section~\ref{modelImpl}), to carry out the main training process. This took a variety of parameters, notably: the input files for training and evaluation, the number of training epochs to perform, how often to save checkpoints and whether those should be resumed, and finally the output directory. A sample of how we used that script is in Listing~\ref{colab_train}. This "output" foler with our model could then be copied back over to Google Drive and downloaded.
 
-\lstinputlisting[fontadjust=\true, float, firstline=28, lastline=42, caption=Colab Setup, label={colab_train}]
+\lstinputlisting[fontadjust=\true, float, firstline=28, lastline=42, caption=Colab Training, label={colab_train}]
 {../../../../code/data/scripts/hf_transformers_train.py} 
 
 Checkpoints were stored at steps specified in the script, into folders in the same file system. These were very useful in resuming previous training progress, since it did take several hours at a time and Colab imposes a 12 hour time consecutive runtime limit, with a cooldown period between.
