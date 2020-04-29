@@ -57,6 +57,9 @@
 \contentsline {section}{\numberline {6.2}Conclusions}{43}{section.6.2}% 
 \contentsline {section}{\numberline {6.3}Contributions}{43}{section.6.3}% 
 \contentsline {section}{\numberline {6.4}Future Work}{43}{section.6.4}% 
-\contentsline {chapter}{Appendix A: GUI Screenshots}{45}{section*.30}% 
-\contentsline {chapter}{Appendix B: AI Generated Story}{48}{section*.34}% 
-\contentsline {chapter}{References}{49}{appendix*.35}% 
+\contentsline {chapter}{\numberline {A}Appendix A}{45}{appendix.A}% 
+\contentsline {chapter}{Appendix A: GUI Screenshots}{45}{section*.29}% 
+\contentsline {chapter}{Appendix B: AI Generated Story}{48}{section*.33}% 
+\contentsline {chapter}{Appendix C: AI Generated Story 2}{50}{section*.35}% 
+\contentsline {chapter}{Appendix D: AI Generated Story 2 - Altered}{52}{section*.37}% 
+\contentsline {chapter}{References}{53}{appendix*.38}% 
