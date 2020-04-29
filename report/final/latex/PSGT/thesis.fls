@@ -372,6 +372,12 @@ INPUT ./2_related_research/figures/rnn-unrolled.png
 INPUT 2_related_research/figures/attention.png
 INPUT ./2_related_research/figures/attention.png
 INPUT ./2_related_research/figures/attention.png
+INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/cm/cmtt10.tfm
+INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/cm/cmmi10.tfm
+INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
+INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/cm/cmex10.tfm
+INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
+INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 OUTPUT 3_design/design.aux
 INPUT 3_design/design.tex
 INPUT 3_design/design.tex
@@ -395,12 +401,6 @@ INPUT ./3_design/figures/front_boxed.png
 OUTPUT 4_implementation/implementation.aux
 INPUT 4_implementation/implementation.tex
 INPUT 4_implementation/implementation.tex
-INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/cm/cmtt10.tfm
-INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/cm/cmmi10.tfm
-INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
-INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/cm/cmex10.tfm
-INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
-INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT ../../../../code/data/scripts/praw_scrape.py
 INPUT ../../../../code/data/scripts/praw_scrape.py
 INPUT ../../../../code/data/scripts/praw_scrape.py

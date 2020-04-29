@@ -205,6 +205,12 @@ Radford, A., Wu, J., Child, R., Luan, D., Amodei, D. \harvardand\ Sutskever, I.
 Reghizzi, S.~C., Breveglieri, L. \harvardand\ Morzenti, A.  \harvardyearleft
   2013\harvardyearright , {\em Formal languages and compilation}, Springer.
 
+\harvarditem{Reiter \harvardand\ Belz}{2009}{reiter2009investigation}
+Reiter, E. \harvardand\ Belz, A.  \harvardyearleft 2009\harvardyearright , `An
+  investigation into the validity of some metrics for automatically evaluating
+  natural language generation systems', {\em Computational Linguistics} {\bf
+  35}(4),~529--558.
+
 \harvarditem{Reiter \harvardand\ Dale}{2000}{reiter2000building}
 Reiter, E. \harvardand\ Dale, R.  \harvardyearleft 2000\harvardyearright ,
   `Building natural generation systems', {\em Studies in Natural Language

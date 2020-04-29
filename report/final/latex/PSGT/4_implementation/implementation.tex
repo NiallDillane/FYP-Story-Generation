@@ -26,9 +26,9 @@ As outlined in Section~\ref{data}, we decided to utilise the \href{https://www.r
 
 Limited to 1000 posts
 
-The \href{https://www.reddit.com/dev/api/}{Reddit API} (https://www.reddit.com/dev/api/) is freely available to developers, and offers plenty of functionality and customisation, not limited to: date ranges, filtering based on points, removing posts by certain users, etc. It perhaps isn't the easiest to use, however, but there also happen to be many API wrappers available – effectively providing a layer of abstraction and a more user-friendly interface over the core API.
+The \href{https://www.reddit.com/dev/api/}{Reddit API} (\url{https://www.reddit.com/dev/api/}) is freely available to developers, and offers plenty of functionality and customisation, not limited to: date ranges, filtering based on points, removing posts by certain users, etc. It perhaps isn't the easiest to use, however, but there also happen to be many API wrappers available – effectively providing a layer of abstraction and a more user-friendly interface over the core API.
 
-\href{https://praw.readthedocs.io/en/latest/}{PRAW} (https://praw.readthedocs.io/en/latest/) (Python Reddit API Wrapper) provides, as the name suggests, a Python interface, together with plenty of documentation and examples. we initially ran scripts like Listing~\ref{prawscrape}, which would scan through the top 1000 posts in a subreddit, add the "post" objects into a list, and then iterate over that list to add all of the posts' content into a text file. 
+\href{https://praw.readthedocs.io/en/latest/}{PRAW} (\url{https://praw.readthedocs.io/en/latest/}) (Python Reddit API Wrapper) provides, as the name suggests, a Python interface, together with plenty of documentation and examples. we initially ran scripts like Listing~\ref{prawscrape}, which would scan through the top 1000 posts in a subreddit, add the "post" objects into a list, and then iterate over that list to add all of the posts' content into a text file. 
 
 \lstinputlisting[fontadjust=\true, float, firstline=16,lastline=26, caption=PRAW Scrape Script, label={prawscrape}]
 {../../../../code/data/scripts/praw_scrape.py} 
@@ -37,7 +37,7 @@ However, we soon ran into a problem, which was that the limit on post requests a
 
 \subsection{PushShift API}
 
-\href{https://pushshift.io/}{PushShift} (https://pushshift.io/) is a third-party data source which collects and collates reddit data into its own databse. It also provides an API, allowing us to query that with no artificial post limit. This was done with a more traditional http request as seen in Listing~\ref{pushscrape}. PushShift was slower but unlimited, meaning we could simply loop through pages of results (starting with the most recent), keeping track of the last post's creation date (line 23) and make sure that our next iteration precluded posts after that date. This took time but allowed us to assemble a variety of datasets, as discussed in Section~\ref{datasets}.
+\href{https://pushshift.io/}{PushShift} (\url{https://pushshift.io/}) is a third-party data source which collects and collates reddit data into its own databse. It also provides an API, allowing us to query that with no artificial post limit. This was done with a more traditional HTTP request as seen in Listing~\ref{pushscrape}. PushShift was slower but unlimited, meaning we could simply loop through pages of results (starting with the most recent), keeping track of the last post's creation date (line 23) and make sure that our next iteration precluded posts after that date. This took time but allowed us to assemble a variety of datasets, as discussed in Section~\ref{datasets}.
 
 \lstinputlisting[fontadjust=\true, float, firstline=10, caption=PushShift Scrape Script, label={pushscrape}]
 {../../../../code/data/scripts/pushshift_scrape.py} 
