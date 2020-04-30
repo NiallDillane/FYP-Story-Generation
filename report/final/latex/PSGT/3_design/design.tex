@@ -11,6 +11,15 @@
 
 % ----------------------- contents from here ------------------------
 
+\section{The Product} \label{product}
+
+Our original intention was to take a procedural generation technique and modify the underlying architecture in some way. However, the enormity of this challenge was soon realised. These were concepts and models developed by teams of post-doctorate level researchers, working full-time on these problems, with the backing of huge corporations. For myself, just getting started in the field of machine learning and NLP, it didn't seem like the most impactful use of our time, or the most value we could contribute through our research. 
+
+We took a step back, and considered where we might add value to the system. We discussed the fact that these models, despite being significant advancements and impressive research, were still nowhere near consistently challenging a human writer, and that curation of the AI productions was still required. This seemed like an area for exploration, to create an environment for human writers to work together with a language generation model, editing and inserting their own text as they go. 
+
+We drew inspiration from Google Deepmind's AlphaGo (initially touched on in Section~\ref{introduction}), the AI board game player which challenged a top human player (\Citealt{borowiec2016alphago}). Two particular moments in this series of matches stood out to us: first, AlphaGo made a very unusual move, thought by human analysts to be so absurd it must be a mistake. However, this ended up being a pivotal move in the game, leading to the AI's victory. In another game following this, the human (Lee Sedol) made an unconventional move of his own, stunning viewers and apparently AlphaGo alike, as it led to his one and only win of the series.
+
+This was an exhibition of creativity in the AI, unconventional thinking, not simply mimicking its taught behaviour and following the expected route. This was naturally of great interest to us, with the idea being our AI writer could come up with novel interpretations of its own. Even more interesting, though, was the human taking inspiration from the AI to be inventive in his own way. This was an exchange of creative spark, a collaborative process, both learning from each other, and ultimately what led us to pursue a collaborative writing environment. While NLG AI may not have the same competitiveness of board games', that creative process persists.
 
 
 
@@ -18,15 +27,13 @@
 
 We identified a range of potential models for this project, ranging from earlier grammars, to more recent Recurrent Neural Networks, and finally Transformers. For demonstration purposes, we decided it would be best to settle on one model.
 
-\subsection{GPT-2}
+\subsection{GPT-2} \label{design_gpt2}
 
 As discussed in Section~\ref{gpt}, GPT-2 is currently the state-of-the-art model when it comes to the generation of natural language. A number of resources were identified which made it easier to utilise and fine-tune this model \footnote{\href{https://talktotransformer.com/}{Talk to Transformer} (\url{https://talktotransformer.com/}) by Adam King} \footnote{\href{https://github.com/minimaxir/gpt-2-simple}{GPT-2 Simple} (\url{https://github.com/minimaxir/gpt-2-simple}) by Max Woolf}, as well as the original open-source code itself \footnote{\href{https://github.com/openai/gpt-2/}{GPT-2} (\url{https://github.com/openai/gpt-2/}) by OpenAI}. 
 
-This made the task somewhat less complex, but our original intention at the time was to modify the underlying architecture in some way. Training a model, we reasoned, was too basic, and we needed something more. Since the code is open source, we set about reading through it, along with many explainer articles \footnote{\href{http://jalammar.github.io/illustrated-gpt2/}{The Illustrated GPT-2} (\url{http://jalammar.github.io/illustrated-gpt2/}) by Jay Alammar} and videos \footnote{\href{https://youtu.be/S0KakHcj_rs}{Attention Is All You Need} (\url{https://youtu.be/S0KakHcj\_rs/}) by the AI Socratic Circles, was helpful in understanding the Attention mechanism}.
+This made the task somewhat less complex - our original intention being to modify the underlying architecture in some way. Still, training the model would be necessary, as well as a method of interacting with it. Since the code is open source, we set about reading through it, along with many explainer articles \footnote{\href{http://jalammar.github.io/illustrated-gpt2/}{The Illustrated GPT-2} (\url{http://jalammar.github.io/illustrated-gpt2/}) by Jay Alammar} and videos \footnote{\href{https://youtu.be/S0KakHcj_rs}{Attention Is All You Need} (\url{https://youtu.be/S0KakHcj\_rs/}) by the AI Socratic Circles, was helpful in understanding the Attention mechanism}.
 
-However, the enormity of this challenge was soon realised. These were concepts and models developed by teams of post-doctorate level researchers, working full-time on these problems, with the backing of huge corporations. For myself, just getting started in the field of machine learning and NLP, it didn't seem like the most impactful use of my time, or the most value I could contribute through my research. 
-
-We took a step back, and considered where I might add value to the system. We discussed the fact that these models, despite being significant advancements and impressive research, were still nowhere near consistently challenging a human writer, and that curation of the AI productions was still required. This seemed like an area for exploration, to create an environment for human writers to work together with a language generation model, editing and inserting their own text as they go. A decision was made to pursue this direction.
+As discussed in Section~\ref{product}, we ended up not modifying the architecture directly, but having this understanding was helpful in terms of understanding the output and elegantly building the system.
 
 \subsection{Implementation} \label{modelImpl}
 

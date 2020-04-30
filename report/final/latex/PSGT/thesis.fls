@@ -464,6 +464,9 @@ INPUT ./figures/gui_screenshot_base.png
 INPUT figures/gui_screenshot_generating.png
 INPUT ./figures/gui_screenshot_generating.png
 INPUT ./figures/gui_screenshot_generating.png
+INPUT figures/reddit_screenshot.png
+INPUT ./figures/reddit_screenshot.png
+INPUT ./figures/reddit_screenshot.png
 INPUT thesis.bbl
 INPUT thesis.bbl
 INPUT thesis.brf

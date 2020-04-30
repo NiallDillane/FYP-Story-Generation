@@ -19,15 +19,28 @@
 
 \section{Summary}
 
+In the beginning, we set out to research the linguistic side of this topic, examining the essence of stories and the elements which make up good stories. This was intended to tie in with our research into procedural generation techniques and technologies, so that we could codify those elements to be utilised in algorithmic generation. Ultimately, the technology led us down a different path, culminating in the Transformer. Having grown much more complex in mathematical in nature, it was deemed that creating or modifying the core logic of this language generation technique was infeasible and unlikely to be the most significant contribution we could make. However, these models were still imperfect in their productions.
 
-\section{Conclusions}
+After much consideration, we proceeded to create an interface into the language model, with the intention of facilitating a collaborative writing environment between human and AI. The model itself was fine-tuned on a specific genre (horror), so as to provide proof of concept for the potential of Transformers to specialise in certain tasks, and subsets of tasks.
 
+This research was an incredible learning experience for us, having to pivot at multiple points and reconsider the current path we were on. We regret that delving into the inner workings of a language model was not pursued, but remain satisfied with the product that was developed.  
 
 \section{Contributions}
+
+As outlined in Section~\ref{product}, we believe that there is significant potential for this product as well as collaborative AI in general. Procedural generation techniques, at least in the case of text, are clearly not yet at the level of advancement seen in more strict environments like board games, but they are sufficiently developed that they can help and inspire creativity in humans.
+
+In many ways, the product born out of our research was more creative in nature, or an effort to facilitate creativity. We realised that attempting to conquer humans in this field was going to be infeasible for the forseeable future, but AI already has great ability to act as a writing partner of sorts. We believe that we have created the ideal live writing environment for this, and that there are many areas for expansion.
 
 
 \section{Future Work}
 
+Although we are happy with the progress of our prototype, there of course remains more work that could be done to improve it, including:
+
+\begin{itemize}
+\item \textbf{Titles:} These are currently manually entered, and having an element of procedural generation here would also be nice. Question answering were considered (\Citealt{devlin2018bert}), the idea being that it would be trained on stories as the question and titles as the answer, a model into wish we could pass our current story and receive a title "answer". This proved problematic, since the essence of question answering is uncreative, simply finding the correct answer. Thus, we wouldn't be generating any new or inventive titles, simply finding the existing one which matches best.
+\item \textbf{Feedback:} The ability to provide feedback on the stories generated, or even passages throughout, would be helpful in terms of iterating on the model and fine-tuning it further. This also opens up the potential for customised user profiles, which would adapt the model to what the user has cited as good or bad output. With our training workflow on Google Colab, programatic re-training of the model was infeasible, but with sufficient hardware and running these processes locally, this could be possible.
+\item \textbf{Model:} Returning to our early intentions, we still feel there is room for a more story-focused Transformer. Even since beginning this research, many different versions of Transformers have been released, but still none answering this more creative question. The gains would be incremental and perhaps not as extravagant, but there is so much more to learn and discover in this space.
+\end{itemize}
 
 
 % ---------------------------------------------------------------------------
