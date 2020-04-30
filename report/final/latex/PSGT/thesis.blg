@@ -4,7 +4,6 @@ The top-level auxiliary file: thesis.aux
 A level-1 auxiliary file: 0_frontmatter/abstract.aux
 A level-1 auxiliary file: 0_frontmatter/declaration.aux
 A level-1 auxiliary file: 0_frontmatter/acknowledgement.aux
-A level-1 auxiliary file: 0_frontmatter/dedication.aux
 A level-1 auxiliary file: 1_introduction/introduction.aux
 A level-1 auxiliary file: 2_related_research/related_research.aux
 A level-1 auxiliary file: 3_design/design.aux
@@ -15,7 +14,7 @@ The style file: agsm.bst
 Database file #1: 7_references/references_myphd.bib
 You've used 51 entries,
             2909 wiz_defined-function locations,
-            939 strings with 12963 characters,
+            938 strings with 12935 characters,
 and the built_in function-call counts, 184321 in all, are:
 = -- 29538
 > -- 2619

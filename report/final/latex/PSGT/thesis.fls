@@ -247,8 +247,6 @@ INPUT 0_frontmatter/declaration.aux
 INPUT 0_frontmatter/declaration.aux
 INPUT 0_frontmatter/acknowledgement.aux
 INPUT 0_frontmatter/acknowledgement.aux
-INPUT 0_frontmatter/dedication.aux
-INPUT 0_frontmatter/dedication.aux
 INPUT 1_introduction/introduction.aux
 INPUT 1_introduction/introduction.aux
 INPUT 2_related_research/related_research.aux
@@ -297,18 +295,14 @@ INPUT 0_frontmatter/abstract.tex
 OUTPUT 0_frontmatter/declaration.aux
 INPUT 0_frontmatter/declaration.tex
 INPUT 0_frontmatter/declaration.tex
-INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
 OUTPUT 0_frontmatter/acknowledgement.aux
 INPUT 0_frontmatter/acknowledgement.tex
 INPUT 0_frontmatter/acknowledgement.tex
-OUTPUT 0_frontmatter/dedication.aux
-INPUT 0_frontmatter/dedication.tex
-INPUT 0_frontmatter/dedication.tex
-INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/cm/cmr17.tfm
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/cm/cmr17.tfm
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
 INPUT thesis.toc
 INPUT thesis.toc
+INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/cm/cmr8.tfm
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/cm/cmr6.tfm
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm
@@ -481,8 +475,6 @@ INPUT 0_frontmatter/declaration.aux
 INPUT 0_frontmatter/declaration.aux
 INPUT 0_frontmatter/acknowledgement.aux
 INPUT 0_frontmatter/acknowledgement.aux
-INPUT 0_frontmatter/dedication.aux
-INPUT 0_frontmatter/dedication.aux
 INPUT 1_introduction/introduction.aux
 INPUT 1_introduction/introduction.aux
 INPUT 2_related_research/related_research.aux

@@ -147,10 +147,10 @@
 
 %: ----------------------- tie in front matter ------------------------
 
-\frontmatter
+%\frontmatter
 
 \include{0_frontmatter/acknowledgement}
-\include{0_frontmatter/dedication}
+%\include{0_frontmatter/dedication}
 
 
 %: ----------------------- contents ------------------------
@@ -234,10 +234,10 @@
 
 % here we start the Appendix
 \appendix
-\renewcommand\thefigure{\thechapter.\arabic{figure}}
+\renewcommand\thefigure{A.\arabic{figure}}
 
 % Definition of each Chapter in the Appendix is done via the following two lines
-\chapter*{Appendix A} \label{gui_screenshots}
+\chapter*{Appendix A: GUI Screenshots} \label{gui_screenshots}
 \section*{GUI Screenshots}
 
 % here is how we close the chapter
@@ -248,6 +248,9 @@
 \figuremacroW{figures/gui_screenshot_base}{GUI 1: Default}{Default display of page}{1}
 
 \figuremacroW{figures/gui_screenshot_generating}{GUI 2: Generation}{While generating text, note parameter change}{1}
+
+
+\renewcommand\thefigure{B.\arabic{figure}}
 
 \chapter*{Appendix B} \label{appendix:story}
 \section*{AI Generated Story} 
@@ -273,6 +276,8 @@ I couldn't forget. I didn't. I don't remember. There was the time that my mom fo
 \markboth{Appendix}{Appendix}
 
 
+\renewcommand\thefigure{C.\arabic{figure}}
+
 \chapter*{Appendix C} \label{appendix:story2}
 \section*{AI Generated Story 2 - Original} 
 
@@ -297,6 +302,10 @@ As I’ve repeated it, every single person on earth. How they hurt. How they wor
 \addcontentsline{toc}{chapter}{Appendix C: AI Generated Story 2}
 \chaptermark{Appendix}
 \markboth{Appendix}{Appendix}
+
+
+
+\renewcommand\thefigure{D.\arabic{figure}}
 
 \chapter*{Appendix D} \label{appendix:story2mod}
 \section*{AI Generated Story 2 - Altered} 
