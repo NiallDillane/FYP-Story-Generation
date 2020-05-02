@@ -52,8 +52,8 @@
 \backcite {devlin2018bert}{{17}{2.4.2.1}{subsubsection.2.4.2.1}}
 \backcite {radford2018improving}{{17}{2.4.2.2}{subsubsection.2.4.2.2}}
 \backcite {radford2019language}{{17}{2.4.2.2}{subsubsection.2.4.2.2}}
-\backcite {borowiec2016alphago}{{19}{3.1}{section.3.1}}
-\backcite {krill2014react}{{25}{3.4.2}{subsection.3.4.2}}
+\backcite {borowiec2016alphago}{{19}{3}{chapter.3}}
+\backcite {krill2014react}{{24}{3.3.2}{subsection.3.3.2}}
 \backcite {jelinek1977perplexity}{{41}{5.1}{section.5.1}}
 \backcite {radford2019language}{{42}{1}{Hfootnote.6}}
 \backcite {reiter2009investigation}{{43}{5.2}{section.5.2}}

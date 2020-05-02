@@ -18,15 +18,11 @@
 
 \section{Web Scraping}
 
-Gathered training data from reddit, few different approaches, different sized datasets produced.
-
 As outlined in Section~\ref{data}, we decided to utilise the \href{https://www.reddit.com/r/nosleep}{No Sleep} (\url{https://www.reddit.com/r/nosleep}) community on reddit as a data source, owing to its focused nature on horror stories and mass of posts. Reddit does offer API support itself, so naturally this was the first route we took.
 
 \subsection{Reddit API and PRAW}
 
-Limited to 1000 posts
-
-The \href{https://www.reddit.com/dev/api/}{Reddit API} (\url{https://www.reddit.com/dev/api/}) is freely available to developers, and offers plenty of functionality and customisation, not limited to: date ranges, filtering based on points, removing posts by certain users, etc. It perhaps isn't the easiest to use, however, but there also happen to be many API wrappers available – effectively providing a layer of abstraction and a more user-friendly interface over the core API.
+The \href{https://www.reddit.com/dev/api/}{Reddit API} (\url{https://www.reddit.com/dev/api/}) is freely available to developers, and offers plenty of functionality and customisation, not limited to: date ranges, filtering based on points, removing posts by certain users, etc. It perhaps isn't the easiest to use, but there also happen to be many API wrappers available – effectively providing a layer of abstraction and a more user-friendly interface over the core API.
 
 \href{https://praw.readthedocs.io/en/latest/}{PRAW} (\url{https://praw.readthedocs.io/en/latest/}) (Python Reddit API Wrapper) provides, as the name suggests, a Python interface, together with plenty of documentation and examples. we initially ran scripts like Listing~\ref{prawscrape}, which would scan through the top 1000 posts in a subreddit, add the "post" objects into a list, and then iterate over that list to add all of the posts' content into a text file. 
 
@@ -37,7 +33,7 @@ However, we soon ran into a problem, which was that the limit on post requests a
 
 \subsection{PushShift API}
 
-\href{https://pushshift.io/}{PushShift} (\url{https://pushshift.io/}) is a third-party data source which collects and collates reddit data into its own databse. It also provides an API, allowing us to query that with no artificial post limit. This was done with a more traditional HTTP request as seen in Listing~\ref{pushscrape}. PushShift was slower but unlimited, meaning we could simply loop through pages of results (starting with the most recent), keeping track of the last post's creation date (line 23) and make sure that our next iteration precluded posts after that date. This took time but allowed us to assemble a variety of datasets, as discussed in Section~\ref{datasets}.
+\href{https://pushshift.io/}{PushShift} (\url{https://pushshift.io/}) is a third-party data source which collects and collates reddit data into its own databse. It also provides an API, allowing us to query that with no artificial post limit. This was done with a more traditional HTTP request as seen in Listing~\ref{pushscrape}. PushShift was slower but unlimited, meaning we could simply loop through pages of results (starting with the most recent), keep track of the last post's creation date (line 23) and make sure that our next iteration precluded posts after that date. This took time but allowed us to assemble a variety of datasets, as discussed in Section~\ref{datasets}.
 
 \lstinputlisting[fontadjust=\true, float, firstline=10, caption=PushShift Scrape Script, label={pushscrape}]
 {../../../../code/data/scripts/pushshift_scrape.py} 
@@ -60,8 +56,6 @@ However, when training these models individually for testing purposes, we found 
 
 
 \section{Training the Model}
-
-Worried about hardware, online resources to the rescue! Sample scripts for GPT-2 provided by huggingface
 
 The training process for these models revolved around Google Colab, as designed in Section~\ref{training}. Here, we were able to connect the Python Notebook environment to Google Drive storage, where we uploaded the relevant scripts for training as well as the datasets from which we were building the models. The environment looked something like Figure~\ref{colab_env}. We can see the file explorer on the left-hand-side, which allows access to Google Drive files via the /gdrive/ folder, and on the right we see the Notebook itself. Along the top toolbar we have menus including Runtime, which is where we connect to a remote hardware accelerator (Nvidia K80 GPU).
 
@@ -134,8 +128,6 @@ Screenshots of the final GUI can be found in Appendix~\hyperref[gui_screenshots]
 
 
 \section{Python Flask API}
-
-API to encapsulate scripts, easily callable and customisable.
 
 Finally, to tie the model and front-end together, we would utilise a Python Flask API (outlined in Section~\ref{backend}). This would encapsulate the calling of our scripts – the interface for communicating with Huggingface's transformer implementation - with an easily callable and customisable interface of our own.
 

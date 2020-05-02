@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2020.2.5)  1 MAY 2020 10:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2020.2.5)  2 MAY 2020 19:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -852,7 +852,7 @@ LaTeX Info: Redefining \nameref on input line 117.
 
 ABD: EveryShipout initializing macros
 \c@lstlisting=\count174
-<0_frontmatter/figures/centre_UL_logo.jpg, id=260, 2370.8575pt x 1185.42876pt>
+<0_frontmatter/figures/centre_UL_logo.jpg, id=256, 2370.8575pt x 1185.42876pt>
 File: 0_frontmatter/figures/centre_UL_logo.jpg Graphic file (type jpg)
 <use 0_frontmatter/figures/centre_UL_logo.jpg>
 Package pdftex.def Info: 0_frontmatter/figures/centre_UL_logo.jpg  used on inpu
@@ -942,14 +942,14 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 ]
  2.
 [5]
-<2_related_research/figures/3-act-structure.jpg, id=503, 642.4pt x 321.2pt>
+<2_related_research/figures/3-act-structure.jpg, id=498, 642.4pt x 321.2pt>
 File: 2_related_research/figures/3-act-structure.jpg Graphic file (type jpg)
 <use 2_related_research/figures/3-act-structure.jpg>
 Package pdftex.def Info: 2_related_research/figures/3-act-structure.jpg  used o
 n input line 42.
 (pdftex.def)             Requested size: 330.05322pt x 165.03021pt.
 [6 <./2_related_research/figures/3-act-structure.jpg>]
-<2_related_research/figures/heros-journey.png, id=523, 803.0pt x 807.015pt>
+<2_related_research/figures/heros-journey.png, id=518, 803.0pt x 807.015pt>
 File: 2_related_research/figures/heros-journey.png Graphic file (type png)
 <use 2_related_research/figures/heros-journey.png>
 Package pdftex.def Info: 2_related_research/figures/heros-journey.png  used on 
@@ -959,13 +959,13 @@ input line 48.
 Underfull \vbox (badness 1009) has occurred while \output is active []
 
 [7 <./2_related_research/figures/heros-journey.png>] [8]
-<2_related_research/figures/propp-eg.png, id=562, 513.92pt x 193.72375pt>
+<2_related_research/figures/propp-eg.png, id=557, 513.92pt x 193.72375pt>
 File: 2_related_research/figures/propp-eg.png Graphic file (type png)
 <use 2_related_research/figures/propp-eg.png>
 Package pdftex.def Info: 2_related_research/figures/propp-eg.png  used on input
  line 80.
 (pdftex.def)             Requested size: 330.05322pt x 124.4173pt.
-<2_related_research/figures/propp-eg-2.png, id=568, 612.2875pt x 321.2pt>
+<2_related_research/figures/propp-eg-2.png, id=563, 612.2875pt x 321.2pt>
 File: 2_related_research/figures/propp-eg-2.png Graphic file (type png)
 <use 2_related_research/figures/propp-eg-2.png>
 Package pdftex.def Info: 2_related_research/figures/propp-eg-2.png  used on inp
@@ -973,14 +973,14 @@ ut line 84.
 (pdftex.def)             Requested size: 330.05322pt x 173.14154pt.
 [9 <./2_related_research/figures/propp-eg.png>] [10 <./2_related_research/figur
 es/propp-eg-2.png>] [11]
-<2_related_research/figures/nn-sample.png, id=622, 501.875pt x 603.25375pt>
+<2_related_research/figures/nn-sample.png, id=617, 501.875pt x 603.25375pt>
 File: 2_related_research/figures/nn-sample.png Graphic file (type png)
 <use 2_related_research/figures/nn-sample.png>
 Package pdftex.def Info: 2_related_research/figures/nn-sample.png  used on inpu
 t line 133.
 (pdftex.def)             Requested size: 247.54149pt x 297.54836pt.
 [12] [13 <./2_related_research/figures/nn-sample.png>]
-<2_related_research/figures/rnn-unrolled.png, id=660, 977.8131pt x 256.91985pt>
+<2_related_research/figures/rnn-unrolled.png, id=655, 977.8131pt x 256.91985pt>
 
 File: 2_related_research/figures/rnn-unrolled.png Graphic file (type png)
 <use 2_related_research/figures/rnn-unrolled.png>
@@ -988,7 +988,7 @@ Package pdftex.def Info: 2_related_research/figures/rnn-unrolled.png  used on i
 nput line 144.
 (pdftex.def)             Requested size: 330.05322pt x 86.72041pt.
 [14 <./2_related_research/figures/rnn-unrolled.png>]
-<2_related_research/figures/attention.png, id=682, 1378.14874pt x 748.7975pt>
+<2_related_research/figures/attention.png, id=677, 1378.14874pt x 748.7975pt>
 File: 2_related_research/figures/attention.png Graphic file (type png)
 <use 2_related_research/figures/attention.png>
 Package pdftex.def Info: 2_related_research/figures/attention.png  used on inpu
@@ -1004,27 +1004,27 @@ t line 157.
 ]
  3.
 [19] [20] [21] [22]
-<3_design/figures/ui_sketch.png, id=805, 3264.195pt x 2026.57124pt>
+<3_design/figures/ui_sketch.png, id=800, 3264.195pt x 2026.57124pt>
 File: 3_design/figures/ui_sketch.png Graphic file (type png)
 <use 3_design/figures/ui_sketch.png>
 Package pdftex.def Info: 3_design/figures/ui_sketch.png  used on input line 67.
 
 (pdftex.def)             Requested size: 330.05322pt x 204.89545pt.
-[23 <./3_design/figures/ui_sketch.png>]
-<3_design/figures/architecture_sketch.png, id=812, 4625.28pt x 2348.775pt>
+<3_design/figures/architecture_sketch.png, id=802, 4625.28pt x 2348.775pt>
 File: 3_design/figures/architecture_sketch.png Graphic file (type png)
 <use 3_design/figures/architecture_sketch.png>
 Package pdftex.def Info: 3_design/figures/architecture_sketch.png  used on inpu
 t line 71.
 (pdftex.def)             Requested size: 330.05322pt x 167.58492pt.
-[24 <./3_design/figures/architecture_sketch.png>]
-<3_design/figures/front_boxed.png, id=826, 4625.28pt x 2184.16pt>
+[23 <./3_design/figures/ui_sketch.png>]
+<3_design/figures/front_boxed.png, id=817, 4625.28pt x 2184.16pt>
 File: 3_design/figures/front_boxed.png Graphic file (type png)
 <use 3_design/figures/front_boxed.png>
 Package pdftex.def Info: 3_design/figures/front_boxed.png  used on input line 8
-7.
+3.
 (pdftex.def)             Requested size: 330.05322pt x 155.83965pt.
-) [25 <./3_design/figures/front_boxed.png>]
+) [24 <./3_design/figures/architecture_sketch.png>] [25 <./3_design/figures/fro
+nt_boxed.png>]
 \openout2 = `4_implementation/implementation.aux'.
 
 (./4_implementation/implementation.tex [26
@@ -1034,7 +1034,7 @@ Package pdftex.def Info: 3_design/figures/front_boxed.png  used on input line 8
 ]
  4.
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 34.
+nput line 30.
 (../../../../code/data/scripts/praw_scrape.py) [27] (../../../../code/data/scri
 pts/pushshift_scrape.py
 LaTeX Font Info:    Try loading font information for OML+cmr on input line 10.
@@ -1043,25 +1043,29 @@ File: omlcmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <12> not available
 (Font)              Font shape `OML/cmm/m/it' tried instead on input line 10.
-) [28] [29] [30]
-<4_implementation/figures/colab_env.png, id=900, 1439.3775pt x 799.98875pt>
+) [28] [29]
+<4_implementation/figures/colab_env.png, id=891, 1439.3775pt x 799.98875pt>
 File: 4_implementation/figures/colab_env.png Graphic file (type png)
 <use 4_implementation/figures/colab_env.png>
 Package pdftex.def Info: 4_implementation/figures/colab_env.png  used on input 
-line 68.
+line 62.
 (pdftex.def)             Requested size: 412.56496pt x 229.29309pt.
-(../../../../code/data/scripts/hf_transformers_train.py) (../../../../code/data
-/scripts/hf_transformers_train.py) [31 <./4_implementation/figures/colab_env.pn
-g>] [32] (/usr/local/texlive/2019/texmf-dist/tex/latex/listings/lstlang1.sty
+(../../../../code/data/scripts/hf_transformers_train.py) [30] [31 <./4_implemen
+tation/figures/colab_env.png>] (../../../../code/data/scripts/hf_transformers_t
+rain.py) [32] (/usr/local/texlive/2019/texmf-dist/tex/latex/listings/lstlang1.s
+ty
 File: lstlang1.sty 2019/02/27 1.8b listings language file
 ) (/usr/local/texlive/2019/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2019/02/27 1.8b (Carsten Heinz)
 ) (../../../../code/App/react-flask-app/src/App.js) [33] [34] (../../../../code
 /App/react-flask-app/src/App.js) (../../../../code/App/react-flask-app/package.
 json) (../../../../code/App/react-flask-app/package.json) [35] [36] (../../../.
-./code/App/react-flask-app/api/api.py) [37] (../../../../code/App/react-flask-a
-pp/api/api.py) [38] (../../../../code/App/react-flask-app/api/api.py) (../../..
-/../code/App/react-flask-app/api/api.py) [39]) [40]
+./code/App/react-flask-app/api/api.py)
+Underfull \vbox (badness 2229) has occurred while \output is active []
+
+[37] (../../../../code/App/react-flask-app/api/api.py) [38] (../../../../code/A
+pp/react-flask-app/api/api.py) (../../../../code/App/react-flask-app/api/api.py
+) [39]) [40]
 \openout2 = `5_evaluation/evaluation.aux'.
 
 (./5_evaluation/evaluation.tex
@@ -1086,13 +1090,13 @@ Underfull \vbox (badness 1430) has occurred while \output is active []
 
 
 ]
-<figures/gui_screenshot_base.png, id=1141, 1412.27625pt x 869.2475pt>
+<figures/gui_screenshot_base.png, id=1136, 1412.27625pt x 869.2475pt>
 File: figures/gui_screenshot_base.png Graphic file (type png)
 <use figures/gui_screenshot_base.png>
 Package pdftex.def Info: figures/gui_screenshot_base.png  used on input line 24
 9.
 (pdftex.def)             Requested size: 412.56496pt x 253.93222pt.
-<figures/gui_screenshot_generating.png, id=1142, 1412.27625pt x 869.2475pt>
+<figures/gui_screenshot_generating.png, id=1137, 1412.27625pt x 869.2475pt>
 File: figures/gui_screenshot_generating.png Graphic file (type png)
 <use figures/gui_screenshot_generating.png>
 Package pdftex.def Info: figures/gui_screenshot_generating.png  used on input l
@@ -1104,7 +1108,7 @@ ng.png>] [51
 ] [52] [53
 
 ] [54]
-<figures/reddit_screenshot.png, id=1171, 743.77875pt x 819.06pt>
+<figures/reddit_screenshot.png, id=1166, 743.77875pt x 819.06pt>
 File: figures/reddit_screenshot.png Graphic file (type png)
 <use figures/reddit_screenshot.png>
 Package pdftex.def Info: figures/reddit_screenshot.png  used on input line 316.
@@ -1142,9 +1146,9 @@ sions.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 374.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 374.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 373761A990E2B0E666EDE1EA671236C0;4195.
+(rerunfilecheck)             Checksum: E8EC98B238EDCB6F38D49EDA7301D585;4134.
 Package rerunfilecheck Info: File `thesis.brf' has not changed.
-(rerunfilecheck)             Checksum: F913566A8C3AC4CF3C938D431C6E4634;3578.
+(rerunfilecheck)             Checksum: 95B3780A6F7DF3C592C3A1AF2E6239DE;3574.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 374.
  )
 (\end occurred inside a group at level 1)
@@ -1153,13 +1157,13 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 374.
 ### bottom level
 (\end occurred when \iftrue on line 95 was incomplete) 
 Here is how much of TeX's memory you used:
- 24105 strings out of 492616
- 430614 string characters out of 6129482
+ 24102 strings out of 492616
+ 430578 string characters out of 6129482
  790439 words of memory out of 5000000
- 27077 multiletter control sequences out of 15000+600000
+ 27075 multiletter control sequences out of 15000+600000
  16491 words of font info for 65 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 64i,15n,83p,1189b,1653s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 64i,15n,83p,1198b,1653s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2019/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2019/t
 exmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2019/te
@@ -1175,10 +1179,10 @@ type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2019/texmf-dist/fonts/t
 ype1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2019/texmf-dist/fonts/ty
 pe1/public/txfonts/t1xbtt.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/p
 ublic/txfonts/t1xtt.pfb>
-Output written on thesis.pdf (75 pages, 4779096 bytes).
+Output written on thesis.pdf (75 pages, 4778865 bytes).
 PDF statistics:
- 1391 PDF objects out of 1440 (max. 8388607)
- 1248 compressed objects within 13 object streams
- 364 named destinations out of 1000 (max. 500000)
- 592 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1386 PDF objects out of 1440 (max. 8388607)
+ 1243 compressed objects within 13 object streams
+ 363 named destinations out of 1000 (max. 500000)
+ 584 words of extra memory for PDF output out of 10000 (max. 10000000)
 
