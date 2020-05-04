@@ -1,0 +1,63 @@
+\babel@toc {english}{}
+\contentsline {chapter}{List of Tables}{ix}{chapter*.2}% 
+\contentsline {chapter}{List of Figures}{xi}{chapter*.3}% 
+\contentsline {chapter}{Listings: List of Code Snippets}{xiii}{chapter*.4}% 
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}% 
+\contentsline {section}{\numberline {1.1}Aims and Objectives}{2}{section.1.1}% 
+\contentsline {section}{\numberline {1.2}Methodology}{3}{section.1.2}% 
+\contentsline {section}{\numberline {1.3}Research Contribution}{3}{section.1.3}% 
+\contentsline {section}{\numberline {1.4}Report Outline}{3}{section.1.4}% 
+\contentsline {chapter}{\numberline {2}Related Research}{5}{chapter.2}% 
+\contentsline {section}{\numberline {2.1}Stories}{5}{section.2.1}% 
+\contentsline {subsection}{\numberline {2.1.1}Structure}{6}{subsection.2.1.1}% 
+\contentsline {subsection}{\numberline {2.1.2}Plot}{8}{subsection.2.1.2}% 
+\contentsline {subsection}{\numberline {2.1.3}Setting}{8}{subsection.2.1.3}% 
+\contentsline {section}{\numberline {2.2}Narratology}{8}{section.2.2}% 
+\contentsline {subsection}{\numberline {2.2.1}Abstractions}{9}{subsection.2.2.1}% 
+\contentsline {section}{\numberline {2.3}Formal Language Theory}{10}{section.2.3}% 
+\contentsline {subsection}{\numberline {2.3.1}Grammars}{10}{subsection.2.3.1}% 
+\contentsline {section}{\numberline {2.4}Natural Language Generation}{11}{section.2.4}% 
+\contentsline {subsection}{\numberline {2.4.1}Neural Networks}{12}{subsection.2.4.1}% 
+\contentsline {subsubsection}{\numberline {2.4.1.1}Recurrent Neural Networks \& LSTMs}{14}{subsubsection.2.4.1.1}% 
+\contentsline {subsection}{\numberline {2.4.2}Transformers}{15}{subsection.2.4.2}% 
+\contentsline {subsubsection}{\numberline {2.4.2.1}BERT}{17}{subsubsection.2.4.2.1}% 
+\contentsline {subsubsection}{\numberline {2.4.2.2}GPT \& GPT-2}{17}{subsubsection.2.4.2.2}% 
+\contentsline {chapter}{\numberline {3}Design}{19}{chapter.3}% 
+\contentsline {section}{\numberline {3.1}Language Model}{20}{section.3.1}% 
+\contentsline {subsection}{\numberline {3.1.1}GPT-2}{20}{subsection.3.1.1}% 
+\contentsline {subsection}{\numberline {3.1.2}Implementation}{21}{subsection.3.1.2}% 
+\contentsline {section}{\numberline {3.2}Training}{21}{section.3.2}% 
+\contentsline {subsection}{\numberline {3.2.1}Data}{22}{subsection.3.2.1}% 
+\contentsline {section}{\numberline {3.3}User Interface}{23}{section.3.3}% 
+\contentsline {subsection}{\numberline {3.3.1}Back End}{24}{subsection.3.3.1}% 
+\contentsline {subsection}{\numberline {3.3.2}Front End}{24}{subsection.3.3.2}% 
+\contentsline {chapter}{\numberline {4}Implementation}{27}{chapter.4}% 
+\contentsline {section}{\numberline {4.1}Web Scraping}{27}{section.4.1}% 
+\contentsline {subsection}{\numberline {4.1.1}Reddit API and PRAW}{27}{subsection.4.1.1}% 
+\contentsline {subsection}{\numberline {4.1.2}PushShift API}{28}{subsection.4.1.2}% 
+\contentsline {subsection}{\numberline {4.1.3}Datasets}{28}{subsection.4.1.3}% 
+\contentsline {section}{\numberline {4.2}Training the Model}{30}{section.4.2}% 
+\contentsline {section}{\numberline {4.3}React JS}{32}{section.4.3}% 
+\contentsline {subsection}{\numberline {4.3.1}Functions}{33}{subsection.4.3.1}% 
+\contentsline {subsection}{\numberline {4.3.2}Hooks and State}{33}{subsection.4.3.2}% 
+\contentsline {subsection}{\numberline {4.3.3}Communication with API}{35}{subsection.4.3.3}% 
+\contentsline {subsection}{\numberline {4.3.4}Styling}{35}{subsection.4.3.4}% 
+\contentsline {subsubsection}{\numberline {4.3.4.1}Distinguishing Text}{35}{subsubsection.4.3.4.1}% 
+\contentsline {section}{\numberline {4.4}Python Flask API}{37}{section.4.4}% 
+\contentsline {subsection}{\numberline {4.4.1}Generation Script}{38}{subsection.4.4.1}% 
+\contentsline {subsection}{\numberline {4.4.2}Maintaining Style}{38}{subsection.4.4.2}% 
+\contentsline {subsection}{\numberline {4.4.3}Parameter Parsing}{39}{subsection.4.4.3}% 
+\contentsline {chapter}{\numberline {5}Evaluation}{41}{chapter.5}% 
+\contentsline {section}{\numberline {5.1}Perplexity}{41}{section.5.1}% 
+\contentsline {section}{\numberline {5.2}Human Review}{43}{section.5.2}% 
+\contentsline {subsection}{\numberline {5.2.1}Example Story}{43}{subsection.5.2.1}% 
+\contentsline {subsection}{\numberline {5.2.2}Anonymous Reviews}{44}{subsection.5.2.2}% 
+\contentsline {chapter}{\numberline {6}Conclusions and Future Directions}{45}{chapter.6}% 
+\contentsline {section}{\numberline {6.1}Summary}{45}{section.6.1}% 
+\contentsline {section}{\numberline {6.2}Contributions}{46}{section.6.2}% 
+\contentsline {section}{\numberline {6.3}Future Work}{46}{section.6.3}% 
+\contentsline {chapter}{Appendix A: GUI Screenshots}{49}{section*.30}% 
+\contentsline {chapter}{Appendix B: AI Generated Story}{52}{section*.34}% 
+\contentsline {chapter}{Appendix C: AI Generated Story 2}{54}{section*.36}% 
+\contentsline {chapter}{Appendix D: AI Generated Story 2 - Altered}{55}{figure.caption.39}% 
+\contentsline {chapter}{References}{57}{appendix*.40}% 

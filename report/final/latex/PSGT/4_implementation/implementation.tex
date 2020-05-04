@@ -1,0 +1,169 @@
+% this file is called up by thesis.tex
+% content in this file will be fed into the main document
+
+\chapter{Implementation} % top level followed by section, subsection
+
+
+% ----------------------- paths to graphics ------------------------
+
+% change according to folder and file names
+\ifpdf
+    \graphicspath{{4_implementation/figures/PNG/}{4_implementation/figures/PDF/}{4_implementation/figures/}}
+\else
+    \graphicspath{{4_implementation/figures/EPS/}{4_implementation/figures/}}
+\fi
+
+
+% ----------------------- contents from here ------------------------
+
+\section{Web Scraping}
+
+As outlined in Section~\ref{data}, we decided to utilise the \href{https://www.reddit.com/r/nosleep}{No Sleep} (\url{https://www.reddit.com/r/nosleep}) community on reddit as a data source, owing to its focused nature on horror stories and mass of posts. Reddit does offer API support itself, so naturally this was the first route we took.
+
+\subsection{Reddit API and PRAW}
+
+The \href{https://www.reddit.com/dev/api/}{Reddit API} (\url{https://www.reddit.com/dev/api/}) is freely available to developers, and offers plenty of functionality and customisation, not limited to: date ranges, filtering based on points, removing posts by certain users, etc. It perhaps isn't the easiest to use, but there also happen to be many API wrappers available – effectively providing a layer of abstraction and a more user-friendly interface over the core API.
+
+\href{https://praw.readthedocs.io/en/latest/}{PRAW} (\url{https://praw.readthedocs.io/en/latest/}) (Python Reddit API Wrapper) provides, as the name suggests, a Python interface, together with plenty of documentation and examples. we initially ran scripts like Listing~\ref{prawscrape}, which would scan through the top 1000 posts in a subreddit, add the "post" objects into a list, and then iterate over that list to add all of the posts' content into a text file. 
+
+\lstinputlisting[fontadjust=\true, float, firstline=16,lastline=26, caption=PRAW Scrape Script, label={prawscrape}]
+{../../../../code/data/scripts/praw_scrape.py} 
+
+However, we soon ran into a problem, which was that the limit on post requests at a time was indeed 1000. This meant that going through in one call was going to be impossible or very messy with this API approach.
+
+\subsection{PushShift API}
+
+\href{https://pushshift.io/}{PushShift} (\url{https://pushshift.io/}) is a third-party data source which collects and collates reddit data into its own databse. It also provides an API, allowing us to query that with no artificial post limit. This was done with a more traditional HTTP request as seen in Listing~\ref{pushscrape}. PushShift was slower but unlimited, meaning we could simply loop through pages of results (starting with the most recent), keep track of the last post's creation date (line 23) and make sure that our next iteration precluded posts after that date. This took time but allowed us to assemble a variety of datasets, as discussed in Section~\ref{datasets}.
+
+\lstinputlisting[fontadjust=\true, float, firstline=10, caption=PushShift Scrape Script, label={pushscrape}]
+{../../../../code/data/scripts/pushshift_scrape.py} 
+
+
+\subsection{Datasets} \label{datasets}
+
+As discussed in Section~\ref{data}, we wished only to collect posts with a relatively high score as voted by the users of the community, and several datasets were assembled on a trial-and-error basis.
+
+\begin{itemize}
+
+  \item Initially, with the official Reddit API, a file with the top 1000 posts was created, a size of 12MB.
+  \item Using PushShift, we expanded our scope and collated all posts with over 1000 points, for a size of 45.4MB.
+  \item Feeling this wasn't enough, the points threshold was reduced to 400, which gave us a file size of 102.5MB.
+  \item As a stretch goal, we set a very low bound on points, only 10 points, which created a file of 496.3MB.
+
+\end{itemize}
+
+However, when training these models individually for testing purposes, we found that perplexity (a measure for evalutating text generation, which will be discussed more in Section~\ref{perplexity}) actually worsened when moving from the first to the third dataset. As such, we decided to stop training and proceed with the third model, despite its slightly worse score, fearing the exponential increase in size from the fourth dataset.
+
+
+\section{Training the Model}
+
+The training process for these models revolved around Google Colab, as designed in Section~\ref{training}. Here, we were able to connect the Python Notebook environment to Google Drive storage, where we uploaded the relevant scripts for training as well as the datasets from which we were building the models. The environment looked something like Figure~\ref{colab_env}. We can see the file explorer on the left-hand-side, which allows access to Google Drive files via the /gdrive/ folder, and on the right we see the Notebook itself. Along the top toolbar we have menus including Runtime, which is where we connect to a remote hardware accelerator (Nvidia K80 GPU).
+
+\figuremacroW{colab_env}{Google Colab Environment}{Python Notebook}{1}
+
+Initial setup code involved mounting Google Drive and importing various required packages, as in Listing~\ref{colab_setup}. As you can see, we were able to run scripts and typical unix terminal commands using the (!) prefix.
+
+\lstinputlisting[fontadjust=\true, float, firstline=12, lastline=22, caption=Colab Setup, label={colab_setup}]
+{../../../../code/data/scripts/hf_transformers_train.py} 
+
+Then, we utilised the run\_language\_modeling.py script, provided as part of the Huggingface implementation (discussed in Section~\ref{modelImpl}), to carry out the main training process. This took a variety of parameters, notably: the input files for training and evaluation, the number of training epochs to perform, how often to save checkpoints and whether those should be resumed, and finally the output directory. A sample of how we used that script is in Listing~\ref{colab_train}. This "output" foler with our model could then be copied back over to Google Drive and downloaded.
+
+\lstinputlisting[fontadjust=\true, float, firstline=28, lastline=42, caption=Colab Training, label={colab_train}]
+{../../../../code/data/scripts/hf_transformers_train.py} 
+
+Checkpoints were stored at steps specified in the script, into folders in the same file system. These were very useful in resuming previous training progress, since it did take several hours at a time and Colab imposes a 12 hour time consecutive runtime limit, with a cooldown period between.
+
+
+\section{React JS} \label{react}
+
+The front end of our application was written in JavaScript, specifically using the React library we mentioned in Section~\ref{frontend}. Boiler plate code was also available from \href{https://github.com/facebook/create-react-app}{Facebook} (\url{https://github.com/facebook/create-react-app}), which helped with getting the initial file structure in place. From a software design point of view, we went for a purely functional style with no classes, as these have become less relevant in newer versions of React. We felt this would aid the development process by virtue of being highly modular and adaptable.
+
+\subsection{Functions}
+
+As mentioned in Section~\ref{react}, we utilised the newer development techniques and libraries in React, with a purely functional approach. This was a challenging new way of thinking, and with more limited resources for help, but it had the benefits of being highly extensible and easily handling concurrency. While not major issues in developing this relatively small prototype, it was important to bear in mind the potential growth of the system beyond this. 
+
+The structure of a React file looks something like Listing~\ref{hook_style}, where we can see that functions can return HTML, which can then be called in other functions and build up our app as desired. The HTML itself has some modifications, such as "className" instead of "class" for calling the relevant stylesheet, but it is largely standard. 
+
+\lstinputlisting[language=HTML, fontadjust=\true, float, firstline=251, lastline=270, caption=Hook Style, label={hook_style}]
+{../../../../code/App/react-flask-app/src/App.js} 
+
+\subsection{Hooks and State}
+
+Another key aspect to development was the utilisation of Hooks, namely to manage state and asynchronous calls to the API. These are all evident in the most vital portion of the front-end application: text generation, as in Listing~\ref{text_gen}. 
+
+Note first the "useState" hook on line 4 of Listing~\ref{text_gen}, which declares the array of getter and setter for the state "story", initialised with the value currently in the writing pane, as returned by the "getParams()" method. This "story" state can now be passed around inside this function and modified as we wish, after the initial page render, through the "useEffect()" hook.
+
+This "useEffect()" hook is how we allow for asynchronous operations, and after the page loads, which is exactly what is required when making sporadic API calls, as we are with text generation. We issue a fetch request to the API with the current story and parameters, as shown on line 17 of Listing~\ref{text_gen}, which is then used to update the "story" state on return via ".then" on line 20 and so on. The key to looping this repeatedly is the callback on line 28, which calls the function again whenever that specified value (in this case the "story" state) is modified.
+
+\lstinputlisting[language=HTML, fontadjust=\true, float, firstline=61, lastline=91, caption=Text Generation, label={text_gen}]
+{../../../../code/App/react-flask-app/src/App.js} 
+
+\subsection{Communication with API} \label{link_api_react}
+
+Linking the React app to an API was very straightforward, with only a few lines needed on top of the boilerplate code.
+
+Both locally hosted for development purposes, the React app was on port 3000 and the API on port 5000. The first change was assigning a proxy to the React app to port 5000, which would redirect requests to the API, as shown in Listing~\ref{api_proxy}. Furthermore, to save time when starting the app, we added an additional script to start the API from the same directory, seen in Listing~\ref{api_script}.
+
+With these changes in place, the entire webapp could be run with two terminals: one running "yarn start", and the other "yarn start-api", both able to communicate with each other.
+
+\lstinputlisting[language=HTML, fontadjust=\true, float, firstline=18, lastline=18, caption=React API Proxy, label={api_proxy}]
+{../../../../code/App/react-flask-app/package.json}
+
+
+\lstinputlisting[language=HTML, fontadjust=\true, float, firstline=38, lastline=38, caption=API Start Script, label={api_script}]
+{../../../../code/App/react-flask-app/package.json}
+
+
+\subsection{Styling} \label{styling}
+
+Styling of the front-end was also a significant consideration, as this can have a large influence on how the application is perceived and used. It was important to us that the writing be the main focus, and that any AI involvement or parameter tuning be subtle, as outlined in Section~\ref{ui_design}.
+
+This was done through hiding the sliders and inputs by default, and only showing them (individually) on hover over the associated icon. We felt that this was a minimal but still functional solution, not wanting to frustrate users with too much movement or unintuitive menus. The play/pause buttons and loading icon were also kept subtle in their colours, against a light grey background which we felt would be easier on the eyes during long writing sessions. 
+
+\subsubsection{Distinguishing Text}
+
+From a user feedback perspective, one key piece of styling was the distinction of user-written text from AI-generated text. We initially considered incorporating some percentage outputs, but this did not feel like the most fluid solution. Instead, we opted for a visual approach, surrounding the AI text in HTML bold tags, increasing the font weight. Ultimately, we flipped this around so that the user's text was bolded and the AI's regular, feeling that the AI would likely be the main contributor in this kind of writing environment. 
+
+Screenshots of the final GUI can be found in Appendix~\hyperref[gui_screenshots]{A}.
+
+
+\section{Python Flask API}
+
+Finally, to tie the model and front-end together, we would utilise a Python Flask API (outlined in Section~\ref{backend}). This would encapsulate the calling of our scripts – the interface for communicating with Huggingface's transformer implementation - with an easily callable and customisable interface of our own.
+
+API endpoints were exposed as shown in Listing~\ref{api_endpoints}, assigning the function a destination and method. We discussed how this was able to communicate with our React App in Section~\ref{link_api_react}.
+
+\lstinputlisting[language=Python, fontadjust=\true, float, firstline=27, lastline=28, caption=API Endpoints, label={api_endpoints}]
+{../../../../code/App/react-flask-app/api/api.py} 
+
+\subsection{Generation Script}
+
+As for the function itself, we wished to parse through our input text and parameters, then call the "run\_generation.py" script provided by Huggingface. The calling of that script was done through a subprocess, as shown in Listing~\ref{rungen}
+
+\lstinputlisting[language=Python, fontadjust=\true, float, firstline=44, lastline=52, caption=Script Call, label={rungen}]
+{../../../../code/App/react-flask-app/api/api.py} 
+
+\subsection{Maintaining Style}
+
+For the purposes of styling our AI and human writing differently (as per Section~\ref{styling}), we needed to surround generated text with bold tags but also maintain the previous styling of the input, rather than overwriting it with each call. To accomplish this, we maintained an original version of the input (existing text), then created a copy with all extraneous tags removed for our model prompt. The latter was passed to the model for generation of a new full (plain) text, from which the prompt was trimmed to leave us with just the new portion. Then, we prepended our original, styled input onto the beginning, to retain the formatting of what was written before.
+
+The danger was that, since technically the whole story is generated each time, it would all be recognised as AI writing, even the parts the human had previously contributed. Some of the code for this implementation can be seen in Listing~\ref{format_output}. The bold tags themselves were inserted around every word with a space in between, to allow for human insertion of text at any point.
+
+\lstinputlisting[language=Python, fontadjust=\true, float, firstline=55, lastline=58, caption=Formatting Generation Output, label={format_output}]
+{../../../../code/App/react-flask-app/api/api.py} 
+
+\subsection{Parameter Parsing}
+
+Some adjustments were required for parameters, also. Temperature was straightforward as a number, but length and seed needed parsing, shown in Listing~\ref{param_parse}.
+
+\lstinputlisting[language=Python, fontadjust=\true, float, firstline=39, lastline=42, caption=Parameter Parsing, label={param_parse}]
+{../../../../code/App/react-flask-app/api/api.py} 
+
+Length was based on tokens rather than words (a fairly abstract concept), and for the whole text rather than just the new portion. As such, we altered this to be more of a multiplier based on a rough estimation of the current tokens in the text. This was not extremely precise, but through testing it seemed to produce reasonably intuitive results. 
+
+Seed, being the random seed for text generation, naturally needed to be a number. However, in an effort to provide customisability and an anthropomorphisation of sorts (effectively giving a "name" to your AI writer), we wanted to allow letters as input. We made the decision to simply calculate the sum of character values in the given seed, or assign it a random integer if empty. This was imperfect and would potentialy lead to different inputs providing the same seed, but this was essentially random anyway and we reasoned it was an acceptable solution.
+
+
+% ---------------------------------------------------------------------------
+% ----------------------- end of thesis sub-document ------------------------
+% ---------------------------------------------------------------------------
