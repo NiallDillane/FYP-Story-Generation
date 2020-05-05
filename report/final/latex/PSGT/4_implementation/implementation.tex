@@ -24,7 +24,7 @@ As outlined in Section~\ref{data}, we decided to utilise the \href{https://www.r
 
 The \href{https://www.reddit.com/dev/api/}{Reddit API} (\url{https://www.reddit.com/dev/api/}) is freely available to developers, and offers plenty of functionality and customisation, not limited to: date ranges, filtering based on points, removing posts by certain users, etc. It perhaps isn't the easiest to use, but there also happen to be many API wrappers available – effectively providing a layer of abstraction and a more user-friendly interface over the core API.
 
-\href{https://praw.readthedocs.io/en/latest/}{PRAW} (\url{https://praw.readthedocs.io/en/latest/}) (Python Reddit API Wrapper) provides, as the name suggests, a Python interface, together with plenty of documentation and examples. we initially ran scripts like Listing~\ref{prawscrape}, which would scan through the top 1000 posts in a subreddit, add the "post" objects into a list, and then iterate over that list to add all of the posts' content into a text file. 
+\href{https://praw.readthedocs.io/en/latest/}{PRAW} (\url{https://praw.readthedocs.io/en/latest/}) (Python Reddit API Wrapper) provides, as the name suggests, a Python interface, together with plenty of documentation and examples. We initially ran scripts like Listing~\ref{prawscrape}, which would scan through the top 1000 posts in a subreddit, add the "post" objects into a list, and then iterate over that list to add all of the posts' content into a text file. 
 
 \lstinputlisting[fontadjust=\true, float, firstline=16,lastline=26, caption=PRAW Scrape Script, label={prawscrape}]
 {../../../../code/data/scripts/praw_scrape.py} 

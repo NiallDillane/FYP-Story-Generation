@@ -1,6 +1,6 @@
 \contentsline {lstlisting}{\numberline {4.1}PRAW Scrape Script}{28}{lstlisting.4.1}% 
 \contentsline {lstlisting}{\numberline {4.2}PushShift Scrape Script}{29}{lstlisting.4.2}% 
-\contentsline {lstlisting}{\numberline {4.3}Colab Setup}{31}{lstlisting.4.3}% 
+\contentsline {lstlisting}{\numberline {4.3}Colab Setup}{32}{lstlisting.4.3}% 
 \contentsline {lstlisting}{\numberline {4.4}Colab Training}{32}{lstlisting.4.4}% 
 \contentsline {lstlisting}{\numberline {4.5}Hook Style}{34}{lstlisting.4.5}% 
 \contentsline {lstlisting}{\numberline {4.6}Text Generation}{36}{lstlisting.4.6}% 

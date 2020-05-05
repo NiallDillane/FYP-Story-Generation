@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2020.2.5)  4 MAY 2020 18:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2020.2.5)  4 MAY 2020 18:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1073,29 +1073,31 @@ File: omlcmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <12> not available
 (Font)              Font shape `OML/cmm/m/it' tried instead on input line 10.
-) [28] [29]
+)
+Underfull \vbox (badness 4819) has occurred while \output is active []
+
+[28] [29]
 <4_implementation/figures/colab_env.png, id=895, 1439.3775pt x 799.98875pt>
 File: 4_implementation/figures/colab_env.png Graphic file (type png)
 <use 4_implementation/figures/colab_env.png>
 Package pdftex.def Info: 4_implementation/figures/colab_env.png  used on input 
 line 62.
 (pdftex.def)             Requested size: 412.56496pt x 229.29309pt.
-(../../../../code/data/scripts/hf_transformers_train.py) [30] [31 <./4_implemen
-tation/figures/colab_env.png>] (../../../../code/data/scripts/hf_transformers_t
-rain.py) [32] (/usr/local/texlive/2019/texmf-dist/tex/latex/listings/lstlang1.s
-ty
+[30] (../../../../code/data/scripts/hf_transformers_train.py) (../../../../code
+/data/scripts/hf_transformers_train.py)
+Underfull \vbox (badness 2600) has occurred while \output is active []
+
+[31 <./4_implementation/figures/colab_env.png>] [32] (/usr/local/texlive/2019/t
+exmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2019/02/27 1.8b listings language file
 ) (/usr/local/texlive/2019/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2019/02/27 1.8b (Carsten Heinz)
 ) (../../../../code/App/react-flask-app/src/App.js) [33] [34] (../../../../code
 /App/react-flask-app/src/App.js) (../../../../code/App/react-flask-app/package.
 json) (../../../../code/App/react-flask-app/package.json) [35] [36] (../../../.
-./code/App/react-flask-app/api/api.py)
-Underfull \vbox (badness 2229) has occurred while \output is active []
-
-[37] (../../../../code/App/react-flask-app/api/api.py) [38] (../../../../code/A
-pp/react-flask-app/api/api.py) (../../../../code/App/react-flask-app/api/api.py
-) [39]) [40]
+./code/App/react-flask-app/api/api.py) [37] (../../../../code/App/react-flask-a
+pp/api/api.py) [38] (../../../../code/App/react-flask-app/api/api.py) (../../..
+/../code/App/react-flask-app/api/api.py) [39]) [40]
 \openout2 = `5_evaluation/evaluation.aux'.
 
 (./5_evaluation/evaluation.tex
@@ -1209,7 +1211,7 @@ type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2019/texmf-dist/fonts/t
 ype1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2019/texmf-dist/fonts/ty
 pe1/public/txfonts/t1xbtt.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/p
 ublic/txfonts/t1xtt.pfb>
-Output written on thesis.pdf (75 pages, 4779946 bytes).
+Output written on thesis.pdf (75 pages, 4779848 bytes).
 PDF statistics:
  1391 PDF objects out of 1440 (max. 8388607)
  1248 compressed objects within 13 object streams
